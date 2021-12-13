@@ -1,10 +1,120 @@
+.footer_overall{
+    padding: 4rem 0;
+}
+footer {
+    display: block;
+}
+.footer-top{
+    width: 1110px;
+    margin: 0 auto;
+}
+.footer_top-title{
+    /* position: absolute; */
+width: 92px;
+height: 20px;
+left: 152px;
+top: 40px;
+
+
+
+font-family: Metropolis;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 20px;
+
+
+color: #FF645A;
+}
+.footer_top-title::after{
+    content: "";
+    display: block;
+    width: 25px;
+    padding: 1rem 0 0 0;
+    border-bottom: 2px solid #FF645A;
+}
+.footer_top-list{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+ul{
+    scroll-behavior: smooth;
+
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+}
+a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.footer_top-list li{
+    width: 20%;
+    padding: 0.8rem 0 0 0;
+}
+.footer_top-list li a{
+    color: #666;
+    position: static;
+width: 53px;
+height: 20px;
+left: 0px;
+top: 0px;
+
+/* Body/Body 4 */
+
+font-family: Metropolis;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+
+/* Neutral/Grayshadow */
+
+color: #797979;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+
+}
 .footer_last{
 position: absolute;
 background: #FFFFFF;
-
+width: 100%;
 }
 .footer_last-logodiv{
-    width: 10%;
-    margin: auto;
-    margin-left: 50%;
+    /* position: absolute; */
+    /* width: 25%; */
+    margin-left: 45%;
+}
+.footer_last-logodiv{
+    aspect-ratio: auto 100 / 24;
+    backface-visibility: hidden;
+    max-width: 20%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
 }
