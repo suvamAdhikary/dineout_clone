@@ -1,0 +1,10 @@
+.footer_last{
+position: absolute;
+background: #FFFFFF;
+
+}
+.footer_last-logodiv{
+    width: 10%;
+    margin: auto;
+    margin-left: 50%;
+}

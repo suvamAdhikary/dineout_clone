@@ -1,0 +1,16 @@
+.head{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+    background: #fff;
+    display: block;
+}
+.logo{
+    aspect-ratio: auto 100 / 34;
+    backface-visibility: hidden;
+    max-width: 60%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
