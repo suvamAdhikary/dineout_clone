@@ -3,6 +3,7 @@ import Location_Logo from "../Images/Location_Logo.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import {Popup} from '../Pages/Home/Popup'
 const NavbarStyle = styled.div`
   position: absolute;
   width: 100%;
@@ -71,13 +72,13 @@ const NavbarStyle = styled.div`
       justify-content: center;
       align-items: center;
     }
-    .forpos{
-      position:relative;
-      left:-40px;
+    .forpos {
+      position: relative;
+      left: -40px;
     }
-    .forhome{
-      position:relative;
-      left:30px;
+    .forhome {
+      position: relative;
+      left: 30px;
     }
   }
   button {
@@ -95,7 +96,7 @@ const NavbarStyle = styled.div`
     color: #ffffff;
   }
   .selected {
-    width:100%;
+    width: 100%;
     a {
       color: #ff645a !important;
       font-weight: bold;
@@ -113,7 +114,7 @@ const NavbarStyle = styled.div`
       height: 3px;
     }
   }
-  .links:hover{
+  .links:hover {
     a {
       color: #ff645a !important;
       font-weight: bold;
@@ -140,7 +141,8 @@ export const Navbar = () => {
   const [passport, setPassport] = useState(false);
   const [saver, setSaver] = useState(false);
   const [blog, setBlog] = useState(false);
-  return (
+  return (<>
+  <Popup/>
     <NavbarStyle>
       <img src={Dineout_Logo} className="header_logo" alt="" />
       <div className="search_bar">
@@ -152,72 +154,102 @@ export const Navbar = () => {
       <div className="pages_link">
         <div className={home ? "links forhome selected" : "forhome links"}>
           <span></span>
-          <Link onClick={()=>{
-            setHome(true)
-            setTable(false)
-            setDineout(false)
-            setPassport(false)
-            setSaver(false)
-            setBlog(false)
-          }} to="/#">Home</Link>
+          <Link
+            onClick={() => {
+              setHome(true);
+              setTable(false);
+              setDineout(false);
+              setPassport(false);
+              setSaver(false);
+              setBlog(false);
+            }}
+            to="/#"
+          >
+            Home
+          </Link>
         </div>
         <div className={table ? "links selected" : "links"}>
           <span></span>
-          <Link onClick={()=>{
-            setHome(false)
-            setTable(true)
-            setDineout(false)
-            setPassport(false)
-            setSaver(false)
-            setBlog(false)
-          }} to="/#">Book a Table</Link>
+          <Link
+            onClick={() => {
+              setHome(false);
+              setTable(true);
+              setDineout(false);
+              setPassport(false);
+              setSaver(false);
+              setBlog(false);
+            }}
+            to="/#"
+          >
+            Book a Table
+          </Link>
         </div>
         <div className={dineout ? "links selected" : "links"}>
           <span></span>
-          <Link onClick={()=>{
-            setHome(false)
-            setTable(false)
-            setDineout(true)
-            setPassport(false)
-            setSaver(false)
-            setBlog(false)
-          }} to="/#">Dineout Play</Link>
+          <Link
+            onClick={() => {
+              setHome(false);
+              setTable(false);
+              setDineout(true);
+              setPassport(false);
+              setSaver(false);
+              setBlog(false);
+            }}
+            to="/#"
+          >
+            Dineout Play
+          </Link>
         </div>
         <div className={passport ? "links selected" : "links"}>
           <span></span>
-          <Link onClick={()=>{
-            setHome(false)
-            setTable(false)
-            setDineout(false)
-            setPassport(true)
-            setSaver(false)
-            setBlog(false)
-          }} to="/#">Dineout Passport</Link>
+          <Link
+            onClick={() => {
+              setHome(false);
+              setTable(false);
+              setDineout(false);
+              setPassport(true);
+              setSaver(false);
+              setBlog(false);
+            }}
+            to="/#"
+          >
+            Dineout Passport
+          </Link>
         </div>
         <div className={saver ? "links selected" : "links"}>
           <span></span>
-          <Link onClick={()=>{
-            setHome(false)
-            setTable(false)
-            setDineout(false)
-            setPassport(false)
-            setSaver(true)
-            setBlog(false)
-          }} to="/#">Super Saver</Link>
+          <Link
+            onClick={() => {
+              setHome(false);
+              setTable(false);
+              setDineout(false);
+              setPassport(false);
+              setSaver(true);
+              setBlog(false);
+            }}
+            to="/#"
+          >
+            Super Saver
+          </Link>
         </div>
         <div className={blog ? "links selected forpos" : "forpos links"}>
           <span></span>
-          <Link onClick={()=>{
-            setHome(false)
-            setTable(false)
-            setDineout(false)
-            setPassport(false)
-            setSaver(false)
-            setBlog(true)
-          }} to="/#">Blog</Link>
+          <Link
+            onClick={() => {
+              setHome(false);
+              setTable(false);
+              setDineout(false);
+              setPassport(false);
+              setSaver(false);
+              setBlog(true);
+            }}
+            to="/#"
+          >
+            Blog
+          </Link>
         </div>
       </div>
       <button>Login</button>
     </NavbarStyle>
-  );
+ </> );
 };
