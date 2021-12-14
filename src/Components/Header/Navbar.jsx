@@ -52,11 +52,11 @@ const NavbarStyle = styled.div`
   }
   .pages_link {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
-    width: 50%;
+    width: 55%;
     heigth: 100%;
-    justify-content: space-between;
+    /* justify-content: space-around; */
     margin: auto;
     a {
       font-size: 14px;
@@ -64,12 +64,20 @@ const NavbarStyle = styled.div`
       color: #333333;
     }
     .links {
-      width: 100%;
+      width: 130px;
       height: 72px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+    .forpos{
+      position:relative;
+      left:-40px;
+    }
+    .forhome{
+      position:relative;
+      left:30px;
     }
   }
   button {
@@ -87,6 +95,7 @@ const NavbarStyle = styled.div`
     color: #ffffff;
   }
   .selected {
+    width:100%;
     a {
       color: #ff645a !important;
       font-weight: bold;
@@ -96,10 +105,28 @@ const NavbarStyle = styled.div`
       top: -3px;
     }
     span {
-      width: 20%;
+      width: 23%;
       background: #ff645a;
       position: relative;
-      top: -25px;
+      top: -26px;
+      marign: auto;
+      height: 3px;
+    }
+  }
+  .links:hover{
+    a {
+      color: #ff645a !important;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      position: relative;
+      top: -3px;
+    }
+    span {
+      width: 23%;
+      background: #ff645a;
+      position: relative;
+      top: -26px;
       marign: auto;
       height: 3px;
     }
@@ -123,7 +150,7 @@ export const Navbar = () => {
         </select>
       </div>
       <div className="pages_link">
-        <div className={home ? "links selected" : "links"}>
+        <div className={home ? "links forhome selected" : "forhome links"}>
           <span></span>
           <Link onClick={()=>{
             setHome(true)
@@ -178,7 +205,7 @@ export const Navbar = () => {
             setBlog(false)
           }} to="/#">Super Saver</Link>
         </div>
-        <div className={blog ? "links selected" : "links"}>
+        <div className={blog ? "links selected forpos" : "forpos links"}>
           <span></span>
           <Link onClick={()=>{
             setHome(false)
