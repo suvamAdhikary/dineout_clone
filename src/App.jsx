@@ -1,5 +1,5 @@
 
-import { GlobalStyles } from './Components/styles/Global';
+import { GlobalStyles } from './Components/Styles/Global';
 import Dineout from './Dineout';
 
 function App() {
