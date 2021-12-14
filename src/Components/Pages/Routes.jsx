@@ -1,27 +1,16 @@
-import { Route, Switch } from 'react-router-dom';
-
+import { Route, Switch } from "react-router-dom";
 
 export default function Routes() {
   return (
     <div className="App">
-
       <Switch>
-        <Route path="/" exact>
+        <Route path="/" exact></Route>
 
-        </Route>
+        <Route path="/login"></Route>
 
-        <Route path="/login">
+        <Route path="/testing"></Route>
 
-        </Route>
-
-       <Route path="/testing">
-
-       </Route>
-
-
-        <Route>
-          404 Page not found
-        </Route>
+        <Route>404 Page not found</Route>
       </Switch>
     </div>
   );
