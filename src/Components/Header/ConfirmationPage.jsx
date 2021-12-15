@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 const Style = styled.div`
+  padding-bottom: 100px;
   .first {
     margin: auto;
     text-align: center;
     margin-top: 40px;
     width: 752px;
     height: 144px;
-    background: red;
+    background: white;
     border-radius: 4px;
     h1 {
       font-weight: bold;
@@ -28,13 +29,13 @@ const Style = styled.div`
     width: 752px;
     border-radius: 4px;
     margin: auto;
-    background-color: red;
     margin-top: 20px;
+    background: white;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    align-itmes:center;
-    justify-content:center;
+    align-itmes: center;
+    justify-content: center;
     row-gap: 20px;
     .heading {
       font-weight: 600;
@@ -45,9 +46,9 @@ const Style = styled.div`
     div {
       display: flex;
       justify-content: space-between;
-      p{
+      p {
         color: #333333;
-        font-size:16px;
+        font-size: 16px;
       }
     }
     .bold {
@@ -62,13 +63,13 @@ const Style = styled.div`
     width: 752px;
     border-radius: 4px;
     margin: auto;
-    background-color: red;
+    background-color: white;
     margin-top: 20px;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    align-itmes:center;
-    justify-content:center;
+    align-itmes: center;
+    justify-content: center;
     row-gap: 20px;
     .heading {
       font-weight: 600;
@@ -78,10 +79,10 @@ const Style = styled.div`
     div {
       display: flex;
       justify-content: space-between;
-      p{
+      p {
         font-size: 16px;
-line-height: 22px;
-color: #333333;
+        line-height: 22px;
+        color: #333333;
       }
     }
   }

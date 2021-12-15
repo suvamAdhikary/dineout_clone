@@ -8,6 +8,7 @@ const Scroll = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+  background:white;
   width: 100%;
   .top_searchDiv {
     width: 100%;
