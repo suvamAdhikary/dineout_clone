@@ -6,9 +6,9 @@ import "./Card.css"
 export default function Card() {
   return (
     <div>
-      <div className="container">
+      {/* <div className="container">
         <div className="row">
-          <div class="col-sm-3">
+          <div class="col-sm-3"> */}
             <div class="card card_withfooter" style={{border:"transparent"}}>
               <img class="card-img-top img-fluid" src={imgcard} alt="" />
               <div class="card-block" style={{display:"flex"}}>
@@ -25,9 +25,9 @@ export default function Card() {
                 Dessert/ Moc...
               </div>
             </div>
-          </div>
+          {/* </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -26,3 +26,16 @@ position: static;
 cursor: pointer;
 box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.08);
 }
+.card_compP{
+/* position: absolute; */
+width: 243px;
+height: 30px;
+left: 152px;
+top: 918px;
+font-family: Metropolis;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+color: #333333;
+}
