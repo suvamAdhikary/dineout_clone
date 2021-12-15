@@ -83,7 +83,6 @@ const Style = styled.div`
   span {
     height: 44px;
     width: 272px;
-    /* border-top: 1px solid #ff645a; */
     left: 0px;
     top: 64px;
     border-radius: 0px;
