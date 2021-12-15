@@ -5,6 +5,7 @@ import Card from "./Components/Cards/Card"
 import OfferCards from "./Components/Cards/OfferCards"
 import MobileApp from "./Components/Cards/MobileApp"
 import HomePage from "./Components/Home/HomePage"
+import Buttons from "./Components/Cards/Buttons"
 
 export default function Dineout() {
 
@@ -12,8 +13,8 @@ export default function Dineout() {
         <Routes />
         <HomePage/>
         <OfferCards/>
+        <Buttons/>
         <Passport/>
-        <Card/>
         <MobileApp/>
         <Footer/>
     </>)

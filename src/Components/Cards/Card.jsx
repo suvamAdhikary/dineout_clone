@@ -10,7 +10,7 @@ export default function Card() {
         <div className="row">
           <div class="col-sm-3"> */}
             <div class="card card_withfooter" style={{border:"transparent"}}>
-              <img class="card-img-top img-fluid" src={imgcard} alt="" />
+              <img class="card-img-top img-fluid c-img" src={imgcard} alt="" />
               <div class="card-block" style={{display:"flex"}}>
                 <h4 class="card-title">Caafe 360 Degree</h4>
                 <div className="card_rating">4.5</div>

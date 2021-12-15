@@ -12,12 +12,25 @@ export default function Passport() {
            <img src={passImg} alt="" />
        </div>
        <div className="col">
-       <div class="col-sm-6">
+       <div class="col-sm">
+           <Card/>
+           </div>
+           <div class="col-sm">
+           <Card/>
+           </div>
+       </div>
+       <div className="col">
+       <div class="col-sm">
+           <Card/>
+           </div>
+           <div class="col-sm">
            <Card/>
            </div>
        </div>
         </div>
       </div>
+      <br/>
     </div>
+    
   );
 }

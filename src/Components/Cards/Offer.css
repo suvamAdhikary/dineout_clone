@@ -1,0 +1,25 @@
+.card-offer img{
+width: 216px;
+height: 280px;
+left: 152px;
+top: 94px;
+margin: 0% !important;
+padding: 0%;
+filter: drop-shadow(6px 8px 10px rgba(0, 0, 0, 0.16));
+}
+
+.card-offer{
+    padding-right:0;
+    padding-left:0;
+}
+.card-offer:hover{
+cursor: pointer;
+}
+.container{
+    background-color: transparent;
+    border: none;
+}
+.card{
+    background-color: transparent; 
+    border: none;
+}

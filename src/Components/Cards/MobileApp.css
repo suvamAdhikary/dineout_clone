@@ -62,6 +62,12 @@ background: #FFFFFF;
 border: 1px solid #cecdcd !important;
 box-sizing: border-box;
 border-radius: 4px;
+color: #797979;
+font-family: Metropolis;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
 }
 
 .mob_mobicon{

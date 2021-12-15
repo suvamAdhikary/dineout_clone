@@ -39,3 +39,9 @@ font-size: 24px;
 line-height: 30px;
 color: #333333;
 }
+.c-img{
+    transition: transform .2s;  
+}
+.card_withfooter .c-img:hover{
+    transform: scale(1.1);
+}
