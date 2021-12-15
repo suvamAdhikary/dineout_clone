@@ -8,6 +8,7 @@ import { Signup } from './Components/Pages/Signup/Signup';
 import { VerifyOtp } from './Components/Header/VerifyOtp';
 import { GlobalStyles } from './Components/Styles/Global';
 import Dineout from './Dineout';
+import { ConfirmReservation } from './Components/Header/ConfirmReservation';
 
 function App() {
   return (<>
@@ -19,7 +20,8 @@ function App() {
       {/* <ConfirmationPage/> */}
       {/* <Popup/> */}
       {/* <Signin/> */}
-      <VerifyOtp/>
+      {/* <VerifyOtp/> */}
+      <ConfirmReservation/>
       <Dineout />
     </div>
   </>);
