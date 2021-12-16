@@ -1,72 +1,68 @@
 import React from "react";
-import img1 from "../../Images/25offid.svg"
-import img2 from "../../Images/30offid.jpg"
-import img3 from "../../Images/15offid.png"
-import img4 from "../../Images/20offid.png"
-import img30 from '../../Images/30prct.svg'
+import img1 from "../../Images/25offid.svg";
+import img2 from "../../Images/30offid.jpg";
+import img3 from "../../Images/15offid.png";
+import img4 from "../../Images/20offid.png";
+import img30 from "../../Images/30prct.svg";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Offercss = styled.div`
-.card-offer img{
-width: 216px;
-height: 280px;
-left: 152px;
-top: 94px;
-margin: 0% !important;
-padding: 0%;
-filter: drop-shadow(6px 8px 10px rgba(0, 0, 0, 0.16));
-}
-
-.card-offer{
-    padding-right:0;
-    padding-left:0;
-}
-.card-offer:hover{
-cursor: pointer;
-}
-.container{
-    background-color: transparent;
-    border: none;
-}
-.card{
-    background-color: transparent; 
-    border: none;
-}
-`
+  height: 422px;
+  background: #f3f3f3;
+  padding: 10px;
+  padding-bottom:10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .offers-div {
+    width: 82%;
+    margin: auto;
+    margin-bottom:0;
+    h1 {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: left;
+    }
+  }
+  .card-main-div {
+    width: 82%;
+    margin: auto;
+    display: flex;
+    column-gap:16px;
+    div {
+      box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.08);
+      height: 280px;
+      width: 216px;
+      img {
+        height: 280px;
+        width: 216px;
+      }
+    }
+  }
+`;
 export default function OfferCards() {
   return (
     <Offercss>
-      <div className="container-fluid" style={{background: "#F3F3F3"}} >
-      <br />
-          <h4 style={{fontFamily:"Metropolis", fontStyle:"normal", fontWeight:"bold", fontSize:"24px", lineHeight:"30px", color:"#333333", marginLeft:"8%"}}>Best Offers</h4>
-          <br />
-          <div className="container">
-            <div className="container">
-            <div className="col-md-10">
-              <div className="container">
-            <div className="row">
-              <div className="col card-offer">
-                <img src={img1} alt="" />
-              </div>
-              <div className="col card-offer">
-                <img src={img30} alt="" />
-              </div>
-              <div className="col card-offer">
-                <img src={img3} alt="" />
-              </div>
-              <div className="col card-offer">
-                <img src={img4} alt="" />
-              </div>
-            </div>
-          </div>
-          </div>
-          </div>
-          </div>
-          <br />
-      <br />
+      <div className="offers-div">
+        <h1>Best offers</h1>
       </div>
-     
+      <div className="card-main-div">
+        <div>
+          <img src={img1} alt="" />
+        </div>
+        <div>
+          <img src={img30} alt="" />
+        </div>
+        <div>
+          <img src={img3} alt="" />
+        </div>
+        <div>
+          <img src={img4} alt="" />
+        </div>
+      </div>
     </Offercss>
   );
 }

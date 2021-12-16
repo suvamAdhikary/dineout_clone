@@ -11,7 +11,7 @@ export default function HomePage() {
   
       
       <OfferCards/>
-        <Buttons/>
+        {/* <Buttons/> */}
         <Passport/>
         <MobileApp/>
         <Footer/>
