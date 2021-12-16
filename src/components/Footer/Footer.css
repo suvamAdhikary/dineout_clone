@@ -90,3 +90,7 @@ margin: 7%;
     /* align-items: center; */
     text-align: left; 
 }
+.footer_end{
+     align-items: center;
+     text-align: center;
+}
