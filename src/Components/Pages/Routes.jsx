@@ -1,4 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
+import RestaurantPage from './Restaurant/RestaurantPage';
 
 
 export default function Routes() {
@@ -14,9 +15,9 @@ export default function Routes() {
 
         </Route>
 
-       <Route path="/testing">
-
-       </Route>
+        <Route path="/testing">
+          <RestaurantPage />
+        </Route>
 
 
         <Route>
