@@ -2,12 +2,11 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const FiltersStyle = styled.div`
-  width: 272px;
+  min-width: 272px;
   padding: 15px;
   padding-top: 8px;
   border-radius: 4px;
-  background:red;
-  margin: auto;
+  background:white;
   .accordion-heading {
     cursor: pointer;
     height: 32px;
@@ -82,7 +81,6 @@ const FiltersStyle = styled.div`
   }
   .accordion-hidden {
     display: block;
-    background: red;
   }
 `;
 

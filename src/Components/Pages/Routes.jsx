@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom";
+import { PetFriendly } from "./PetFriendly/PetFriendly";
 
 export default function Routes() {
   return (
@@ -7,6 +8,10 @@ export default function Routes() {
         <Route path="/" exact></Route>
 
         <Route path="/login"></Route>
+        <Route path="/petfriendly">
+          <PetFriendly/>
+        </Route>
+
 
         <Route path="/testing"></Route>
 

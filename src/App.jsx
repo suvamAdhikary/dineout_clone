@@ -12,7 +12,7 @@ function App() {
       {/* <FoodCard/> */}
       {/* <PetFriendly/> */}
       {/* <Signin/> */}
-      <Explore/>
+      {/* <Explore/> */}
       <Dineout />
     </div>
   </>);
