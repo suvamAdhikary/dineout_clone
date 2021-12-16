@@ -1,0 +1,1850 @@
+ [
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 51639,
+      "name": "Meghana Foods",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/1/50691/92d9b4053ef0965120828b4fa4eecc3b_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/1/50691/92d9b4053ef0965120828b4fa4eecc3b_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "4.4",
+        "rating_text": "4.4",
+        "rating_subtitle": "Very Good",
+        "rating_color": "5BA829",
+        "votes": "19.8K",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "4.5",
+            "reviewCount": "2,297",
+            "reviewTextSmall": "2,297 Reviews",
+            "subtext": "2,297 Dining Reviews",
+            "color": "#1C1C1C",
+            "ratingV2": "4.5",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "4.3",
+            "reviewCount": "17.5K",
+            "reviewTextSmall": "17.5K Reviews",
+            "subtext": "17.5K Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "4.3",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹700 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Residency Road, Bangalore",
+        "address": "57/1, 1st Floor, Jayalaxmi Chambers, Near Old Galaxy Theatre, Residency Road, Bangalore",
+        "localityUrl": "bangalore/residency-road-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMlwiXX0iXQ%3D%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/andhra/",
+          "name": "Andhra"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNTBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/north-indian/",
+          "name": "North Indian"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiODNcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/sea-food/",
+          "name": "Seafood"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiN1wiXX0iXQ%3D%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/biryani/",
+          "name": "Biryani"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "44 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/meghana-foods-residency-road/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/meghana-foods-residency-road/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "1.6 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"51639\",\"element_type\":\"listing\",\"rank\":1}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "10925+ orders placed from here recently"
+      },
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png",
+          "aspect_ratio": 2.66666666667
+        },
+        "text": "Follows all Max Safety measures to ensure your food is safe"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 18424061,
+      "name": "Leon Grill",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/1/60551/cec7f54fde5067ef575d6ff3735f31f7_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/1/60551/cec7f54fde5067ef575d6ff3735f31f7_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "4.2",
+        "rating_text": "4.2",
+        "rating_subtitle": "Very Good",
+        "rating_color": "5BA829",
+        "votes": "15.4K",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "4.1",
+            "reviewCount": "418",
+            "reviewTextSmall": "418 Reviews",
+            "subtext": "418 Dining Reviews",
+            "color": "#1C1C1C",
+            "ratingV2": "4.1",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "4.3",
+            "reviewCount": "15K",
+            "reviewTextSmall": "15K Reviews",
+            "subtext": "15K Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "4.3",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹600 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "St. Marks Road, Bangalore",
+        "address": "Ground Floor, House of Lords, Sampangi Rama Nagar, St. Marks Road, Bangalore",
+        "localityUrl": "bangalore/st-marks-road-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiOTk4XCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/salad/",
+          "name": "Salad"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiOTBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/street-food/",
+          "name": "Street Food"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNDBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/fast-food/",
+          "name": "Fast Food"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTAwXCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/desserts/",
+          "name": "Desserts"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMjcwXCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/beverages/",
+          "name": "Beverages"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "41 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/leon-grill-st-marks-road/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/leon-grill-st-marks-road/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "717 m",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"18424061\",\"element_type\":\"listing\",\"rank\":2}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [
+      {
+        "text": "Pro extra 10% OFF",
+        "color": {
+          "tint": "600",
+          "type": "pink"
+        }
+      },
+      {
+        "text": "30% OFF",
+        "color": {
+          "tint": "500",
+          "type": "blue"
+        }
+      }
+    ],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "8700+ orders placed from here recently"
+      },
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png",
+          "aspect_ratio": 2.66666666667
+        },
+        "text": "Follows all Max Safety measures to ensure your food is safe"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 19813408,
+      "name": "Ovenstory Pizza",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/8/19813408/591434a707983edd9f96313d82303e2e_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/8/19813408/591434a707983edd9f96313d82303e2e_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "3.8",
+        "rating_text": "3.8",
+        "rating_subtitle": "Good",
+        "rating_color": "9ACD32",
+        "votes": "232",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "",
+            "reviewCount": "0",
+            "reviewTextSmall": "0 Reviews",
+            "subtext": "Does not offer Dining",
+            "color": "",
+            "ratingV2": "-",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "grey",
+              "tint": "500"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "3.8",
+            "reviewCount": "232",
+            "reviewTextSmall": "232 Reviews",
+            "subtext": "232 Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "3.8",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "600"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹600 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Shanti Nagar, Bangalore",
+        "address": "142, KMK Towers, 1st floor, Above Tata Motors, K H Road, Shanti Nagar, Bangalore",
+        "localityUrl": "bangalore/shanti-nagar-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNDBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/fast-food/",
+          "name": "Fast Food"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNTVcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/italian/",
+          "name": "Italian"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiODJcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/pizza/",
+          "name": "Pizza"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTA2NlwiXX0iXQ%3D%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/shake/",
+          "name": "Shake"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "45 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/ovenstory-pizza-1-shanti-nagar-bangalore/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/ovenstory-pizza-1-shanti-nagar-bangalore/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "1.1 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"19813408\",\"element_type\":\"listing\",\"rank\":3}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [
+      {
+        "text": "50% OFF",
+        "color": {
+          "tint": "500",
+          "type": "blue"
+        }
+      }
+    ],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "1250+ orders placed from here recently"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 19719485,
+      "name": "Kwalitywall's Frozen Dessert And Ice Cream Shop",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/9/19085099/dd0c072f525f3bd7055d2e90723d3ffc_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/9/19085099/dd0c072f525f3bd7055d2e90723d3ffc_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "4.5",
+        "rating_text": "4.5",
+        "rating_subtitle": "Excellent",
+        "rating_color": "3F7E00",
+        "votes": "154",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "",
+            "reviewCount": "0",
+            "reviewTextSmall": "0 Reviews",
+            "subtext": "Does not offer Dining",
+            "color": "",
+            "ratingV2": "-",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "grey",
+              "tint": "500"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "4.5",
+            "reviewCount": "154",
+            "reviewTextSmall": "154 Reviews",
+            "subtext": "154 Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "4.5",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹200 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Wilson Garden, Bangalore",
+        "address": "2, Abhay Shopping Complex, 5th Cross Wilson Garden, Bangalore",
+        "localityUrl": "bangalore/wilson-garden-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMjMzXCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/ice-cream/",
+          "name": "Ice Cream"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTAwXCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/desserts/",
+          "name": "Desserts"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "36 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/kwalitywalls-frozen-dessert-and-ice-cream-shop-wilson-garden-bangalore/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/kwalitywalls-frozen-dessert-and-ice-cream-shop-wilson-garden-bangalore/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "2.3 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"19719485\",\"element_type\":\"listing\",\"rank\":4}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [
+      {
+        "text": "40% OFF",
+        "color": {
+          "tint": "500",
+          "type": "blue"
+        }
+      }
+    ],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "325+ orders placed from here recently"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 60453,
+      "name": "FreshMenu",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/9/59179/a27b0a7128ad0035df8c14fabf52cdef_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/9/59179/a27b0a7128ad0035df8c14fabf52cdef_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "3.8",
+        "rating_text": "3.8",
+        "rating_subtitle": "Good",
+        "rating_color": "9ACD32",
+        "votes": "16.5K",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "",
+            "reviewCount": "0",
+            "reviewTextSmall": "0 Reviews",
+            "subtext": "Does not offer Dining",
+            "color": "",
+            "ratingV2": "-",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "grey",
+              "tint": "500"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "3.8",
+            "reviewCount": "16.5K",
+            "reviewTextSmall": "16.5K Reviews",
+            "subtext": "16.5K Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "3.8",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "600"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹500 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Richmond Road, Bangalore",
+        "address": "Richmond Town, Richmond Road, Bangalore",
+        "localityUrl": "bangalore/richmond-road-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMzVcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/continental/",
+          "name": "Continental"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNTBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/north-indian/",
+          "name": "North Indian"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiN1wiXX0iXQ%3D%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/biryani/",
+          "name": "Biryani"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "49 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/freshmenu-richmond-road/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/freshmenu-richmond-road/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "1.5 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"60453\",\"element_type\":\"listing\",\"rank\":5}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [
+      {
+        "text": "Pro extra 10% OFF",
+        "color": {
+          "tint": "600",
+          "type": "pink"
+        }
+      },
+      {
+        "text": "50% OFF",
+        "color": {
+          "tint": "500",
+          "type": "blue"
+        }
+      }
+    ],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "5225+ orders placed from here recently"
+      },
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png",
+          "aspect_ratio": 2.66666666667
+        },
+        "text": "Follows all Max Safety measures to ensure your food is safe"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 53227,
+      "name": "Anand Sweets And Savouries",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/5/52995/be2450c56cd7dc933c81b7d370f851ec_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/5/52995/be2450c56cd7dc933c81b7d370f851ec_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "4.2",
+        "rating_text": "4.2",
+        "rating_subtitle": "Very Good",
+        "rating_color": "5BA829",
+        "votes": "2,841",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "4.0",
+            "reviewCount": "276",
+            "reviewTextSmall": "276 Reviews",
+            "subtext": "276 Dining Reviews",
+            "color": "#1C1C1C",
+            "ratingV2": "4.0",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "600"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "4.3",
+            "reviewCount": "2,565",
+            "reviewTextSmall": "2,565 Reviews",
+            "subtext": "2,565 Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "4.3",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹300 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Old Airport Road, Bangalore",
+        "address": "7, Anjaneya Complex, Kodihalli, Old Airport Road, Bangalore",
+        "localityUrl": "bangalore/old-airport-road-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTAxNVwiXX0iXQ%3D%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/mithai/",
+          "name": "Mithai"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiOTBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/street-food/",
+          "name": "Street Food"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMjcwXCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/beverages/",
+          "name": "Beverages"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTAwXCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/desserts/",
+          "name": "Desserts"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "60 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/anand-sweets-and-savouries-airport-road-bangalore/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/anand-sweets-and-savouries-airport-road-bangalore/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "5.6 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"53227\",\"element_type\":\"listing\",\"rank\":6}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "4500+ orders placed from here recently"
+      },
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png",
+          "aspect_ratio": 2.66666666667
+        },
+        "text": "Follows all Max Safety measures to ensure your food is safe"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 19792715,
+      "name": "Goli Vada Pav No. 1",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/3/51403/d6af5723e4c0a4077e57ea9364e89a8a_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/3/51403/d6af5723e4c0a4077e57ea9364e89a8a_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "3.6",
+        "rating_text": "3.6",
+        "rating_subtitle": "Good",
+        "rating_color": "9ACD32",
+        "votes": "43",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "3.1",
+            "reviewCount": "0",
+            "reviewTextSmall": "0 Reviews",
+            "subtext": "0 Dining Reviews",
+            "color": "#1C1C1C",
+            "ratingV2": "3.1",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "500"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "4.1",
+            "reviewCount": "43",
+            "reviewTextSmall": "43 Reviews",
+            "subtext": "43 Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "4.1",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹300 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Indiranagar, Bangalore",
+        "address": "33, Binnamangala Layout Extension, 1st Stage, Indiranagar, Bangalore",
+        "localityUrl": "bangalore/indiranagar-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiOTBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/street-food/",
+          "name": "Street Food"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNDBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/fast-food/",
+          "name": "Fast Food"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTAwXCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/desserts/",
+          "name": "Desserts"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "47 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/goli-vada-pav-no-1-2-indiranagar-bangalore/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/goli-vada-pav-no-1-2-indiranagar-bangalore/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "4.8 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"19792715\",\"element_type\":\"listing\",\"rank\":7}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "375+ orders placed from here recently"
+      },
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png",
+          "aspect_ratio": 2.66666666667
+        },
+        "text": "Follows all Max Safety measures to ensure your food is safe"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 57143,
+      "name": "Hari Super Sandwich",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/1/51571/af8fe6df3d53d9df39e651d9ecde28c5_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/1/51571/af8fe6df3d53d9df39e651d9ecde28c5_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "4.0",
+        "rating_text": "4.0",
+        "rating_subtitle": "Very Good",
+        "rating_color": "5BA829",
+        "votes": "905",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "4.1",
+            "reviewCount": "338",
+            "reviewTextSmall": "338 Reviews",
+            "subtext": "338 Dining Reviews",
+            "color": "#1C1C1C",
+            "ratingV2": "4.1",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "3.9",
+            "reviewCount": "567",
+            "reviewTextSmall": "567 Reviews",
+            "subtext": "567 Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "3.9",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "600"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹250 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Basavanagudi, Bangalore",
+        "address": "2, National High School Road, Basavanagudi, Bangalore",
+        "localityUrl": "bangalore/basavanagudi-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMzA0XCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/sandwich/",
+          "name": "Sandwich"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNDBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/fast-food/",
+          "name": "Fast Food"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiOTBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/street-food/",
+          "name": "Street Food"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "51 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/hari-super-sandwich-basavanagudi/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/hari-super-sandwich-basavanagudi/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "3.3 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"57143\",\"element_type\":\"listing\",\"rank\":8}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [
+      {
+        "text": "Pro extra 20% OFF",
+        "color": {
+          "tint": "600",
+          "type": "pink"
+        }
+      },
+      {
+        "text": "40% OFF",
+        "color": {
+          "tint": "500",
+          "type": "blue"
+        }
+      }
+    ],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "1300+ orders placed from here recently"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 18718387,
+      "name": "Punjabi Nawabi",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/8/18489118/a39228f63559b763c6928e91fbdf4942_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/8/18489118/a39228f63559b763c6928e91fbdf4942_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "3.6",
+        "rating_text": "3.6",
+        "rating_subtitle": "Good",
+        "rating_color": "9ACD32",
+        "votes": "21.2K",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "",
+            "reviewCount": "0",
+            "reviewTextSmall": "0 Reviews",
+            "subtext": "Does not offer Dining",
+            "color": "",
+            "ratingV2": "-",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "grey",
+              "tint": "500"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "3.6",
+            "reviewCount": "21.2K",
+            "reviewTextSmall": "21.2K Reviews",
+            "subtext": "21.2K Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "3.6",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "600"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹500 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Koramangala 7th Block, Bangalore",
+        "address": "57, 1st Main Road, Koramangala 7th Block, Bangalore",
+        "localityUrl": "bangalore/koramangala-7th-block-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNTBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/north-indian/",
+          "name": "North Indian"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiN1wiXX0iXQ%3D%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/biryani/",
+          "name": "Biryani"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNzVcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/mughlai/",
+          "name": "Mughlai"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMjVcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/chinese/",
+          "name": "Chinese"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "57 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/punjabi-nawabi-koramangala-7th-block-bangalore/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/punjabi-nawabi-koramangala-7th-block-bangalore/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "4.5 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"18718387\",\"element_type\":\"listing\",\"rank\":9}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [
+      {
+        "text": "Pro extra 15% OFF",
+        "color": {
+          "tint": "600",
+          "type": "pink"
+        }
+      },
+      {
+        "text": "60% OFF",
+        "color": {
+          "tint": "500",
+          "type": "blue"
+        }
+      }
+    ],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "15200+ orders placed from here recently"
+      },
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png",
+          "aspect_ratio": 2.66666666667
+        },
+        "text": "Follows all Max Safety measures to ensure your food is safe"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 18414362,
+      "name": "WOW! Momo",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/4/54644/36e84d81b27629e84bfd33e8c7b8074d_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/4/54644/36e84d81b27629e84bfd33e8c7b8074d_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "3.8",
+        "rating_text": "3.8",
+        "rating_subtitle": "Good",
+        "rating_color": "9ACD32",
+        "votes": "1,933",
+        "subtext": "REVIEW",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "3.3",
+            "reviewCount": "188",
+            "reviewTextSmall": "188 Reviews",
+            "subtext": "188 Dining Reviews",
+            "color": "#1C1C1C",
+            "ratingV2": "3.3",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "500"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "4.2",
+            "reviewCount": "1,745",
+            "reviewTextSmall": "1,745 Reviews",
+            "subtext": "1,745 Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "4.2",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹400 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Brigade Road, Bangalore",
+        "address": "185, Brigade Road, Bangalore",
+        "localityUrl": "bangalore/brigade-road-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTA1MVwiXX0iXQ%3D%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/momos/",
+          "name": "Momos"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNDBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/fast-food/",
+          "name": "Fast Food"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiOTNcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/tibetan/",
+          "name": "Tibetan"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "46 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/wow-momo-1-brigade-road/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/wow-momo-1-brigade-road/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "1.4 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"18414362\",\"element_type\":\"listing\",\"rank\":10}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [
+      {
+        "text": "Pro extra 20% OFF",
+        "color": {
+          "tint": "600",
+          "type": "pink"
+        }
+      },
+      {
+        "text": "50% OFF",
+        "color": {
+          "tint": "500",
+          "type": "blue"
+        }
+      }
+    ],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "525+ orders placed from here recently"
+      },
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png",
+          "aspect_ratio": 2.66666666667
+        },
+        "text": "Follows all Max Safety measures to ensure your food is safe"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 59768,
+      "name": "Pathaan Sir",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/7/58607/4307315f24c7474ba57b31f38b4abfaa_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/7/58607/4307315f24c7474ba57b31f38b4abfaa_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "3.7",
+        "rating_text": "3.7",
+        "rating_subtitle": "Good",
+        "rating_color": "9ACD32",
+        "votes": "8,573",
+        "subtext": "REVIEWS",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "3.3",
+            "reviewCount": "128",
+            "reviewTextSmall": "128 Reviews",
+            "subtext": "128 Dining Reviews",
+            "color": "#1C1C1C",
+            "ratingV2": "3.3",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "500"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "4.0",
+            "reviewCount": "8,445",
+            "reviewTextSmall": "8,445 Reviews",
+            "subtext": "8,445 Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "4.0",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "600"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹300 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Frazer Town, Bangalore",
+        "address": "67, Near HDFC Bank, Coles Road, Frazer Town, Bangalore",
+        "localityUrl": "bangalore/frazer-town-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTAyM1wiXX0iXQ%3D%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/rolls/",
+          "name": "Rolls"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiNDBcIl19Il0%3D",
+          "url": "https://www.zomato.com/bangalore/restaurants/fast-food/",
+          "name": "Fast Food"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "52 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/pathaan-sir-frazer-town/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/pathaan-sir-frazer-town/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "3.4 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"59768\",\"element_type\":\"listing\",\"rank\":11}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [
+      {
+        "text": "50% OFF",
+        "color": {
+          "tint": "500",
+          "type": "blue"
+        }
+      }
+    ],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "3525+ orders placed from here recently"
+      },
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png",
+          "aspect_ratio": 2.66666666667
+        },
+        "text": "Follows all Max Safety measures to ensure your food is safe"
+      }
+    ]
+  },
+  {
+    "type": "restaurant",
+    "info": {
+      "resId": 19316327,
+      "name": "NIC - Natural Ice Creams",
+      "image": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/3/18643523/0feccf5dd75fc83f8731589741489c72_o2_featured_v2.jpg"
+      },
+      "o2FeaturedImage": {
+        "url": "https://b.zmtcdn.com/data/pictures/chains/3/18643523/0feccf5dd75fc83f8731589741489c72_o2_featured_v2.jpg"
+      },
+      "rating": {
+        "has_fake_reviews": 0,
+        "aggregate_rating": "4.4",
+        "rating_text": "4.4",
+        "rating_subtitle": "Very Good",
+        "rating_color": "5BA829",
+        "votes": "1,234",
+        "subtext": "REVIEW",
+        "is_new": false
+      },
+      "ratingNew": {
+        "newlyOpenedObj": null,
+        "suspiciousReviewObj": null,
+        "ratings": {
+          "DINING": {
+            "rating_type": "DINING",
+            "rating": "",
+            "reviewCount": "0",
+            "reviewTextSmall": "0 Reviews",
+            "subtext": "Does not offer Dining",
+            "color": "",
+            "ratingV2": "-",
+            "subtitle": "DINING",
+            "sideSubTitle": "Dining Reviews",
+            "bgColorV2": {
+              "type": "grey",
+              "tint": "500"
+            }
+          },
+          "DELIVERY": {
+            "rating_type": "DELIVERY",
+            "rating": "4.4",
+            "reviewCount": "1,234",
+            "reviewTextSmall": "1,234 Reviews",
+            "subtext": "1,234 Delivery Reviews",
+            "color": "#E23744",
+            "ratingV2": "4.4",
+            "subtitle": "DELIVERY",
+            "sideSubTitle": "Delivery Reviews",
+            "bgColorV2": {
+              "type": "green",
+              "tint": "700"
+            },
+            "newOnDelivery": false
+          }
+        }
+      },
+      "cft": {
+        "text": "₹200 for two"
+      },
+      "cfo": {
+        "text": "₹300 for one"
+      },
+      "locality": {
+        "name": "Frazer Town, Bangalore",
+        "address": "6-3, Robertson Road, Near G K Vale Photostudio, Frazer Town, Bangalore",
+        "localityUrl": "bangalore/frazer-town-restaurants"
+      },
+      "timing": {
+        "text": "",
+        "color": ""
+      },
+      "cuisine": [
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMjMzXCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/ice-cream/",
+          "name": "Ice Cream"
+        },
+        {
+          "deeplink": "zomato://search?deeplink_filters=WyJ7XCJjb250ZXh0XCI6XCJhbGxcIn0iLCJ7XCJjdWlzaW5lX2lkXCI6W1wiMTAwXCJdfSJd",
+          "url": "https://www.zomato.com/bangalore/restaurants/desserts/",
+          "name": "Desserts"
+        }
+      ],
+      "should_ban_ugc": false,
+      "costText": {
+        "text": "₹300 for one"
+      }
+    },
+    "order": {
+      "deliveryTime": "48 min",
+      "isServiceable": true,
+      "hasOnlineOrdering": true,
+      "actionInfo": {
+        "text": "Order Now",
+        "clickUrl": "/bangalore/nic-natural-ice-creams-frazer-town-bangalore/order"
+      }
+    },
+    "gold": [],
+    "takeaway": [],
+    "cardAction": {
+      "text": "",
+      "clickUrl": "/bangalore/nic-natural-ice-creams-frazer-town-bangalore/order",
+      "clickActionDeeplink": ""
+    },
+    "distance": "3.6 km",
+    "isPromoted": false,
+    "promotedText": "",
+    "trackingData": [
+      {
+        "table_name": "zsearch_events_log",
+        "payload": "{\"search_id\":\"5c98c4f2-6fdb-4a65-bdaf-7e7928f6991d\",\"location_type\":\"delivery_cell\",\"location_id\":\"4300399395616063488\",\"page_type\":\"delivery\",\"app_type\":\"new_web_consumer\",\"section\":\"restaurants\",\"entity_type\":\"restaurant\",\"entity_id\":\"19316327\",\"element_type\":\"listing\",\"rank\":12}",
+        "event_names": {
+          "tap": "{\"action\":\"tap\"}",
+          "impression": "{\"action\":\"impression\"}"
+        }
+      }
+    ],
+    "allCTA": [],
+    "promoOffer": "",
+    "checkBulkOffers": true,
+    "bulkOffers": [
+      {
+        "text": "Pro extra 15% OFF",
+        "color": {
+          "tint": "600",
+          "type": "pink"
+        }
+      },
+      {
+        "text": "50% OFF",
+        "color": {
+          "tint": "500",
+          "type": "blue"
+        }
+      }
+    ],
+    "isDisabled": false,
+    "bottomContainers": [
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/4bf016f32f05d26242cea342f30d47a31595763089.png"
+        },
+        "text": "1625+ orders placed from here recently"
+      },
+      {
+        "image": {
+          "url": "https://b.zmtcdn.com/data/o2_assets/695598f38d29d0e5d3f8ffe57cfdb94c1613145422.png",
+          "aspect_ratio": 2.0625
+        },
+        "text": "Restaurant partner follows WHO protocol"
+      }
+    ]
+  }
+]

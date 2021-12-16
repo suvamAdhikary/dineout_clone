@@ -4,8 +4,18 @@ import payImg from "../Assets/do-pay.svg";
 
 const Wrapper = styled.div`
     display: flex;
-
+    align-items: center;
     
+    > div {
+        margin: 14px 24px 14px 16px;
+
+        > p {
+            color: #333333;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+    }
 `;
 
 const DineoutPay = () => {
