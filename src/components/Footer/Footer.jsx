@@ -1,9 +1,121 @@
 import React from "react";
-import "./Footer.css";
+
 import logo from "../Images/logo.svg";
+import styled from 'styled-components';
+
+const Footerstyle = styled.div`
+.footer_top h4{
+    width: 92px;
+height: 20px;
+left: 152px;
+top: 40px;
+
+font-family: Metropolis;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 20px;
+
+color: #FF645A;
+}
+.footer_top h4:after{
+    content: "";
+    display: block;
+    width: 25px;
+    padding: 1rem 0 0 0;
+    border-bottom: 2px solid #FF645A;
+}
+.footer_end-logo{
+    width: 96px;
+height: 32px;
+left: 672px;
+top: 634px;
+align-self: center;
+}
+.footer_top-one{
+    margin-top: 2%;
+}
+.footer_top-one p{
+
+    width: 34px;
+height: 20px;
+left: 0px;
+top: 0px;
+margin: 5%;
+font-family: Metropolis;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+
+color: #797979;
+}
+.footer_top-one p:hover{
+width: 36px;
+height: 20px;
+left: 0px;
+top: 0px;
+
+font-family: Metropolis;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 20px;
+
+color: #333333;
+}
+.footer_mid-one h5{
+    font-family: Metropolis;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 20px;
+margin-left: 10px;
+color: #FF645A;
+margin-bottom: 2%;
+
+}
+.footer_mid-one h5:after{
+    content: "";
+    display: block;
+    width: 25px;
+    padding: 1rem 0 0 0;
+    border-bottom: 2px solid #FF645A;
+}
+.footer_mid-one p{
+    font-size: 14px;
+line-height: 20px;
+
+color: #797979;
+margin: 7%;
+
+}
+.footer_mid-one{
+    /* margin: auto;
+     
+    /* align-items: center; */
+    text-align: left; 
+}
+.footer_end{
+     align-items: center;
+     text-align: center;
+     margin: 1%;
+}
+.footer_end p{
+    font-size: 14px;
+line-height: 20px;
+font-weight: bold;
+color: #797979;
+margin: 10px;
+}
+.yt svg{
+    margin: 5px;
+}
+`
+
 export default function Footer() {
   return (
-    <div>
+    <Footerstyle>
       <hr />
       <div className="container-fluid footer_top">
         <div className="container">
@@ -187,9 +299,12 @@ export default function Footer() {
             </div>
           </div>
        
-
+          
         </div>
+        <hr />
+        
       </div>
-    </div>
+
+    </Footerstyle>
   );
 }
