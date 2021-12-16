@@ -1,10 +1,7 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import firebase from "firebase";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
+  // Your credentials
   apiKey: "AIzaSyCGnqOaqMxyi-RJGataTmYNsqVcnueHZBQ",
   authDomain: "dineout-client-7c634.firebaseapp.com",
   projectId: "dineout-client-7c634",
@@ -13,5 +10,6 @@ const firebaseConfig = {
   appId: "1:753726811097:web:c27404b7a6a90c8d2f47c8"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+var auth = firebase.auth();
+export { auth, firebase };

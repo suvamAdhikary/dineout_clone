@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Model from "react-modal";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { SigninContext } from "../../../Context/SignInContext";
+import { firebase, auth } from "../../../Utils/Firebase";
 const Style = styled.div`
   height: 455px;
   width: 464px;
@@ -152,11 +153,39 @@ const customStyles = {
 };
 Model.setAppElement("#root");
 export const Signin = () => {
-  const { model, handleModel,handleSignupModel } = useContext(SigninContext);
+  const { model, handleModel, handleSignupModel, handleOtp, handleSetFinal } =
+    useContext(SigninContext);
+  // Inputs
+  const [mynumber, setnumber] = useState("");
+  const [otp, setotp] = useState("");
+  // const [show, setshow] = useState(false);
+  // const [final, setfinal] = useState("");
+
+  // Sent OTP
+  const signin = () => {
+    if (mynumber === "" || mynumber.length < 10) return;
+
+    let verify = new firebase.auth.RecaptchaVerifier("recaptcha-container");
+    auth
+      .signInWithPhoneNumber("+91" + mynumber, verify)
+      .then((result) => {
+        handleSetFinal(result);
+        alert("code sent");
+        // setshow(true);
+      })
+      .then(() => {
+        handleOtp();
+      })
+      .catch((err) => {
+        alert(err);
+        window.location.reload();
+      });
+  };
+
   return (
     <Model style={customStyles} isOpen={model}>
       <Style>
-        <span onClick={()=>handleModel()} className="top_cross">
+        <span onClick={() => handleModel()} className="top_cross">
           <svg
             width="12"
             height="12"
@@ -175,10 +204,16 @@ export const Signin = () => {
         <div className="inputBox">
           <p>Phone number</p>
           <div>
-            <input placeholder="Enter Your Number" type="text" />
+            <input
+              value={mynumber}
+              placeholder="Enter Your Number"
+              onChange={(e) => setnumber(e.target.value)}
+              type="text"
+            />
           </div>
         </div>
-        <button onClick={() => handleModel()} className="signup_button">
+        <div id="recaptcha-container"></div>
+        <button onClick={signin} className="signup_button">
           SEND OTP
         </button>
         <div className="lines">
@@ -232,7 +267,8 @@ export const Signin = () => {
         </div>
         <div className="end_line">
           <p>
-            Don't have an account? <span onClick={() =>handleSignupModel()}>Create one</span>
+            Don't have an account?{" "}
+            <span onClick={() => handleSignupModel()}>Create one</span>
           </p>
         </div>
       </Style>
