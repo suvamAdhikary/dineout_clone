@@ -1,12 +1,18 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../Images/website-logo.png";
+import logo from "../Images/logo.svg";
 export default function Footer() {
   return (
     <div>
-      <div className="container-fluid">
+      <hr />
+      <div className="container-fluid footer_top">
         <div className="container">
-          <h5>Available in</h5>
+        <div className="container">
+        <h4>Available in</h4>
+        </div>   
+        </div>
+        <div className="container footer_top-one ">
+        
           <div className="row">
             <div className="col">
               <p>Delhi</p>
@@ -40,8 +46,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <hr />
         <div className="container">
-          <div className="row">
+          <div className="row footer_mid-one">
             <div className="col">
               <h5>Discover</h5>
               <p>Trending Restaurants</p>
@@ -88,6 +95,16 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <hr />
+        <div className="container">
+          <img className="footer_end-logo" src={logo} alt="" />
+          <p>Find the best Restaurants, Deals, Discounts & Offers</p>
+          <p>Contact: +91-9212340202</p>
+
+          <div className="row">
+          
+          </div>
+          </div>
       </div>
     </div>
   );
