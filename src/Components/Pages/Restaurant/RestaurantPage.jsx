@@ -16,6 +16,9 @@ import doOfferImg from "./Assets/Dineout Pay Offers.svg";
 import calIcon from "./Assets/calIcon.svg";
 import noOfrImg from "./Assets/No offer.svg";
 import downArrow from "./Assets/downArrowHead.svg";
+import addImg from "./Assets/add.svg";
+import removeImg from "./Assets/remove.svg";
+
 
 const Wrapper = styled.div`
     width: 100vw;
@@ -50,7 +53,7 @@ const Right = styled.div`
     width: 25.56vw;
     background-color: #FFFFFF;
     height: max-content !important;
-
+    border-radius: 4px;
 
     > div {
         &:nth-child(1){
@@ -60,6 +63,7 @@ const Right = styled.div`
             background-color: #333333;
             color: #FFFFFF;
             height: 74px;
+            border-radius: 4px 4px 0 0;
 
             > p{
                 font-size: 18px;
@@ -119,34 +123,186 @@ const Right = styled.div`
             border-radius: 4px;
             box-shadow: 2px -1px 16px #00000028;
 
-            > div{
-                &:nth-child(1){
-                    background-color: #3595FF;
-                    display: flex;
-                    flex-direction: column;
-                    width: 60px;
-                    padding: 17px 0 15px;
-                    align-items: center;
-                    gap: 9px;
-                    border-radius: 4px 0 0 4px;
+            
+            .calenderIcon__parent {
+                background-color: #3595FF;
+                display: flex;
+                flex-direction: column;
+                width: 60px !important;
+                padding: 17px 0 15px;
+                align-items: center;
+                gap: 9px;
+                border-radius: 4px 0 0 4px;
 
-                    > p {
-                        background-color: #0B5B8F;
-                        color: #FFFFFF;
-                        font-size: 12px;
-                        line-height: 16px;
-                        font-weight: 400;
-                        width: max-content;
-                        padding: 2px 8px;
-                    }
-
+                > p {
+                    background-color: #0B5B8F;
+                    color: #FFFFFF;
+                    font-size: 12px;
+                    line-height: 16px;
+                    font-weight: 400;
+                    width: max-content;
+                    padding: 2px 8px;
                 }
+
             }
+            
 
 
             .calendar__dayes--parent{
                 display: flex;
                 flex-direction: row;
+                gap: 7px;
+                padding: 20px;
+                /* width: 229px; */
+                overflow: hidden;
+                flex-wrap: nowrap;
+                position: relative;
+
+                .calender__dayes{
+                    height: 52px;
+                    width: 37.5px;
+
+                    > p {
+                        color: #797979;
+                        font-size: 12px;
+                        line-height: 16px;
+
+                        &:nth-child(1){
+                            font-weight: 400;
+                        }
+                        &:nth-child(2){
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .default__time {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 16px 0;
+        > p > b {
+            color: #333333;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            > p {
+                &:nth-child(1){
+                    color: #797979;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                }
+
+                &:nth-child(2){
+                    background-color: #3595FF;
+                    width: 75px;
+                    height: 28px;
+                    color: #FFFFFF;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    padding: 6px 12px;
+                    border-radius: 4px;
+                    margin: 0 16px;
+                }
+            }
+            > div {
+                /* padding: 7.51px 5.35px; */
+            }
+        }
+    }
+
+    .noOffer__parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 16px;
+
+        > div {
+
+            &:nth-child(2){
+                text-align: center;
+                padding: 16px;
+
+
+                > p {
+                    color: #797979;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .select__guest--parent{
+        padding: 16px 24px 16px 16px;
+        display: flex;
+        flex-direction: column;
+
+        > h4 {
+            color: #333333;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        > p {
+            margin: 8px 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #797979;
+        }
+
+        .guest__count--parent{
+            display: flex;
+            padding: 10px;
+            background-color: #F3F3F3;
+            border-radius: 4px;
+            align-items: center;
+            margin: 1px 0;
+
+            > h4 {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 700;
+                color: #333333;
+            }
+            > div {
+                margin: 0 14px;
+            }
+        }
+
+        .addGuest__special{
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+
+            > span {
+                background-color: #F3F3F3;
+                padding: 6px;
+                border-radius: 50%;
+            }
+
+            > p {
+                margin: 0 6px;
+                color: #797979;
+                font-size: 12px;
+                line-height: 16px;
+                font-weight: 400;
             }
         }
     }
@@ -348,7 +504,7 @@ const RestaurantPage = () => {
                 <div className="calendar__head--parent">
                     <p>Select Date</p>
                     <div className="calendar__head">
-                        <div>
+                        <div className="calenderIcon__parent">
                             <p>DEC</p>
                             <img src={calIcon} alt="calIcon" />
                         </div>
@@ -385,16 +541,19 @@ const RestaurantPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className="default__time">
                         <p><b>Time</b></p>
                         <div>
                             <p>Choose an available time slot</p>
                             <p>2:00 PM</p>
-                            <span>&#8964;</span>
+                            <div>
+                                <img src={downArrow} alt="downarrow" />
+                                {/* <span>&#8964;</span> */}
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="noOffer__parent">
                     <div>
                         <img src={noOfrImg} alt="noofferimg" />
                     </div>
@@ -402,6 +561,24 @@ const RestaurantPage = () => {
                         <p>
                             Sorry there are no Offers available for these timings. Select guests to continue to reserve a table.
                         </p>
+                    </div>
+                </div>
+                <div className="select__guest--parent">
+                    <h4>Select Guest/s</h4>
+                    <p>Choose the number of guests going</p>
+                    <div className="guest__count--parent">
+                        <h4>Guests:</h4>
+                        <div>
+                            <img src={addImg} alt="addImg" />
+                        </div>
+                        <h4>0</h4>
+                        <div>
+                            <img src={removeImg} alt="removeImg" />
+                        </div>
+                    </div>
+                    <div className="addGuest__special">
+                        <span>+</span>
+                        <p>Any special request (Optional)</p>
                     </div>
                 </div>
             </Right>
