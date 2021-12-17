@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getRestaurants = () => {
+export const getAllRestaurants = () => {
 
-    return axios.get("http://localhost:3005/restaurants");
+    return axios.get("https://dineout-clone.herokuapp.com/restaurants");
 }
