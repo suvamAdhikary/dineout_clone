@@ -8,7 +8,7 @@ import { TagsFilter } from "./TagsFilter";
 import Footer from '../../Footer/Footer'
 const PetStyle = styled.div`
   width: 100%;
-  padding-top:100px;
+  padding-top:2px;
   min-height: 1004px;
   padding-bottom:50px;
   background: #f3f3f3;

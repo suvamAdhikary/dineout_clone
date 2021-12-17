@@ -19,10 +19,13 @@ export const MainHome = () => {
       setNav(false);
     }
   };
+
+  
   window.addEventListener("scroll", handleChange);
   return (
     <>
       {/* {!nav ? <Navbar /> : <ScrollNavbar />} */}
+      {/* <ScrollNavbar /> */}
       <Navbar/>
       <SearchBox />
       <OfferCards />

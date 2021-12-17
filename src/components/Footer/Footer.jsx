@@ -42,6 +42,10 @@ const FooterStyle = styled.div`
       font-size: 14px;
       line-height: 20px;
       color: #797979;
+      cursor: pointer;
+    }
+    p:hover{
+      color:black;
     }
   }
   .container-heading-part {
@@ -63,6 +67,7 @@ const FooterStyle = styled.div`
       line-height: 20px;
       color: #797979;
       margin:10px;
+      cursor: pointer;
     }
     .sociallinks {
       display: flex;

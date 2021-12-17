@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const SerachBoxStyle = styled.div`
   height: 384px;
-
   .backImg {
     height: 384px;
     width: 100%;
