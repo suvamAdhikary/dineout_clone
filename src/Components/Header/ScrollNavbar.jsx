@@ -139,6 +139,7 @@ const Scroll = styled.div`
     width: 200px;
     /* background: red; */
     margin-left: 30px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -165,9 +166,9 @@ const Scroll = styled.div`
 
 export const ScrollNavbar = () => {
   const { handleModel } = useContext(SigninContext);
-  const logout = ()=>{
-    auth.signOut()
-  }
+  const logout = () => {
+    auth.signOut();
+  };
   const [user] = useAuthState(auth);
   return (
     <>

@@ -5,6 +5,8 @@ import { GlobalStyles } from './Components/Styles/Global';
 import {Signin} from './Components/Pages/signin/Signin'
 import Dineout from './Dineout';
 import { Explore } from './Components/Pages/Home/Explore';
+import { SearchBox } from './Components/Pages/Home/SearchBox';
+import { MainHome } from './Components/Pages/Home/MainHome';
 function App() {
   return (<>
     <GlobalStyles />
@@ -13,7 +15,9 @@ function App() {
       {/* <PetFriendly/> */}
       {/* <Signin/> */}
       {/* <Explore/> */}
-      <Dineout />
+      {/* <SearchBox/> */}
+      {/* <Dineout /> */}
+      <MainHome/>
     </div>
   </>);
 }
