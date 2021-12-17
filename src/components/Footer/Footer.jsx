@@ -123,7 +123,7 @@ export default function Footer() {
           <p>Ludhiana</p>
         </div>
         <hr />
-        
+      {/* hello */}
       </div>
       <hr />
       <div className="footer-second-row">
