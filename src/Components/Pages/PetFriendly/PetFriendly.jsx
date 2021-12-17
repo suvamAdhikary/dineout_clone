@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { ScrollNavbar } from "../../Header/ScrollNavbar";
+import { CuisinesFilter } from "./CuisinesFilter";
 import { Filters } from "./Filters";
 import { PetFriendlyCard } from "./PetFriendlyCard";
 import {PetFriendlyHeading} from './PetFriendlyHeading'
+import { TagsFilter } from "./TagsFilter";
+import Footer from '../../Footer/Footer'
 const PetStyle = styled.div`
   width: 100%;
   padding-top:100px;
@@ -93,13 +96,13 @@ const PetStyle = styled.div`
 export const PetFriendly = () => {
   return (
     <>
-      <PetStyle>
         <ScrollNavbar />
+      <PetStyle>
         <div className="PetStyle_main_div">
           <div className="petStyle_filters_div">
             <Filters />
-            <Filters />
-            <Filters />
+            <CuisinesFilter/>
+            <TagsFilter/>
             <Filters />
             <p className="bottom-para-pet1">Top 10 Restrauns in Kolkata</p>
             <p className="bottom-para-pet">
@@ -112,6 +115,7 @@ export const PetFriendly = () => {
           </div>
         </div>
       </PetStyle>
+        <Footer/>
     </>
   );
 };

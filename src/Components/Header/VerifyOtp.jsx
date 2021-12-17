@@ -123,12 +123,13 @@ export const VerifyOtp = () => {
     final
       .confirm(otp)
       .then((result) => {
-        handleOtp()
+        handleOtp(result)
       })
       .catch((err) => {
         alert(err.message);
       });
   };
+
   return (
     <>
       <Model style={customStyles} isOpen={verifyOtp}>

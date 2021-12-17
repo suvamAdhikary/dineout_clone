@@ -14,7 +14,7 @@ const FeaturedRestrauntsStyle = styled.div`
   .heading {
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     h1 {
       font-weight: 700;
       font-size: 24px;
@@ -32,17 +32,14 @@ const FeaturedRestrauntsStyle = styled.div`
   }
 `;
 
-export const FeaturedRestraunts = () => {
+export const RestrauntsNear = () => {
   const properties = {
     duration: 10,
     slidesToShow: 4,
     transitionDuration: 200,
     slidesToScroll: 1,
     autoplay: false,
-    prevArrow: (
-      <div style={{ width: "30px", marginRight: "-30px" }}>
-      </div>
-    ),
+    prevArrow: <div style={{ width: "30px", marginRight: "-30px" }}></div>,
     nextArrow: (
       <div
         style={{
@@ -53,9 +50,9 @@ export const FeaturedRestraunts = () => {
           alignItems: "center",
           backgroundColor: "#F3F3F3",
           borderRadius: "20px",
-          marginLeft: "-30px",
           marginBottom:"100px",
-          cursor: 'pointer'
+          marginLeft: "-30px",
+          cursor: "pointer",
         }}
       >
         <svg
@@ -79,18 +76,17 @@ export const FeaturedRestraunts = () => {
   return (
     <FeaturedRestrauntsStyle>
       <div className="heading">
-        <h1>Featured Restraunts</h1>
+        <h1>Restraunts Near You</h1>
         <p>See all</p>
       </div>
       <div>
         <div>
           <Slide {...properties}>
-            <FoodCard/>
-            <FoodCard/>
-            <FoodCard/>
-            <FoodCard/>
-            <FoodCard/>
-
+            <FoodCard />
+            <FoodCard />
+            <FoodCard />
+            <FoodCard />
+            <FoodCard />
           </Slide>
         </div>
       </div>

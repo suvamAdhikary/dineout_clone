@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Style = styled.div`
   padding-bottom: 100px;
+  padding-top:100px;
   .first {
     margin: auto;
     text-align: center;

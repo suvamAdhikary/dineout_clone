@@ -8,6 +8,7 @@ import OfferCards from "./OfferCards";
 import { SearchBox } from "./SearchBox";
 import Footer from "../../Footer/Footer";
 import { useState } from "react";
+import {RestrauntsNear} from './RestrauntsNear'
 import { FeaturedRestraunts } from "./FeaturedRestraunts";
 export const MainHome = () => {
   const [nav, setNav] = useState(false);
@@ -25,6 +26,7 @@ export const MainHome = () => {
       <Navbar/>
       <SearchBox />
       <OfferCards />
+      <RestrauntsNear />
       <FeaturedRestraunts />
       <Buttons />
       <Passport />

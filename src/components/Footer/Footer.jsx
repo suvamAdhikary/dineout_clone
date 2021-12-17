@@ -75,9 +75,9 @@ const FooterStyle = styled.div`
 `;
 
 export default function Footer() {
-  return (
+  return (<>
+      <hr style={{marginTop:"-0px"}} />
     <FooterStyle>
-      <hr />
       <div className="footer-second-row">
         <div className="footerparent">
           <div className="container-heading-second">
@@ -199,5 +199,5 @@ export default function Footer() {
       <p>2017, Dineout.co.in All Rights Reserved</p>
       </div>
     </FooterStyle>
-  );
+ </> );
 }

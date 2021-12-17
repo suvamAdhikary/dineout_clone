@@ -13,7 +13,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 const Scroll = styled.div`
   height: 112px;
   display: flex;
-  position:absolute;
+  position:fixed;
   top:0;
   z-index:100;
   flex-direction: column;
