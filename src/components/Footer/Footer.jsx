@@ -28,14 +28,13 @@ const FooterStyle = styled.div`
   }
   .footer-second-row {
     padding: 30px;
-    width: 85%;
+    width: 86%;
     margin: auto;
     display: flex;
-    /* text-align:center;/ */
-    justify-content: space-between;
+    justify-content: space-around;
     .footerparent {
       display: flex;
-      width: 180px;
+      width: 240px;
       flex-direction: column;
       row-gap: 8px;
     }
