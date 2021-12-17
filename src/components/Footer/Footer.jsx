@@ -48,7 +48,7 @@ const FooterStyle = styled.div`
     height: 48px;
   }
   .footer_end_div {
-    height: 244px;
+    height: 234px;
     background: white;
     text-align: center;
     .footerlogodiv {

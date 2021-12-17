@@ -14,6 +14,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 const NavbarStyle = styled.div`
   /* position: absolute; */
   width: 100%;
+  /* z-index:100; */
   height: 72px;
   left: 0px;
   box-shadow: 0px 0px 4px gray;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import "react-slideshow-image/dist/styles.css";
 import React, { useState } from "react";
 import { Slide } from "react-slideshow-image";
-import { DummyCard } from "./DummyCard";
+import { FoodCard } from "./FoodCard";
 const FeaturedRestrauntsStyle = styled.div`
   width: 84%;
   margin: auto;
@@ -84,13 +84,12 @@ export const FeaturedRestraunts = () => {
       <div>
         <div>
           <Slide {...properties}>
-            <DummyCard />
-            <DummyCard />
-            <DummyCard />
-            <DummyCard />
-            <DummyCard />
-            <DummyCard />
-            <DummyCard />
+            <FoodCard/>
+            <FoodCard/>
+            <FoodCard/>
+            <FoodCard/>
+            <FoodCard/>
+
           </Slide>
         </div>
       </div>

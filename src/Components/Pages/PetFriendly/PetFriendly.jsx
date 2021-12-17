@@ -5,7 +5,9 @@ import { PetFriendlyCard } from "./PetFriendlyCard";
 import {PetFriendlyHeading} from './PetFriendlyHeading'
 const PetStyle = styled.div`
   width: 100%;
-  height: 2004px;
+  padding-top:100px;
+  min-height: 1004px;
+  padding-bottom:50px;
   background: #f3f3f3;
   .PetStyle_main_div {
     width: 85%;

@@ -7,6 +7,7 @@ const Style = styled.div`
   padding: 0px;
   width: 272px;
   overflow: hidden;
+  margin-bottom:20px;
   height: 276px;
   transition: box-shadow 0.4s;
   background: #ffffff;
