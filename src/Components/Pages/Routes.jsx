@@ -1,19 +1,19 @@
 import { Route, Switch } from 'react-router-dom';
 import RestaurantPage from './Restaurant/RestaurantPage';
+import { PetFriendly } from "./PetFriendly/PetFriendly";
 
 
 export default function Routes() {
   return (
     <div className="App">
-
       <Switch>
-        <Route path="/" exact>
+        <Route path="/" exact></Route>
 
+        <Route path="/petfriendly">
+          <PetFriendly/>
         </Route>
 
-        <Route path="/login">
 
-        </Route>
 
         <Route path="/testing">
           <RestaurantPage />
@@ -23,6 +23,11 @@ export default function Routes() {
         <Route>
           404 Page not found
         </Route>
+
+        <Route path="/testing"></Route>
+
+        <Route>404 Page not found</Route>
+
       </Switch>
     </div>
   );
