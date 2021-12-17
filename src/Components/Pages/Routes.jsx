@@ -7,7 +7,6 @@ export default function Routes() {
       <Switch>
         <Route path="/" exact></Route>
 
-        <Route path="/login"></Route>
         <Route path="/petfriendly">
           <PetFriendly/>
         </Route>
