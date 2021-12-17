@@ -4,7 +4,7 @@ import Model from "react-modal";
 import { SigninContext } from "../../../Context/SignInContext";
 
 const Style = styled.div`
-  height: 532px;
+  min-height: 532px;
   width: 464px;
   border-radius: 4px;
   box-shadow: 0px 0px 4px gray;
