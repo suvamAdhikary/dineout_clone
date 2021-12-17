@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Model from "react-modal";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 const Style = styled.div`
   height: 336px;
   width: 560px;
@@ -62,6 +62,14 @@ const customStyles = {
 Model.setAppElement('#root');
 export const Popup = () => {
   const [model, setModel] = useState(true);
+    useEffect(() => {
+      if (model) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'unset';
+      }
+    }, [model]);
+
   return (
     <>
       <Model style={customStyles} isOpen={model}>

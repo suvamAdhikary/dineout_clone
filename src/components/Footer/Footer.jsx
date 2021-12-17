@@ -28,14 +28,13 @@ const FooterStyle = styled.div`
   }
   .footer-second-row {
     padding: 30px;
-    width: 85%;
+    width: 86%;
     margin: auto;
     display: flex;
-    /* text-align:center;/ */
-    justify-content: space-between;
+    justify-content: space-around;
     .footerparent {
       display: flex;
-      width: 180px;
+      width: 240px;
       flex-direction: column;
       row-gap: 8px;
     }
@@ -43,13 +42,17 @@ const FooterStyle = styled.div`
       font-size: 14px;
       line-height: 20px;
       color: #797979;
+      cursor: pointer;
+    }
+    p:hover{
+      color:black;
     }
   }
   .container-heading-part {
     height: 48px;
   }
   .footer_end_div {
-    height: 244px;
+    height: 234px;
     background: white;
     text-align: center;
     .footerlogodiv {
@@ -64,6 +67,7 @@ const FooterStyle = styled.div`
       line-height: 20px;
       color: #797979;
       margin:10px;
+      cursor: pointer;
     }
     .sociallinks {
       display: flex;
@@ -76,9 +80,9 @@ const FooterStyle = styled.div`
 `;
 
 export default function Footer() {
-  return (
+  return (<>
+      <hr style={{marginTop:"-0px"}} />
     <FooterStyle>
-      <hr />
       <div className="footer-second-row">
         <div className="footerparent">
           <div className="container-heading-second">
@@ -200,5 +204,5 @@ export default function Footer() {
       <p>2017, Dineout.co.in All Rights Reserved</p>
       </div>
     </FooterStyle>
-  );
+ </> );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import img1 from "../../Images/25offid.svg";
-import img2 from "../../Images/30offid.jpg";
 import img3 from "../../Images/15offid.png";
 import img4 from "../../Images/20offid.png";
 import img30 from "../../Images/30prct.svg";

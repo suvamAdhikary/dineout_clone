@@ -3,13 +3,11 @@ import styled from "styled-components";
 const Style = styled.div`
   display: flex;
   flex-direction: column;
-  margin: auto;
-  /* border: 1px solid black; */
-  margin-top: 100px;
   align-items: flex-start;
   padding: 0px;
   width: 272px;
   overflow: hidden;
+  margin-bottom:20px;
   height: 276px;
   transition: box-shadow 0.4s;
   background: #ffffff;
