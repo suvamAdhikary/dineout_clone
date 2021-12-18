@@ -135,6 +135,13 @@ const Style = styled.div`
     position: relative;
     left: 380px;
     cursor: pointer;
+    width:24px;
+    height:24px;
+    border-radius:20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.03)
   }
 `;
 const customStyles = {
@@ -159,7 +166,7 @@ export const Signup = () => {
     <>
       <Model style={customStyles} isOpen={signupModel}>
         <Style>
-          <span onClick={() => handleSignupModel()} className="top_cross">
+          <div onClick={() => handleSignupModel()} className="top_cross">
             <svg
               width="12"
               height="12"
@@ -173,7 +180,7 @@ export const Signup = () => {
                 stroke="#DCDCDC"
               />
             </svg>
-          </span>
+          </div>
           <h1>Sign Up</h1>
           <div className="inputBox">
             <p>Name</p>

@@ -85,17 +85,18 @@ const Style = styled.div`
     font-size: 16px;
     line-height: 22px;
   }
-  .cross_btn {
+  .cross_btn_abc {
     width: 24px;
-    heigth: 24px;
+    heigth: 24px!important;
     position: relative;
     top: -15px;
     left: 380px;
-    background: #ffffff;
     cursor: pointer;
+    border-radius:20px;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.03)
   }
 `;
 
@@ -135,7 +136,7 @@ export const VerifyOtp = () => {
     <>
       <Model style={customStyles} isOpen={verifyOtp}>
         <Style>
-          <div onClick={()=>handleOtp()} className="cross_btn">
+          <div onClick={()=>handleOtp()} className="cross_btn_abc">
             <svg
               width="12"
               height="12"
