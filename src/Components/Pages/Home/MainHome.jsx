@@ -7,24 +7,27 @@ import OfferCards from "./OfferCards";
 import { SearchBox } from "./SearchBox";
 import Footer from "../../Footer/Footer";
 import { useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
 import { RestrauntsNear } from "./RestrauntsNear";
 import { FeaturedRestraunts } from "./FeaturedRestraunts";
-import { getRestaurantError, getRestaurantsLoading, getRestaurantsSuccess } from "../../../Redux/Restaurants/action";
+import {
+  getRestaurantError,
+  getRestaurantsLoading,
+  getRestaurantsSuccess,
+} from "../../../Redux/Restaurants/action";
 import { useDispatch } from "react-redux";
 export const MainHome = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(async () => {
-  dispatch(getRestaurantsLoading())
-  try{
-    const { data } = await axios.get(
-      "https://dineout-clone.herokuapp.com/restaurants"
-    );
-    dispatch(getRestaurantsSuccess(data.items))
-  }
-  catch(err){
-    dispatch(getRestaurantError(err))
-  }
+    dispatch(getRestaurantsLoading());
+    try {
+      const { data } = await axios.get(
+        "https://dineout-clone.herokuapp.com/restaurants"
+      );
+      dispatch(getRestaurantsSuccess(data.items));
+    } catch (err) {
+      dispatch(getRestaurantError(err));
+    }
   }, []);
   return (
     <>

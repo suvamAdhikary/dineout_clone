@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { ScrollNavbar } from "../../Header/ScrollNavbar";
 import { CuisinesFilter } from "./CuisinesFilter";
-import { Filters } from "./Filters";
 import { PetFriendlyCard } from "./PetFriendlyCard";
 import { PetFriendlyHeading } from "./PetFriendlyHeading";
 import { ChipsContext } from "../../../Context/ChipsContest";
@@ -10,6 +9,8 @@ import Footer from "../../Footer/Footer";
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useContext, useState } from "react";
 import axios from "axios";
+import { QuickFilters } from "./QuickFilters";
+import { Chips } from "./Chips";
 const PetStyle = styled.div`
   width: 100%;
   padding-top: 2px;
@@ -171,28 +172,80 @@ export const PetFriendly = () => {
       setOldData(newData);
       return;
     }
+    const payload = {
+      id: Math.random(),
+      data: type,
+    };
     if (type === "chinese") {
-      handleAddChips('chinese')
+      handleAddChips(payload);
       const data = newData.filter((e) => {
         return e.chinese === true;
       });
       setOldData(data);
     } else if (type === "italian") {
-      handleAddChips('italian')
+      handleAddChips(payload);
       const data = newData.filter((e) => {
         return e.italian === true;
       });
       setOldData(data);
     } else if (type === "fastFood") {
-      handleAddChips('fastFood')
+      handleAddChips(payload);
       const data = newData.filter((e) => {
         return e.fastFood === true;
       });
       setOldData(data);
     } else if (type === "continental") {
-      handleAddChips('continental')
+      handleAddChips(payload);
       const data = newData.filter((e) => {
         return e.continental === true;
+      });
+      setOldData(data);
+    } else if (type === "Dineout Pay") {
+      handleAddChips(payload);
+      const data = newData.filter((e) => {
+        return e.dineoutPay === true;
+      });
+      setOldData(data);
+    } else if (type === "Pure Veg") {
+      handleAddChips(payload);
+      const data = newData.filter((e) => {
+        return e.pureVeg === true;
+      });
+      setOldData(data);
+    } else if (type === "Bengali") {
+      handleAddChips(payload);
+      const data = newData.filter((e) => {
+        return e.bengali === true;
+      });
+      setOldData(data);
+    } else if (type === "Buffet") {
+      handleAddChips(payload);
+      const data = newData.filter((e) => {
+        return e.buffet === true;
+      });
+      setOldData(data);
+    } else if (type === "Pedrigree Sponsored") {
+      handleAddChips(payload);
+      const data = newData.filter((e) => {
+        return e.pedigreeSponsored === true;
+      });
+      setOldData(data);
+    } else if (type === "Cafe") {
+      handleAddChips(payload);
+      const data = newData.filter((e) => {
+        return e.cafe === true;
+      });
+      setOldData(data);
+    } else if (type === "Casual Dining") {
+      handleAddChips(payload);
+      const data = newData.filter((e) => {
+        return e.casualDining === true;
+      });
+      setOldData(data);
+    } else if (type === "Dineout Pay") {
+      handleAddChips(payload);
+      const data = newData.filter((e) => {
+        return e.dineoutPay === true;
       });
       setOldData(data);
     } else setOldData(newData);
@@ -203,10 +256,9 @@ export const PetFriendly = () => {
       <PetStyle>
         <div className="PetStyle_main_div">
           <div className="petStyle_filters_div">
-            <Filters />
+            <Chips />
             <CuisinesFilter handleFilter={handleIt} />
-            <TagsFilter />
-            <Filters />
+            <TagsFilter handleFilter={handleIt} />
             <p className="bottom-para-pet1">Top 10 Restrauns in Kolkata</p>
             <p className="bottom-para-pet">
               Pedegree Sponserd Restraunts Near Me
@@ -230,10 +282,10 @@ export const PetFriendly = () => {
       <PetStyle>
         <div className="PetStyle_main_div">
           <div className="petStyle_filters_div">
-            <Filters />
+            <Chips />
+            <QuickFilters handleFilter={handleIt} />
             <CuisinesFilter handleFilter={handleIt} />
-            <TagsFilter />
-            <Filters />
+            <TagsFilter handleFilter={handleIt} />
             <p className="bottom-para-pet1">Top 10 Restrauns in Kolkata</p>
             <p className="bottom-para-pet">
               Pedegree Sponserd Restraunts Near Me

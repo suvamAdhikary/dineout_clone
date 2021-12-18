@@ -6,8 +6,14 @@ export const ChipsContextProvider = ({ children }) => {
   const handleAddChips = (e) => {
     setChips([...chips, e]);
   };
+  const handleDelete = (d)=>{
+    const Data = chips.filter((e) => {
+      return e.id !== d;
+    })
+    setChips(Data)
+  }
   return (
-    <ChipsContext.Provider value={{ handleAddChips, chips }}>
+    <ChipsContext.Provider value={{ handleAddChips,handleDelete, chips }}>
       {children}
     </ChipsContext.Provider>
   );

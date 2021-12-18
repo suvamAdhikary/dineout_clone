@@ -83,7 +83,7 @@ const Style = styled.div`
   }
   span {
     height: 24px;
-    width: 103px;
+    width: 115px;
     border-radius: 4px;
     padding: 4px, 8px, 4px, 8px;
     position:relative;

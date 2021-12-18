@@ -6,12 +6,22 @@ const FiltersStyle = styled.div`
   .MainDiv {
     width: 272px;
     padding: 15px;
-    padding-top:15px;
+    padding-top: 15px;
     border-radius: 4px;
     background: white;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    svg {
+      cursor: pointer;
+    }
+    .addedChips {
+      width: 100%;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #797979;
+    }
     .protoChips {
       display: flex;
       justify-content: center;
@@ -36,22 +46,27 @@ const FiltersStyle = styled.div`
       }
     }
   }
-  .hidden{
+  .hidden {
     display: none;
   }
 `;
 
-export const Filters = () => {
-  const { chips } = useContext(ChipsContext);
+export const Chips = () => {
+  const { chips, handleDelete } = useContext(ChipsContext);
+  const handleDele = (e) => {
+    handleDelete(e);
+  };
   return (
     <FiltersStyle>
       <div className={chips.length > 0 ? "MainDiv" : "hidden"}>
+        <p className="addedChips">Added Chips</p>
         {chips.length !== 0
           ? chips.map((e, i) => (
               <div key={i} className="protoChips">
-                <p>{e}</p>
+                <p>{e.data}</p>
                 <div>
                   <svg
+                    onClick={() => handleDele(e.id)}
                     width="10"
                     height="10"
                     viewBox="0 0 10 10"

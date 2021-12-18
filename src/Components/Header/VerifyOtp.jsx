@@ -33,10 +33,11 @@ const Style = styled.div`
   }
   .time_input {
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid #3595FF;
     height: 40px;
     display: flex;
     position: relative;
+    border: 1px solid #3595FF;
     top: 40px;
     p {
       width: 73px;
@@ -169,7 +170,7 @@ export const VerifyOtp = () => {
           </div>
           <div className="time_input">
             <input onChange={(e)=>setotp(e.target.value)} placeholder="Enter otp here..." type="text" />
-            <p>15 sec</p>
+            <p></p>
           </div>
           <p className="resend_otp">RESEND OTP</p>
           <button onClick={ValidateOtp} className="verify_btn">VERIFY OTP</button>

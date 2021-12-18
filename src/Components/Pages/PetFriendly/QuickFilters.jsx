@@ -85,7 +85,7 @@ const FiltersStyle = styled.div`
   }
 `;
 
-export const TagsFilter = ({ handleFilter }) => {
+export const QuickFilters = ({ handleFilter }) => {
   const [accord, setAccord] = useState(true);
   const [one, setOne] = useState(false);
   const [two, setTwo] = useState(false);
@@ -98,7 +98,7 @@ export const TagsFilter = ({ handleFilter }) => {
         onClick={() => setAccord(accord ? false : true)}
         className="accordion-heading"
       >
-        <p>Tags</p>
+        <p>Quick Filters</p>
         <span>
           {accord ? (
             <svg
@@ -140,25 +140,25 @@ export const TagsFilter = ({ handleFilter }) => {
         <div className="accordion-checkbox">
           <input
             onChange={() => {
-              setOne(one ? false : true);
+              setOne(one ? false : true)
               setTwo(false);
               setThree(false);
               setFour(false);
-              handleFilter("Pedrigree Sponsored", one);
+              handleFilter("Dineout Pay",one);
             }}
             checked={one}
             type="checkbox"
           />
           <p
             onClick={() => {
-              handleFilter("Pedrigree Sponsored", one);
+              handleFilter("Dineout Pay",one);
               setOne(one ? false : true);
               setTwo(false);
               setThree(false);
               setFour(false);
             }}
           >
-            Pedrigree Sponsored
+            Dineout Pay
           </p>
         </div>
         <div className="accordion-checkbox">
@@ -166,7 +166,7 @@ export const TagsFilter = ({ handleFilter }) => {
             onChange={() => {
               setOne(false);
               setTwo(two ? false : true);
-              handleFilter("Cafe", two);
+              handleFilter("Pure Veg",two);
               setThree(false);
               setFour(false);
             }}
@@ -175,14 +175,14 @@ export const TagsFilter = ({ handleFilter }) => {
           />
           <p
             onClick={() => {
-              handleFilter("Cafe", two);
+              handleFilter("Pure Veg",two);
               setOne(false);
               setTwo(two ? false : true);
               setThree(false);
               setFour(false);
             }}
           >
-            Cafe
+            Pure Veg
           </p>
         </div>
         <div className="accordion-checkbox">
@@ -192,21 +192,21 @@ export const TagsFilter = ({ handleFilter }) => {
               setTwo(false);
               setThree(three ? false : true);
               setFour(false);
-              handleFilter("Casual Dining", three);
+              handleFilter("Bengali",three);
             }}
             checked={three}
             type="checkbox"
           />
           <p
             onClick={() => {
-              handleFilter("Casual Dining", three);
+              handleFilter("Bengali",three);
               setOne(false);
               setTwo(false);
               setThree(three ? false : true);
               setFour(false);
             }}
           >
-            Casual Dining
+            Bengali
           </p>
         </div>
         <div className="accordion-checkbox">
@@ -215,7 +215,7 @@ export const TagsFilter = ({ handleFilter }) => {
               setOne(false);
               setTwo(false);
               setThree(false);
-              handleFilter("Dineout Pay", four);
+              handleFilter("Buffet",four);
               setFour(four ? false : true);
             }}
             checked={four}
@@ -223,14 +223,14 @@ export const TagsFilter = ({ handleFilter }) => {
           />
           <p
             onClick={() => {
-              handleFilter("Dineout Pay", four);
+              handleFilter("Buffet",four);
               setFour(four ? false : true);
               setOne(false);
               setTwo(false);
               setThree(false);
             }}
           >
-            Dineout Pay
+            Buffet
           </p>
         </div>
       </div>

@@ -32,7 +32,7 @@ const Style = styled.div`
       height: 40px;
       display: flex;
       align-items: center;
-      border: 1px solid gray;
+      border: 1px solid #3595FF;
       input {
         width: 100%;
         border: none;
