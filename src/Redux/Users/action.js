@@ -1,4 +1,4 @@
-import { addNewUser } from "../../Utils/Axios";
+import { addNewUser, getAUser } from "../../Utils/Axios";
 import { ADD_USER_ERROR, ADD_USER_LOADING, ADD_USER_SUCCESS, GET_USER_ERROR, GET_USER_LOADING, GET_USER_SUCCESS } from "./actionTypes";
 
 
@@ -27,9 +27,24 @@ export const addUser = (payload) => async (dispatch) => {
     }
 }
 
-// export const getUser = () = async (dispatch) => {
+export const getUser = (payload) => async (dispatch) => {
 
-//     dispatch(getUserLoading());
+    dispatch(getUserLoading());
+    
+    try {
+
+        const { data: {item} } = await getAUser(payload);
+
+        // dispatch(getUserLoading());
+        
+        if(!item) return;
+
+        dispatch(getUserSuccess(item));
 
 
-// }
+    } catch(error) {
+
+        dispatch(getUserError(error));
+
+    }
+}

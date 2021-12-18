@@ -21,6 +21,7 @@ import removeImg from "./Assets/remove.svg";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getRestaurants } from "../../../Redux/Restaurants/action";
+import { getUser } from "../../../Redux/Users/action";
 
 
 const Wrapper = styled.div`
@@ -437,17 +438,18 @@ const RestaurantPage = () => {
 
     const dispatch = useDispatch();
 
-    const {loading, data, error} = useSelector((state) => state?.restaurants.restaurants);
+    const data = useSelector((state) => state);
 
     const getData = async () => {
         dispatch(getRestaurants())
+        dispatch(getUser('61b8d36a6c6b3bb63911d300'))
     }
     useEffect(() => {
 
         getData();
 
     }, [])
-console.log(data, loading, error);
+console.log(data);
     return(<>
         <Wrapper>
             <Path />
