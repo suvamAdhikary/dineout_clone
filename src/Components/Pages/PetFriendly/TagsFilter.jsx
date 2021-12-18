@@ -6,7 +6,7 @@ const FiltersStyle = styled.div`
   padding: 15px;
   padding-top: 8px;
   border-radius: 4px;
-  background:white;
+  background: white;
   .accordion-heading {
     cursor: pointer;
     height: 32px;
@@ -86,6 +86,10 @@ const FiltersStyle = styled.div`
 
 export const TagsFilter = () => {
   const [accord, setAccord] = useState(true);
+  const [one, setOne] = useState(false);
+  const [two, setTwo] = useState(false);
+  const [three, setThree] = useState(false);
+  const [four, setFour] = useState(false);
   return (
     <FiltersStyle>
       <div
@@ -132,19 +136,55 @@ export const TagsFilter = () => {
           <input placeholder="Search" type="text" />
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
+          <input
+            onChange={() => {
+              setOne(one ? false : true);
+              setTwo(false);
+              setThree(false);
+              setFour(false);
+            }}
+            checked={one}
+            type="checkbox"
+          />
           <p>Pedigree Sponserd</p>
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
+          <input
+            onChange={() => {
+              setOne(false);
+              setTwo(two ? false : true);
+              setThree(false);
+              setFour(false);
+            }}
+            checked={two}
+            type="checkbox"
+          />
           <p>Cafe</p>
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
+          <input
+            onChange={() => {
+              setOne(false);
+              setTwo(false);
+              setThree(three ? false : true);
+              setFour(false);
+            }}
+            checked={three}
+            type="checkbox"
+          />
           <p>Casual Dining</p>
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
+          <input
+            onChange={() => {
+              setOne(false);
+              setTwo(false);
+              setThree(false);
+              setFour(four ? false : true);
+            }}
+            checked={four}
+            type="checkbox"
+          />
           <p>Dineout Pay</p>
         </div>
       </div>

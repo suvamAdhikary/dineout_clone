@@ -6,7 +6,7 @@ const FiltersStyle = styled.div`
   padding: 15px;
   padding-top: 8px;
   border-radius: 4px;
-  background:white;
+  background: white;
   .accordion-heading {
     cursor: pointer;
     height: 32px;
@@ -77,6 +77,7 @@ const FiltersStyle = styled.div`
       font-size: 14px;
       line-height: 20px;
       color: #797979;
+      cursor: pointer;
     }
   }
   .accordion-hidden {
@@ -84,8 +85,13 @@ const FiltersStyle = styled.div`
   }
 `;
 
-export const CuisinesFilter = () => {
+export const CuisinesFilter = ({ handleFilter }) => {
   const [accord, setAccord] = useState(true);
+  const [one, setOne] = useState(false);
+  const [two, setTwo] = useState(false);
+  const [three, setThree] = useState(false);
+  const [four, setFour] = useState(false);
+
   return (
     <FiltersStyle>
       <div
@@ -132,20 +138,100 @@ export const CuisinesFilter = () => {
           <input placeholder="Search for cuisines" type="text" />
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
-          <p>Continental</p>
+          <input
+            onChange={() => {
+              setOne(one ? false : true)
+              setTwo(false);
+              setThree(false);
+              setFour(false);
+              handleFilter("continental",one);
+            }}
+            checked={one}
+            type="checkbox"
+          />
+          <p
+            onClick={() => {
+              handleFilter("continental",one);
+              setOne(one ? false : true);
+              setTwo(false);
+              setThree(false);
+              setFour(false);
+            }}
+          >
+            Continental
+          </p>
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
-          <p>Fast Food</p>
+          <input
+            onChange={() => {
+              setOne(false);
+              setTwo(two ? false : true);
+              handleFilter("fastFood",two);
+              setThree(false);
+              setFour(false);
+            }}
+            checked={two}
+            type="checkbox"
+          />
+          <p
+            onClick={() => {
+              handleFilter("fastFood",two);
+              setOne(false);
+              setTwo(two ? false : true);
+              setThree(false);
+              setFour(false);
+            }}
+          >
+            Fast Food
+          </p>
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
-          <p>Italian</p>
+          <input
+            onChange={() => {
+              setOne(false);
+              setTwo(false);
+              setThree(three ? false : true);
+              setFour(false);
+              handleFilter("italian",three);
+            }}
+            checked={three}
+            type="checkbox"
+          />
+          <p
+            onClick={() => {
+              handleFilter("italian",three);
+              setOne(false);
+              setTwo(false);
+              setThree(three ? false : true);
+              setFour(false);
+            }}
+          >
+            Italian
+          </p>
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
-          <p>Chinese</p>
+          <input
+            onChange={() => {
+              setOne(false);
+              setTwo(false);
+              setThree(false);
+              handleFilter("chinese",four);
+              setFour(four ? false : true);
+            }}
+            checked={four}
+            type="checkbox"
+          />
+          <p
+            onClick={() => {
+              handleFilter("chinese",four);
+              setFour(four ? false : true);
+              setOne(false);
+              setTwo(false);
+              setThree(false);
+            }}
+          >
+            Chinese
+          </p>
         </div>
       </div>
     </FiltersStyle>

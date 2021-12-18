@@ -86,6 +86,10 @@ const FiltersStyle = styled.div`
 
 export const Filters = () => {
   const [accord, setAccord] = useState(false);
+  const [one,setOne] = useState(false)
+  const [two,setTwo] = useState(false)
+  const [three,setThree] = useState(false)
+  const [four,setFour] = useState(false)
   return (
     <FiltersStyle>
       <div
@@ -132,20 +136,40 @@ export const Filters = () => {
           <input placeholder="Search" type="text" />
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
+          <input onChange={()=>{
+            setOne(one ? false : true)
+            setTwo(false)
+            setThree(false)
+            setFour(false)
+          }} checked={one}  type="checkbox" />
           <p>Dineout Pay</p>
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
-          <p>Pure Veg</p>
-        </div>
-        <div className="accordion-checkbox">
-          <input type="checkbox" />
+        <input onChange={()=>{
+            setOne(false)
+            setTwo(two ? false : true)
+            setThree(false)
+            setFour(false)
+          }} checked={two}  type="checkbox" />
           <p>Buffet</p>
         </div>
         <div className="accordion-checkbox">
-          <input type="checkbox" />
+        <input onChange={()=>{
+            setOne(false)
+            setTwo(false)
+            setThree(three ? false : true)
+            setFour(false)
+          }} checked={three}  type="checkbox" />
           <p>5 Star</p>
+        </div>
+        <div className="accordion-checkbox">
+        <input onChange={()=>{
+            setOne(false)
+            setTwo(false)
+            setThree(false)
+            setFour(four ? false : true)
+          }} checked={four}  type="checkbox" />
+          <p>Pure Veg</p>
         </div>
       </div>
     </FiltersStyle>

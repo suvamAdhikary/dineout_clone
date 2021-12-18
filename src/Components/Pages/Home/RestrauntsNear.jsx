@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import "react-slideshow-image/dist/styles.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Slide } from "react-slideshow-image";
 import { FoodCard } from "./FoodCard";
+import { Link } from "react-router-dom";
 const FeaturedRestrauntsStyle = styled.div`
   width: 84%;
   margin: auto;
@@ -50,7 +52,7 @@ export const RestrauntsNear = () => {
           alignItems: "center",
           backgroundColor: "#F3F3F3",
           borderRadius: "20px",
-          marginBottom:"100px",
+          marginBottom: "100px",
           marginLeft: "-30px",
           cursor: "pointer",
         }}
@@ -72,7 +74,9 @@ export const RestrauntsNear = () => {
       </div>
     ),
   };
-
+  const { loading, data, error } = useSelector(
+    (store) => store.restaurants.restaurants
+  );
   return (
     <FeaturedRestrauntsStyle>
       <div className="heading">
@@ -82,11 +86,17 @@ export const RestrauntsNear = () => {
       <div>
         <div>
           <Slide {...properties}>
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
-            <FoodCard />
+            {data.map((d) => (
+              <Link  key={d._id} to={`/restaurants/${d._id}`}>
+                <FoodCard
+                 
+                  image={d.img[2]}
+                  name={d.name}
+                  rating={d.rating}
+                  location={d.city + " " + d.locality}
+                />
+              </Link>
+            ))}
           </Slide>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function Routes() {
           <MainHome/>
         </Route>
 
-        <Route path="/petfriendly">
+        <Route path="/dynamic/:id">
           <PetFriendly/>
         </Route>
         <Route path="/testing">

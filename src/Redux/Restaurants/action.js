@@ -13,8 +13,7 @@ export const getRestaurants = () => async (dispatch) => {
     try {
 
         const { data } = await getAllRestaurants();
-
-        if(!data.length) return;
+        if(data.length === 0) return;
 
         dispatch(getRestaurantsSuccess(data));
 

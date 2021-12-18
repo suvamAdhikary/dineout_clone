@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 const Style = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,7 +6,7 @@ const Style = styled.div`
   padding: 0px;
   width: 272px;
   overflow: hidden;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   height: 276px;
   transition: box-shadow 0.4s;
   background: #ffffff;
@@ -98,19 +97,16 @@ const Style = styled.div`
   }
 `;
 
-export const FoodCard = () => {
+export const FoodCard = ({ image, name, location, rating }) => {
   return (
     <Style>
       <div className="img-div">
-        <img
-          src="https://b.zmtcdn.com/webFrontend/95f005332f5b9e71b9406828b63335331585809309.png?fit=around|402:360&crop=402:360;*,*"
-          alt=""
-        />
+        <img src={image} alt="" />
       </div>
       <div className="details-section">
-        <p className="caffe-name">caffe 360 Degree</p>
-        <p className="location-para">Kakurgati, east kolgata</p>
-        <div className="rating-box">4.5</div>
+        <p className="caffe-name">{name}</p>
+        <p className="location-para">{location}</p>
+        <div className="rating-box">{rating}</div>
       </div>
       <span>
         <svg

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import "react-slideshow-image/dist/styles.css";
-import React, { useState } from "react";
 import { Slide } from "react-slideshow-image";
+import { useSelector } from "react-redux";
 import { FoodCard } from "./FoodCard";
+import { Link } from "react-router-dom";
 const FeaturedRestrauntsStyle = styled.div`
   width: 84%;
   margin: auto;
@@ -14,7 +15,7 @@ const FeaturedRestrauntsStyle = styled.div`
   .heading {
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     h1 {
       font-weight: 700;
       font-size: 24px;
@@ -39,10 +40,7 @@ export const FeaturedRestraunts = () => {
     transitionDuration: 200,
     slidesToScroll: 1,
     autoplay: false,
-    prevArrow: (
-      <div style={{ width: "30px", marginRight: "-30px" }}>
-      </div>
-    ),
+    prevArrow: <div style={{ width: "30px", marginRight: "-30px" }}></div>,
     nextArrow: (
       <div
         style={{
@@ -54,8 +52,8 @@ export const FeaturedRestraunts = () => {
           backgroundColor: "#F3F3F3",
           borderRadius: "20px",
           marginLeft: "-30px",
-          marginBottom:"100px",
-          cursor: 'pointer'
+          marginBottom: "100px",
+          cursor: "pointer",
         }}
       >
         <svg
@@ -75,7 +73,13 @@ export const FeaturedRestraunts = () => {
       </div>
     ),
   };
+  const { data } = useSelector(
+    (store) => store.restaurants.restaurants
+  );
 
+  const handleParams = (e) => {
+    console.log(e);
+  };
   return (
     <FeaturedRestrauntsStyle>
       <div className="heading">
@@ -85,12 +89,17 @@ export const FeaturedRestraunts = () => {
       <div>
         <div>
           <Slide {...properties}>
-            <FoodCard/>
-            <FoodCard/>
-            <FoodCard/>
-            <FoodCard/>
-            <FoodCard/>
-
+            {data.filter((e)=>{return e.topTrending === true}).map((d) => (
+              <Link key={d._id} to={`/restraunts/${d._id}`}>
+                <FoodCard
+                  
+                  image={d.img[2]}
+                  name={d.name}
+                  rating={d.rating}
+                  location={d.city + " " + d.locality}
+                />
+              </Link>
+            ))}
           </Slide>
         </div>
       </div>

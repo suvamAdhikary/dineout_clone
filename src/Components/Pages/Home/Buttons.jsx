@@ -60,49 +60,49 @@ export const Buttons = () => {
         <div>
           <img src={buffet} alt="" />
         </div>
-        <p>Buffet</p>
+        <Link to="/dynamic/buffet">Buffet</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn2} alt="" />
         </div>
-        <p>Top-Trending</p>
+        <Link to="/dynamic/trending">Top-Trending</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn3} alt="" />
         </div>
-        <Link to="/petfriendly">Pet Friendly</Link>
+        <Link to="dynamic/petFriendly">Pet Friendly</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn4} alt="" />
         </div>
-        <p>New & Dineout</p>
+        <Link to="/dynamic/dineoutPay">New & Dineout</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn5} alt="" />
         </div>
-        <p>Family Time</p>
+        <Link to="/dynamic/familyTime">Family Time</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn6} alt="" />
         </div>
-        <p>Pure Veg</p>
+        <Link to="/dynamic/pureVeg">Pure Veg</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn7} alt="" />
         </div>
-        <p>North Indian</p>
+        <Link to="/dynamic/northIndian">North Indian</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn8} alt="" />
         </div>
-        <p>Best Bars</p>
+        <Link to="/dynamic/bestBars">Best Bars</Link>
       </div>
     </ButtonsStyle>
   );
