@@ -1,176 +1,73 @@
 import { useState } from "react";
 import styled from "styled-components";
-
+import { useContext } from "react";
+import { ChipsContext } from "../../../Context/ChipsContest";
 const FiltersStyle = styled.div`
-  min-width: 272px;
-  padding: 15px;
-  padding-top: 8px;
-  border-radius: 4px;
-  background:white;
-  .accordion-heading {
-    cursor: pointer;
-    height: 32px;
-    width: 100%;
+  .MainDiv {
+    width: 272px;
+    padding: 15px;
+    padding-top:15px;
+    border-radius: 4px;
+    background: white;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    span {
-      margin-right: 10px;
-    }
-    p {
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 20px;
-      color: #797979;
-    }
-  }
-  .accordion-details {
-    width: 100%;
-    display: none;
-    .accordion-input-div {
-      margin-top: 8px;
-      height: 32px;
-      width: 240px;
-      left: 16px;
-      margin-bottom: 18px;
-      top: 52px;
-      border-radius: 4px;
-      padding: 6px, 8px, 6px, 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+    .protoChips {
       display: flex;
+      justify-content: center;
       align-items: center;
-      background: #f3f3f3;
-      input {
-        height: 20px;
-        width: 224px;
-        left: 8px;
-        top: 6px;
-        border-radius: nullpx;
-        background: transparent;
-        padding: 8px;
-        border: none;
-        ::placeholder {
-          font-size: 14px;
-          line-height: 20px;
-          color: #797979;
-        }
+      padding: 8px;
+      height: 32px;
+      background: #fff4f4;
+      border-radius: 4px;
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        color: #dc4f4a;
       }
-      input:focus {
-        outline: none !important;
+      div {
+        height: 32px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
-  .accordion-checkbox {
-    display: flex;
-    margin-top: 5px;
-    align-items: center;
-    height: 30px;
-    gap: 20px;
-    input {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 2px solid red;
-      border-radius: 2px;
-      cursor: pointer;
-    }
-    p {
-      font-size: 14px;
-      line-height: 20px;
-      color: #797979;
-    }
-  }
-  .accordion-hidden {
-    display: block;
+  .hidden{
+    display: none;
   }
 `;
 
 export const Filters = () => {
-  const [accord, setAccord] = useState(false);
-  const [one,setOne] = useState(false)
-  const [two,setTwo] = useState(false)
-  const [three,setThree] = useState(false)
-  const [four,setFour] = useState(false)
+  const { chips } = useContext(ChipsContext);
   return (
     <FiltersStyle>
-      <div
-        onClick={() => setAccord(accord ? false : true)}
-        className="accordion-heading"
-      >
-        <p>Quick Filters</p>
-        <span>
-          {accord ? (
-            <svg
-              width="12"
-              height="2"
-              viewBox="0 0 12 2"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.166626 0.166687H11.8333V1.83335H0.166626V0.166687Z"
-                fill="#333333"
-              />
-            </svg>
-          ) : (
-            <svg
-              width="10"
-              height="10"
-              viewBox="0 0 10 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.625 4.375V0H4.375V4.375H0V5.625H4.375V10H5.625V5.625H10V4.375H5.625Z"
-                fill="#333333"
-              />
-            </svg>
-          )}
-        </span>
-      </div>
-      <div
-        className={
-          accord ? "accordion-details accordion-hidden" : "accordion-details"
-        }
-      >
-        <div className="accordion-input-div">
-          <input placeholder="Search" type="text" />
-        </div>
-        <div className="accordion-checkbox">
-          <input onChange={()=>{
-            setOne(one ? false : true)
-            setTwo(false)
-            setThree(false)
-            setFour(false)
-          }} checked={one}  type="checkbox" />
-          <p>Dineout Pay</p>
-        </div>
-        <div className="accordion-checkbox">
-        <input onChange={()=>{
-            setOne(false)
-            setTwo(two ? false : true)
-            setThree(false)
-            setFour(false)
-          }} checked={two}  type="checkbox" />
-          <p>Buffet</p>
-        </div>
-        <div className="accordion-checkbox">
-        <input onChange={()=>{
-            setOne(false)
-            setTwo(false)
-            setThree(three ? false : true)
-            setFour(false)
-          }} checked={three}  type="checkbox" />
-          <p>5 Star</p>
-        </div>
-        <div className="accordion-checkbox">
-        <input onChange={()=>{
-            setOne(false)
-            setTwo(false)
-            setThree(false)
-            setFour(four ? false : true)
-          }} checked={four}  type="checkbox" />
-          <p>Pure Veg</p>
-        </div>
+      <div className={chips.length > 0 ? "MainDiv" : "hidden"}>
+        {chips.length !== 0
+          ? chips.map((e, i) => (
+              <div key={i} className="protoChips">
+                <p>{e}</p>
+                <div>
+                  <svg
+                    width="10"
+                    height="10"
+                    viewBox="0 0 10 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.50024 2.205L7.79524 1.5L5.00024 4.295L2.20524 1.5L1.50024 2.205L4.29524 5L1.50024 7.795L2.20524 8.5L5.00024 5.705L7.79524 8.5L8.50024 7.795L5.70524 5L8.50024 2.205Z"
+                      fill="#DC4F4A"
+                      stroke="#DC4F4A"
+                    />
+                  </svg>
+                </div>
+              </div>
+            ))
+          : ""}
       </div>
     </FiltersStyle>
   );

@@ -4,18 +4,12 @@ import { CuisinesFilter } from "./CuisinesFilter";
 import { Filters } from "./Filters";
 import { PetFriendlyCard } from "./PetFriendlyCard";
 import { PetFriendlyHeading } from "./PetFriendlyHeading";
-import { useSelector } from "react-redux";
+import { ChipsContext } from "../../../Context/ChipsContest";
 import { TagsFilter } from "./TagsFilter";
 import Footer from "../../Footer/Footer";
 import { useParams, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useContext, useState } from "react";
 import axios from "axios";
-import {
-  getRestaurantError,
-  getRestaurantsLoading,
-  getRestaurantsSuccess,
-} from "../../../Redux/Restaurants/action";
 const PetStyle = styled.div`
   width: 100%;
   padding-top: 2px;
@@ -112,6 +106,7 @@ export const PetFriendly = () => {
   const [oldData, setOldData] = useState();
   const [newData, setNewData] = useState();
   const params = useParams();
+  const { chips, handleAddChips } = useContext(ChipsContext);
   useEffect(async () => {
     const { data } = await axios.get(
       "https://dineout-clone.herokuapp.com/restaurants"
@@ -169,27 +164,33 @@ export const PetFriendly = () => {
       setNewData(data.items);
     }
   }, []);
+  console.log(chips);
+
   const handleIt = (type, bool) => {
     if (bool) {
       setOldData(newData);
       return;
     }
     if (type === "chinese") {
+      handleAddChips('chinese')
       const data = newData.filter((e) => {
         return e.chinese === true;
       });
       setOldData(data);
     } else if (type === "italian") {
+      handleAddChips('italian')
       const data = newData.filter((e) => {
         return e.italian === true;
       });
       setOldData(data);
     } else if (type === "fastFood") {
+      handleAddChips('fastFood')
       const data = newData.filter((e) => {
         return e.fastFood === true;
       });
       setOldData(data);
     } else if (type === "continental") {
+      handleAddChips('continental')
       const data = newData.filter((e) => {
         return e.continental === true;
       });
