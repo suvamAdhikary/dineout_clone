@@ -18,6 +18,9 @@ import noOfrImg from "./Assets/No offer.svg";
 import downArrow from "./Assets/downArrowHead.svg";
 import addImg from "./Assets/add.svg";
 import removeImg from "./Assets/remove.svg";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getRestaurants } from "../../../Redux/Restaurants/action";
 
 
 const Wrapper = styled.div`
@@ -149,14 +152,15 @@ const Right = styled.div`
 
 
             .calendar__dayes--parent{
+                object-fit: contain;
                 display: flex;
                 flex-direction: row;
                 gap: 7px;
                 padding: 20px;
                 /* width: 229px; */
                 overflow: hidden;
-                flex-wrap: nowrap;
-                position: relative;
+                /* flex-wrap: nowrap; */
+                /* position: relative; */
 
                 .calender__dayes{
                     height: 52px;
@@ -431,6 +435,19 @@ const Fssai = styled.div`
 
 const RestaurantPage = () => {
 
+    const dispatch = useDispatch();
+
+    const {loading, data, error} = useSelector((state) => state?.restaurants.restaurants);
+
+    const getData = async () => {
+        dispatch(getRestaurants())
+    }
+    useEffect(() => {
+
+        getData();
+
+    }, [])
+console.log(data, loading, error);
     return(<>
         <Wrapper>
             <Path />

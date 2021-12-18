@@ -7,16 +7,18 @@ export const getRestaurantsSuccess = (payload) => ({ type: GET_RESTAURANT_SUCCES
 export const getRestaurantError = (payload) => ({ type: GET_RESTAURANT_ERROR, payload });
 
 export const getRestaurants = () => async (dispatch) => {
-
     dispatch(getRestaurantsLoading());
-
+    
     try {
 
-        const { data } = await getAllRestaurants();
+        const { data: {items} } = await getAllRestaurants();
 
-        if(!data.length) return;
+        dispatch(getRestaurantsLoading());
+        
+        if(!items.length) return;
 
-        dispatch(getRestaurantsSuccess(data));
+        dispatch(getRestaurantsSuccess(items));
+
 
     } catch(error) {
 
