@@ -7,7 +7,7 @@ import { Popup } from "../Pages/Home/Popup";
 import { VerifyOtp } from "./VerifyOtp";
 import { Signup } from "../Pages/Signup/Signup";
 import { Signin } from "../Pages/signin/Signin";
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import { SigninContext } from "../../Context/SignInContext";
 import { auth } from "../../Utils/Firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -179,6 +179,17 @@ export const Navbar = () => {
   const logout = () => {
     auth.signOut();
   };
+  const [nav,setNav] = useState(false)
+const changeNavbarColor = ()=>{
+  let windowHeight = window.scrollY;
+  if(windowHeight > 200){
+    setNav(true)
+  }
+  else setNav(false)
+}
+console.log(nav);
+
+window.addEventListener('scroll', changeNavbarColor);
   return (
     <>
       <Popup />

@@ -10,18 +10,21 @@ import btn8 from "../../Images/btn8.png";
 import { Link } from "react-router-dom";
 
 const ButtonsStyle = styled.div`
-height:268px;
-width:100%;
-padding:5%;
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content: center;
+  height: 268px;
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   .btnDiv {
+background: #f3f3f3;
+background: linear-gradient(to left, #f3f3f3 50%, #e7e6e6 50%) right;
+background-size: 200%;
+transition: .4s ease-out;
     cursor: pointer;
     width: 272px;
     height: 56px;
-    background: #f3f3f3;
     border-radius: 4px;
     display: flex;
     padding: 10px;
@@ -51,6 +54,9 @@ justify-content: center;
       line-height: 28px;
       color: #797979;
     }
+  }
+  .btnDiv:hover {
+    background-position: left;
   }
 `;
 export const Buttons = () => {

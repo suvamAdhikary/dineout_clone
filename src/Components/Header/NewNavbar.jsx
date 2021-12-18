@@ -12,6 +12,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 const Scroll = styled.div`
   height: 112px;
   display: flex;
+  position:fixed;
   top:0;
   z-index:100;
   flex-direction: column;
@@ -165,7 +166,7 @@ const Scroll = styled.div`
   }
 `;
 
-export const ScrollNavbar = () => {
+export const NewNavbar = () => {
   const { handleModel } = useContext(SigninContext);
   const logout = () => {
     auth.signOut();
