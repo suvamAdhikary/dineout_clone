@@ -1,12 +1,14 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunk from "redux-thunk";
 import { restaurantReducer } from "./Restaurants/reducer";
+import { userReducer } from "./Users/reducer";
 
 
 
 
 const rootReducer = combineReducers({
-    restaurants: restaurantReducer
+    restaurants: restaurantReducer,
+    user: userReducer
 })
 
 
