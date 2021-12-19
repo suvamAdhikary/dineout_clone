@@ -311,9 +311,9 @@ export const Navbar = () => {
         ) : (
           <div onClick={logout} className="userAccount">
             <div>
-              <p>AB</p>
+              <p>+91</p>
             </div>
-            <p>{auth.currentUser.phoneNumber}</p>
+            <p>Logout</p>
           </div>
         )}
         {/* <button onClick={() => handleModel()}>Login</button> */}
