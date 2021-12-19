@@ -4,3 +4,15 @@ export const getAllRestaurants = () => {
 
     return axios.get("https://dineout-clone.herokuapp.com/restaurants");
 }
+
+export const addNewUser = ( payload ) => {
+    return axios.post("https://dineout-clone.herokuapp.com/users", payload);
+}
+
+export const getAUser = ( id ) => {
+    return axios.get(`https://dineout-clone.herokuapp.com/users/${id}`);
+}
+
+export const getARestaurant = ( id ) => {
+    return axios.get(`https://dineout-clone.herokuapp.com/restaurants/${id}`);
+}
