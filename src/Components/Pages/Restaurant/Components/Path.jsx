@@ -5,6 +5,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 26px;
 
     >p {
 
@@ -23,20 +24,20 @@ const Wrapper = styled.div`
     }
 `;
 
-const Path = () => {
+const Path = ({ city, locality, resName }) => {
 
     return(<>
         <Wrapper>
             <p>Dineout</p>
             {/* <p>&#10095;</p> */}
             <img src={arrHeadImg} alt="arrowhead" />
-            <p>Kolkata</p>
+            <p>{city}</p>
             {/* <p>&#10095;</p> */}
             <img src={arrHeadImg} alt="arrowhead" />
-            <p>Pet friendly restaurants</p>
+            <p>{locality}</p>
             <img src={arrHeadImg} alt="arrowhead" />
             {/* <p>&#10095;</p> */}
-            <p>The Green House</p>
+            <p>{resName}</p>
         </Wrapper>
     </>)
 }
