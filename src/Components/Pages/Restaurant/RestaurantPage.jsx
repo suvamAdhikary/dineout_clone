@@ -335,6 +335,9 @@ const Right = styled.div`
       width: 336px;
       border-radius: 4px;
       padding: 12px, 32px, 12px, 32px;
+      :hover{
+        background: #DC4F4A;
+      }
     }
   }
 `;

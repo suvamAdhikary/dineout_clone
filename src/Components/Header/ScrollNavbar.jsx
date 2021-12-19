@@ -99,6 +99,9 @@ const Scroll = styled.div`
       input {
         width: 100%;
         border: none;
+        ::placeholder{
+          font-size:12px;
+        }
       }
       input:focus {
         outline: none !important;
