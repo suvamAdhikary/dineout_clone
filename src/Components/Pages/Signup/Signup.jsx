@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import { useContext,useEffect } from "react";
+import { useContext,useEffect,useState } from "react";
 import Model from "react-modal";
+import {useDispatch} from 'react-redux'
 import { SigninContext } from "../../../Context/SignInContext";
+import { addUser } from "../../../Redux/Users/action";
 
 const Style = styled.div`
   min-height: 532px;
@@ -164,7 +166,7 @@ const customStyles = {
 };
 Model.setAppElement("#root");
 export const Signup = () => {
-  const { signupModel, handleSignupModel, handleModel } =
+  const { signupModel, handleSignupModel, handleModel,handleSignupData ,signup} =
     useContext(SigninContext);
     useEffect(() => {
       if (signupModel) {
@@ -175,6 +177,19 @@ export const Signup = () => {
     }, [signupModel]);
     const handleLc = (e)=>{
       localStorage.setItem('data',JSON.stringify(e))
+    }
+    const [name,setName] = useState('')
+    const [num,setNumber] = useState('')
+    const dispatch = useDispatch();
+    const handleSignup = ()=>{
+      const payload = {
+        name:name,
+        number:num
+      }
+      handleSignupData(payload)
+      handleModel()
+      dispatch(addUser(num))
+
     }
   return (
     <>
@@ -199,16 +214,16 @@ export const Signup = () => {
           <div className="inputBox">
             <p>Name</p>
             <div>
-              <input placeholder="Enter Your Name" type="text" />
+              <input name="name" onChange={(e)=>setName(e.target.value)} placeholder="Enter Your Name" type="text" />
             </div>
           </div>
           <div className="inputBox">
             <p>Phone number</p>
             <div>
-              <input placeholder="Enter Your Number" type="text" />
+              <input onChange={(e)=>setNumber(e.target.value)} name="number" placeholder="Enter Your Number" type="text" />
             </div>
           </div>
-          <button className="signup_button">SIGN UP</button>
+          <button onClick={()=>handleSignup()} className="signup_button">SIGN UP</button>
           <div className="lines">
             <span></span>
             <p>Or login via</p>

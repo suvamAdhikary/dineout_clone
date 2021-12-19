@@ -6,6 +6,7 @@ export const SigninContextProvider = ({ children }) => {
   const [signupModel, setSignupModel] = useState(false);
   const [verifyOtp, setVerifyOtp] = useState(false);
   const [confirm,setConfirm] = useState(false);
+  const [signup,setSignup] = useState()
   const handleModel = () => {
     setSignupModel(false);
     setModel(model ? false : true);
@@ -26,6 +27,9 @@ export const SigninContextProvider = ({ children }) => {
   const handleSetFinal = (e) => {
     setFinal(e);
   };
+  const handleSignupData = (payload)=>{
+   setSignup(payload)
+  }
   return (
     <SigninContext.Provider
       value={{
@@ -38,7 +42,9 @@ export const SigninContextProvider = ({ children }) => {
         final,
         handleSetFinal,
         confirm,
-        handleConfirmation
+        handleConfirmation,
+        handleSignupData,
+        signup
       }}
     >
       {children}
