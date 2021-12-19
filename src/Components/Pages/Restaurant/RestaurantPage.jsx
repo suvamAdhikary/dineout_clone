@@ -212,7 +212,7 @@ const Right = styled.div`
 
         &:nth-child(2) {
           background-color: #3595ff;
-          width: 75px;
+          width: 85px;
           height: 28px;
           color: #ffffff;
           font-size: 12px;
@@ -346,11 +346,39 @@ const Details = styled.div`
     width: 100%;
     height:430px;
     overflow: hidden;
+    .leftArrow{
+      width:80px;
+    height:80px;
+    position:relative;
+    top:156px;
+    left:-30px;
+    border-radius:50px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+  }
+  .rightArrow{
+    width:80px;
+    height:80px;
+    position:relative;
+    top:80px;
+    left:660px;
+    border-radius:50px;
+    background: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
     > img {
       width: 100%;
+      position: static;
+      margin-top:-160px;
       border-radius: 4px 4px 0 0;
     }
   }
+
 
   .restaurant__details {
     display: flex;
@@ -550,6 +578,18 @@ const RestaurantPage = () => {
           <Left>
             <Details>
               <div className="restaurant__mainImg--parent">
+                <div className="leftArrow">
+                <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.4833 1.18321C11.6378 1.3374 11.7604 1.52054 11.844 1.72217C11.9277 1.92379 11.9707 2.13993 11.9707 2.35821C11.9707 2.57649 11.9277 2.79263 11.844 2.99425C11.7604 3.19587 11.6378 3.37902 11.4833 3.53321L5.01663 9.99987L11.4833 16.4665C11.7949 16.7782 11.97 17.2008 11.97 17.6415C11.97 18.0822 11.7949 18.5049 11.4833 18.8165C11.1717 19.1282 10.749 19.3032 10.3083 19.3032C9.86759 19.3032 9.44493 19.1282 9.1333 18.8165L1.4833 11.1665C1.32879 11.0124 1.20621 10.8292 1.12258 10.6276C1.03894 10.426 0.995893 10.2098 0.995893 9.99154C0.995893 9.77326 1.03894 9.55712 1.12258 9.3555C1.20621 9.15388 1.32879 8.97073 1.4833 8.81654L9.1333 1.16654C9.76663 0.533207 10.8333 0.533207 11.4833 1.18321Z" fill="white"/>
+</svg>
+
+                </div>
+                <div className="rightArrow">
+                <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.516704 1.18321C0.362198 1.3374 0.239619 1.52054 0.155983 1.72217C0.0723472 1.92379 0.0292969 2.13993 0.0292969 2.35821C0.0292969 2.57649 0.0723472 2.79263 0.155983 2.99425C0.239619 3.19587 0.362198 3.37902 0.516704 3.53321L6.98337 9.99987L0.516704 16.4665C0.205075 16.7782 0.0300026 17.2008 0.0300026 17.6415C0.0300026 18.0822 0.205075 18.5049 0.516704 18.8165C0.828333 19.1282 1.25099 19.3032 1.6917 19.3032C2.13241 19.3032 2.55507 19.1282 2.8667 18.8165L10.5167 11.1665C10.6712 11.0124 10.7938 10.8292 10.8774 10.6276C10.9611 10.426 11.0041 10.2098 11.0041 9.99154C11.0041 9.77326 10.9611 9.55712 10.8774 9.3555C10.7938 9.15388 10.6712 8.97073 10.5167 8.81654L2.8667 1.16654C2.23337 0.533207 1.1667 0.533207 0.516704 1.18321Z" fill="white"/>
+</svg>
+
+                </div>
                 <img src={img[0]} alt="restaurant" />
               </div>
               <div className="restaurant__details">

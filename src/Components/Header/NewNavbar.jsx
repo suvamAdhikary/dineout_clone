@@ -240,9 +240,9 @@ export const NewNavbar = () => {
           ) : (
             <div onClick={logout} className="userAccount">
               <div>
-                <p>AB</p>
+                <p>+91</p>
               </div>
-              <p>My Account</p>
+              <p>Logout</p>
             </div>
           )}
         </div>
