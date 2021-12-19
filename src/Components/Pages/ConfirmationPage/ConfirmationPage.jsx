@@ -1,4 +1,7 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
+import { getUser } from "../../../Redux/Users/action";
 
 const Style = styled.div`
   padding-bottom: 100px;
@@ -89,22 +92,42 @@ const Style = styled.div`
   }
 `;
 
+
 export const ConfirmationPage = () => {
+
+
+  const dispatch = useDispatch();
+
+  const { data } = useSelector((store) => store?.user.user)
+
+  
+  useEffect(() => {
+    
+    const userId = JSON.parse(localStorage.getItem('dineout-userId'));
+    
+    dispatch(getUser(userId))
+
+  }, [dispatch])
+
+  const { restaurantName, locality, city, guests, timeSlot, date, _id } = data.bookings;
+
+  const { name, mobile } = data;
+
   return (
     <Style>
       <div className="first">
-        <h1>The Green House</h1>
-        <p>Salt Lake , East Kolkata , Kolkata</p>
+        <h1>{restaurantName}</h1>
+        <p>{locality} , {city}</p>
       </div>
       <div className="second">
         <p className="heading">Guest Details</p>
         <div>
           <p className="bold">Guest Name:</p>
-          <p>Masuda Begam</p>
+          <p>{name}</p>
         </div>
         <div>
           <p className="bold">Phone No:</p>
-          <p>9874563210</p>
+          <p>{mobile}</p>
         </div>
       </div>
       <div className="third">
@@ -115,19 +138,19 @@ export const ConfirmationPage = () => {
         </div>
         <div>
           <p>Date & Time</p>
-          <p>1St DEC 2021, 5 : 30 PM</p>
+          <p>{date}, {timeSlot}</p>
         </div>
         <div>
           <p>Guests</p>
-          <p>Guests</p>
+          <p>{guests}</p>
         </div>
         <div>
           <p>Name</p>
-          <p>Dharmesh</p>
+          <p>{name}</p>
         </div>
         <div>
           <p>ID</p>
-          <p>1234567896</p>
+          <p>{_id}</p>
         </div>
       </div>
     </Style>

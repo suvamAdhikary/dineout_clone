@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Model from "react-modal";
-import {useContext } from "react";
+import {useContext, useEffect } from "react";
 import {SigninContext} from "../../Context/SignInContext";
 import {Link} from "react-router-dom";
 const Style = styled.div`
@@ -110,8 +110,12 @@ const customStyles = {
   },
 };
 Model.setAppElement('#root');
-export const ConfirmReservation = () => {
+
+export const ConfirmReservation = ({ handleReservation, name, city, guest, bookDate, bookTime }) => {
 const {handleConfirmation,confirm} = useContext(SigninContext)
+
+
+  let imgLink = JSON.parse(localStorage.getItem('dineout__miniImg'));
 
   return (
     <>
@@ -136,18 +140,18 @@ const {handleConfirmation,confirm} = useContext(SigninContext)
       <div className="second_div">
         <div className="img_div">
           <img
-            src="https://b.zmtcdn.com/webFrontend/8ff4212b71b948ed5b6d2ce0d2bc99981594031410.png?fit=around|402:360&crop=402:360;*,*"
-            alt=""
+            src={imgLink}
+            alt="miniImg"
           />
         </div>
         <div className="inner_div">
-          <p className="one">The Green House</p>
-          <p className="two">Salt Lake</p>
-          <p className="three">2 Guests 1DEC, 6:30 PM</p>
+          <p className="one">{name}</p>
+          <p className="two">{city}</p>
+          <p className="three">{guest} Guests {bookDate}, {bookTime}</p>
         </div>
       </div>
       <div className="btn-div">
-        <Link to="/confirm"><button>CONFIRM RESERVATION</button></Link>
+        <Link to="/confirm"><button onClick={handleReservation} >CONFIRM RESERVATION</button></Link>
       </div>
     </Style>
     </Model>
