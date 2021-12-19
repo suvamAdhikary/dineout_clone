@@ -16,3 +16,11 @@ export const getAUser = ( id ) => {
 export const getARestaurant = ( id ) => {
     return axios.get(`https://dineout-clone.herokuapp.com/restaurants/${id}`);
 }
+
+export const getUserByMobile = (mobile) => {
+    return axios.get(`https://dineout-clone.herokuapp.com/users/mobiles/${mobile}`);
+}
+
+export const updateUser = (id, payload) => {
+    return axios.patch(`https://dineout-clone.herokuapp.com/users/${id}`, payload);
+} 

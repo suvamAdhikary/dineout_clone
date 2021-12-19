@@ -18,10 +18,8 @@ import downArrow from "./Assets/downArrowHead.svg";
 import addImg from "./Assets/add.svg";
 import removeImg from "./Assets/remove.svg";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getUser } from "../../../Redux/Users/action";
-import { Link, useParams } from "react-router-dom";
-import { getARestaurant } from "../../../Utils/Axios";
+import { useParams } from "react-router-dom";
+import { getARestaurant, updateUser } from "../../../Utils/Axios";
 import { ConfirmReservation } from "../../Header/ConfirmReservation";
 import TimeSlots from "./Components/TimeSlots";
 import Footer from "../../Footer/Footer";
@@ -484,15 +482,12 @@ const RestaurantPage = () => {
   const [timeStatus, setTimeStatus] = useState("lunch");
   const [bookTime, setBookTime] = useState("");
   const [bookDate, setBookDate] = useState("");
+  const [dineoutUserId, setDineoutUserId] = useState("");
 
   const restaurantId = useParams();
 
-  const dispatch = useDispatch();
+  const { signup } = useContext(SigninContext);
 
-  // const data = useSelector((state) => state);
-
-  // dispatch(getRestaurants())
-  // dispatch(getUser('61b8d36a6c6b3bb63911d300'))
 
   const getRestaurantData = async ({ id }) => {
     try {
@@ -502,6 +497,7 @@ const RestaurantPage = () => {
 
       setRestaurantdata(item);
       setImg(item?.img);
+      localStorage.setItem("dineout__miniImg", JSON.stringify(item?.img));
       setMenuImg(item?.menuImg);
     } catch (err) {
       console.log(err);
@@ -509,10 +505,11 @@ const RestaurantPage = () => {
   };
 
   useEffect(() => {
+    let userId = JSON.parse(localStorage.getItem('dineout-userId'));
+    setDineoutUserId(userId)
+
     getRestaurantData(restaurantId);
   }, [restaurantId]);
-
-  console.log(restaurantData);
 
   const { name, costForTwo, locality, city, rating, reviews, about } =
     restaurantData;
@@ -529,21 +526,48 @@ const RestaurantPage = () => {
     southeastAsian,
     bengali,
   } = restaurantData;
+
   document.title = `Dineout - ${restaurantData.name}`;
+
   const { handleConfirmation, handleSignupModel } = useContext(SigninContext);
+
   const [user] = useAuthState(auth);
+
   const handleModel = () => {
     if (user) {
+      // setUserPh()
       handleConfirmation();
     } else {
       handleSignupModel();
     }
   };
 
+  const handleReservation = async () => {
+    
+    const payload = {
+      guests: guestCount,
+      restaurantName: name,
+      city: city,
+      locality: locality,
+      timeSlot: bookTime,
+      date: bookDate,
+      restaurantId: restaurantId.id
+    }
+
+    await updateUser(dineoutUserId, {bookings: payload});
+  }
+
   return (
     <>
       <ScrollNavbar />
-      <ConfirmReservation />
+      <ConfirmReservation
+        handleReservation={handleReservation}
+        name={name}
+        city={city}
+        guest={guestCount}
+        bookDate={bookDate}
+        bookTime={bookTime}
+      />
       <Wrapper>
         <Path city={city} locality={locality} resName={name} />
         <Main>

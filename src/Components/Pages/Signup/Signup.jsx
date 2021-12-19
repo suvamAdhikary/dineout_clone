@@ -165,9 +165,15 @@ const customStyles = {
   },
 };
 Model.setAppElement("#root");
+
 export const Signup = () => {
+
   const { signupModel, handleSignupModel, handleModel,handleSignupData ,signup} =
     useContext(SigninContext);
+
+
+    const dispatch = useDispatch();
+
     useEffect(() => {
       if (signupModel) {
         document.body.style.overflow = 'hidden';
@@ -175,20 +181,21 @@ export const Signup = () => {
         document.body.style.overflow = 'unset';
       }
     }, [signupModel]);
+
     const handleLc = (e)=>{
       localStorage.setItem('data',JSON.stringify(e))
     }
     const [name,setName] = useState('')
     const [num,setNumber] = useState('')
-    const dispatch = useDispatch();
+    
     const handleSignup = ()=>{
       const payload = {
-        name:name,
-        number:num
+        name: name,
+        mobile: '+91' + num,
       }
       handleSignupData(payload)
       handleModel()
-      dispatch(addUser(num))
+      dispatch(addUser(payload))
 
     }
   return (

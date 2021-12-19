@@ -3,6 +3,7 @@ import Model from "react-modal";
 import { useContext, useState } from "react";
 import { SigninContext } from "../../../Context/SignInContext";
 import { firebase, auth } from "../../../Utils/Firebase";
+import { getUserByMobile } from "../../../Utils/Axios";
 const Style = styled.div`
   /* height: 455px; */
   width: 464px;
@@ -169,7 +170,9 @@ const customStyles = {
     backgroundColor: "rgba(5, 5, 5, 0.3)",
   },
 };
+
 Model.setAppElement("#root");
+
 export const Signin = () => {
   const { model, handleModel, handleSignupModel, handleOtp, handleSetFinal } =
     useContext(SigninContext);
@@ -181,8 +184,12 @@ export const Signin = () => {
     let verify = new firebase.auth.RecaptchaVerifier("recaptcha-container");
     auth
       .signInWithPhoneNumber("+91" + mynumber, verify)
-      .then((result) => {
+      .then( async(result) => {
         handleSetFinal(result);
+
+        const { data } = await getUserByMobile(`+91` + mynumber);
+
+        localStorage.setItem("dineout-userId", JSON.stringify(data?._id));
         localStorage.setItem("number",JSON.stringify(mynumber))
       })
       .then(() => {
