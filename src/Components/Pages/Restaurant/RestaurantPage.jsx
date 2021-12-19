@@ -22,7 +22,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../../Redux/Users/action";
 import { Link, useParams } from "react-router-dom";
 import { getARestaurant } from "../../../Utils/Axios";
-import CalenderComp from "./Components/Calender";
 import { ConfirmReservation } from "../../Header/ConfirmReservation";
 import TimeSlots from "./Components/TimeSlots";
 import Footer from "../../Footer/Footer";
@@ -181,33 +180,7 @@ const Right = styled.div`
         flex-direction: row;
         gap: 7px;
         padding: 20px;
-        /* width: 229px; */
-        /* overflow: hidden; */
-        /* flex-wrap: nowrap; */
-        /* position: relative; */
-        /* background-color: red; */
-        /* color: white; */
-        /* white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;  */
 
-        /* .calender__dayes{
-                    height: 52px;
-                    width: 37.5px;
-
-                    > p {
-                        color: #797979;
-                        font-size: 12px;
-                        line-height: 16px;
-
-                        &:nth-child(1){
-                            font-weight: 400;
-                        }
-                        &:nth-child(2){
-                            font-weight: 700;
-                        }
-                    }
-                } */
       }
     }
   }
@@ -447,7 +420,7 @@ const Details = styled.div`
       width: 64px;
       color: #ffffff;
       font-weight: 700;
-      font-size: 22px;
+      font-size: 20px;
       line-height: 26px;
       display: flex;
       align-items: center;
@@ -460,7 +433,7 @@ const Details = styled.div`
       > p,
       > span {
         font-weight: 700;
-        font-size: 22px;
+        font-size: 20px;
         line-height: 26px;
       }
       > p {
@@ -659,36 +632,6 @@ const RestaurantPage = () => {
                   </div>
                   <div className="calender__slide--parent">
                     <Calender setBookDate={setBookDate} bookDate={bookDate} />
-                    {/* <div className="calendar__dayes--parent">
-                                <div className="calender__dayes">
-                                    <p>Today</p>
-                                    <p>16</p>
-                                </div>
-                                <div className="calender__dayes">
-                                    <p>Wed</p>
-                                    <p>17</p>
-                                </div>
-                                <div className="calender__dayes">
-                                    <p>Thu</p>
-                                    <p>18</p>
-                                </div>
-                                <div className="calender__dayes">
-                                    <p>Fri</p>
-                                    <p>19</p>
-                                </div>
-                                <div className="calender__dayes">
-                                    <p>Sat</p>
-                                    <p>20</p>
-                                </div>
-                                <div className="calender__dayes">
-                                    <p>Sun</p>
-                                    <p>21</p>
-                                </div>
-                                <div className="calender__dayes">
-                                    <p>Mon</p>
-                                    <p>22</p>
-                                </div>
-                            </div> */}
                   </div>
                 </div>
                 <div className="default__time">
