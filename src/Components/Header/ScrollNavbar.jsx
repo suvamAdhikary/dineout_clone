@@ -50,6 +50,7 @@ const Scroll = styled.div`
       select {
         width: 100%;
         margin-right: 10px;
+        background:white;
         margin-left: 1px;
         border: none;
         height: 100%;
@@ -237,7 +238,7 @@ export const ScrollNavbar = () => {
         </div>
         <div className="bottom_div">
           <div>
-            <p>Home</p>
+            <Link to="/"><p>Home</p></Link>
             <p>Book a Table</p>
             <p>Dineout Pay</p>
             <p>Dineout Passport</p>

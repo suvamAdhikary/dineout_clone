@@ -42,6 +42,7 @@ const NavbarStyle = styled.div`
     select {
       width: 100%;
       margin-right: 10px;
+      background:white;
       margin-left: 1px;
       border: none;
       height: 100%;

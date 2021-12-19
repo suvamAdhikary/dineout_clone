@@ -55,6 +55,7 @@ const Scroll = styled.div`
         border: none;
         height: 100%;
         border-radius: 4px;
+        background:white;
         padding-left: 2px;
         font-size: 14px;
         color: #797979;
@@ -247,7 +248,7 @@ export const NewNavbar = () => {
         </div>
         <div className="bottom_div">
           <div>
-            <p>Home</p>
+          <Link to="/"><p>Home</p></Link>
             <p>Book a Table</p>
             <p>Dineout Pay</p>
             <p>Dineout Passport</p>
