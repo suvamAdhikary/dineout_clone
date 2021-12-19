@@ -98,9 +98,17 @@ const NavbarStyle = styled.div`
     font-size: 14px;
     line-height: 16px;
     color: #ffffff;
+
   }
   button:hover{
     background: #DC4F4A;
+    box-shadow: inset 0px 2px 16px #ff645a;
+
+
+  }
+  button:after{
+    background: #FF645A;
+/* IS_Button */
 
   }
   .selected {

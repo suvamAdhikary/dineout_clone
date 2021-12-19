@@ -131,6 +131,8 @@ export const VerifyOtp = () => {
         alert(err.message);
       });
   };
+  let num = localStorage.getItem('number')
+  num = JSON.parse(num)
 
   return (
     <>
@@ -154,7 +156,7 @@ export const VerifyOtp = () => {
           <h1>Verify OTP</h1>
           <div className="verify_otp">
             <p>
-              Enter otp Sent to <span>9876543121</span>
+              Enter otp Sent to <span>{num}</span>
             </p>
             <svg
               width="13"

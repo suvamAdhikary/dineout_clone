@@ -2,6 +2,7 @@ import React from "react";
 import passImg from "../../Images/artboard.jpg";
 import styled from "styled-components";
 import { DummyCard } from "./DummyCard";
+import { Link } from "react-router-dom";
 const Setstyle = styled.div`
   /* height: 550px; */
   padding: 10px;
@@ -38,31 +39,38 @@ export default function Passport() {
           <img src={passImg} alt="" />
         </div>
         <div className="Showing_cards_here">
-          <DummyCard
-            image="https://i.ibb.co/gg9Hg3R/p8121-148947824258c7a262defb7.jpg"
-            name="Park Pivilion"
-            rating="4.3"
-            location={"The Jamson inn, " + Nc}
-          />
-          <DummyCard
-            image="https://i.ibb.co/j6Qqd4n/p535-15448607315c14b43b250a1.jpg"
-            name="Barbeque Nation"
-            rating="4.7"
-            location={"Park Street, " + Nc}
-          />
-
-          <DummyCard
-            image="https://i.ibb.co/FBhR2GT/p3777-1452246512568f85f06f5a0.jpg"
-            name="Mainland China"
-            rating="3.3"
-            location={"SB Road, " + Nc}
-          />
-          <DummyCard
-            image="https://i.ibb.co/S0d5Y1P/p31358-1486538682589ac7ba6b362.jpg"
-            name="Sunbean"
-            rating="5"
-            location={"ITC Sonar, " + Nc}
-          />
+          <Link to="/restaurants/61bcb1e5c4492eabd38d720e">
+            <DummyCard
+              image="https://i.ibb.co/gg9Hg3R/p8121-148947824258c7a262defb7.jpg"
+              name="Park Pivilion"
+              rating="4.3"
+              location={"The Jamson inn, " + Nc}
+            />
+          </Link>
+          <Link to="/restaurants/61bcb261c4492eabd38d7210">
+            <DummyCard
+              image="https://i.ibb.co/j6Qqd4n/p535-15448607315c14b43b250a1.jpg"
+              name="Barbeque Nation"
+              rating="4.7"
+              location={"Park Street, " + Nc}
+            />
+          </Link>
+          <Link to="/restaurants/61bcb757a32705bfb2b1b034">
+            <DummyCard
+              image="https://i.ibb.co/FBhR2GT/p3777-1452246512568f85f06f5a0.jpg"
+              name="Mainland China"
+              rating="3.3"
+              location={"SB Road, " + Nc}
+            />
+          </Link>
+          <Link to="/restaurants/61bcb82ba32705bfb2b1b037">
+            <DummyCard
+              image="https://i.ibb.co/S0d5Y1P/p31358-1486538682589ac7ba6b362.jpg"
+              name="Sunbean"
+              rating="5"
+              location={"ITC Sonar, " + Nc}
+            />
+          </Link>
         </div>
       </Setstyle>
       <hr style={{ marginTop: "50px" }} />

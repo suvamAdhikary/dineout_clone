@@ -1,17 +1,14 @@
 import styled from "styled-components";
 import Model from "react-modal";
-import { useContext,useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { SigninContext } from "../../../Context/SignInContext";
 import { firebase, auth } from "../../../Utils/Firebase";
-import { Google } from "../../../Utils/GoogleOath";
-import SocialMediaOath from "../../../Utils/Oath";
 const Style = styled.div`
-  height: 455px;
+  /* height: 455px; */
   width: 464px;
   border-radius: 4px;
   box-shadow: 0px 0px 4px gray;
   margin: auto;
-  z-index:1000;
   padding: 40px;
   padding-top: 15px;
   h1 {
@@ -59,7 +56,10 @@ const Style = styled.div`
     font-size: 16px;
     line-height: 22px;
     color: white;
-    margin-top: 32px;
+    margin-top: 22px;
+  }
+  .signup_button:hover{
+    background: #DC4F4A;
   }
   .lines {
     display: flex;
@@ -148,6 +148,12 @@ const Style = styled.div`
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.03)
   }
+  #recaptcha-container{
+    width:80%;
+    margin:auto;
+    margin-top:20px;
+
+  }
 `;
 const customStyles = {
   content: {
@@ -169,11 +175,6 @@ export const Signin = () => {
     useContext(SigninContext);
   // Inputs
   const [mynumber, setnumber] = useState("");
-  const [otp, setotp] = useState("");
-  // const [show, setshow] = useState(false);
-  // const [final, setfinal] = useState("");
-
-  // Sent OTP
   const signin = () => {
     if (mynumber === "" || mynumber.length < 10) return;
 
@@ -182,8 +183,7 @@ export const Signin = () => {
       .signInWithPhoneNumber("+91" + mynumber, verify)
       .then((result) => {
         handleSetFinal(result);
-        alert("code sent");
-        // setshow(true);
+        localStorage.setItem("number",JSON.stringify(mynumber))
       })
       .then(() => {
         handleOtp();
@@ -194,20 +194,6 @@ export const Signin = () => {
       });
   };
 
-  useEffect(() => {
-    if (model) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [model]);
-  const handleLc = (e)=>{
-    localStorage.setItem('data',JSON.stringify(e))
-  }
-const handleOnClick =async ( provider)=>{
-const res = await SocialMediaOath(provider);
-console.log(res);
-}
   return (
     <Model style={customStyles} isOpen={model}>
       <Style>
@@ -248,7 +234,7 @@ console.log(res);
           <span></span>
         </div>
         <div className="oath_links">
-          <div onClick={()=>{handleOnClick(Google)}} className="gmail">
+          <div className="gmail">
             <svg
               width="16"
               height="16"

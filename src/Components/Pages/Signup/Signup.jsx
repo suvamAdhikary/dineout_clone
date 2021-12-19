@@ -56,6 +56,10 @@ const Style = styled.div`
     color: white;
     margin-top: 30px;
   }
+  .signup_button:hover{
+    background: ##DC4F4A;
+
+  }
   .lines {
     display: flex;
     margin-top: 20px;
