@@ -88,7 +88,6 @@ const Style = styled.div`
     padding: 4px, 8px, 4px, 8px;
     position:relative;
     top:-20px;
-    left:10px;
     background: #fff4f4;
     display:flex;
     gap:10px;

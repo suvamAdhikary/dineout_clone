@@ -8,6 +8,7 @@ import { Signup } from "../Pages/Signup/Signup";
 import { VerifyOtp } from "./VerifyOtp";
 import { auth } from "../../Utils/Firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
 
 const Scroll = styled.div`
   height: 112px;
@@ -91,6 +92,9 @@ const Scroll = styled.div`
         line-height: 16px;
         color: #ffffff;
       }
+      button:hover{
+        background: #DC4F4A;
+      }
       input {
         width: 100%;
         border: none;
@@ -114,6 +118,9 @@ const Scroll = styled.div`
       line-height: 16px;
       color: #ffffff;
     }
+    .login_btn:hover{
+        background: #DC4F4A;
+      }
   }
   .bottom_div {
     height: 42px;
@@ -131,7 +138,12 @@ const Scroll = styled.div`
         font-size: 14px;
         line-height: 16px;
         align-items: center;
+        cursor: pointer;
         color: #797979;
+      }
+      p:hover{
+        color: #ff645a;
+        font-weight: bold;
       }
     }
   }
@@ -171,6 +183,8 @@ export const ScrollNavbar = () => {
     auth.signOut();
   };
   const [user] = useAuthState(auth);
+  const LcData = localStorage.getItem('data')
+  const Nc = JSON.parse(LcData)
   return (
     <>
       <VerifyOtp />
@@ -178,11 +192,11 @@ export const ScrollNavbar = () => {
       <Signup />
       <Scroll>
         <div className="top_searchDiv">
-          <img src={Dineout_Logo} className="header_logo" alt="" />
+          <Link to="/"><img src={Dineout_Logo} className="header_logo" alt="" /></Link>
           <div className="search_bar">
             <img src={Location_Logo} alt="" />
             <select name="search" id="">
-              <option value="abc">Delhi</option>
+              <option value="abc">{Nc}</option>
             </select>
           </div>
           <div className="big_search_bar">

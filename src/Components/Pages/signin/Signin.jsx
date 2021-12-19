@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import Model from "react-modal";
-import { useContext, useState } from "react";
+import { useContext,useEffect, useState } from "react";
 import { SigninContext } from "../../../Context/SignInContext";
 import { firebase, auth } from "../../../Utils/Firebase";
+import { Google } from "../../../Utils/GoogleOath";
+import SocialMediaOath from "../../../Utils/Oath";
 const Style = styled.div`
   height: 455px;
   width: 464px;
@@ -192,6 +194,20 @@ export const Signin = () => {
       });
   };
 
+  useEffect(() => {
+    if (model) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [model]);
+  const handleLc = (e)=>{
+    localStorage.setItem('data',JSON.stringify(e))
+  }
+const handleOnClick =async ( provider)=>{
+const res = await SocialMediaOath(provider);
+console.log(res);
+}
   return (
     <Model style={customStyles} isOpen={model}>
       <Style>
@@ -232,7 +248,7 @@ export const Signin = () => {
           <span></span>
         </div>
         <div className="oath_links">
-          <div className="gmail">
+          <div onClick={()=>{handleOnClick(Google)}} className="gmail">
             <svg
               width="16"
               height="16"

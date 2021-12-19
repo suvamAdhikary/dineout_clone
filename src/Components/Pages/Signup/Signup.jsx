@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import Model from "react-modal";
 import { SigninContext } from "../../../Context/SignInContext";
 
@@ -162,6 +162,16 @@ Model.setAppElement("#root");
 export const Signup = () => {
   const { signupModel, handleSignupModel, handleModel } =
     useContext(SigninContext);
+    useEffect(() => {
+      if (signupModel) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'unset';
+      }
+    }, [signupModel]);
+    const handleLc = (e)=>{
+      localStorage.setItem('data',JSON.stringify(e))
+    }
   return (
     <>
       <Model style={customStyles} isOpen={signupModel}>

@@ -250,6 +250,8 @@ export const PetFriendly = () => {
       setOldData(data);
     } else setOldData(newData);
   };
+  const LcData = localStorage.getItem('data')
+  const Lc = JSON.parse(LcData)
   return !oldData ? (
     <>
       <ScrollNavbar />
@@ -259,9 +261,9 @@ export const PetFriendly = () => {
             <Chips />
             <CuisinesFilter handleFilter={handleIt} />
             <TagsFilter handleFilter={handleIt} />
-            <p className="bottom-para-pet1">Top 10 Restrauns in Kolkata</p>
+            <p className="bottom-para-pet1">Top 10 Restrauns in {Lc}</p>
             <p className="bottom-para-pet">
-              Pedegree Sponserd Restraunts Near Me
+              {params.id} Restraunts Near Me
             </p>
           </div>
           <div className="PetStyle_cards_div">
@@ -286,9 +288,9 @@ export const PetFriendly = () => {
             <QuickFilters handleFilter={handleIt} />
             <CuisinesFilter handleFilter={handleIt} />
             <TagsFilter handleFilter={handleIt} />
-            <p className="bottom-para-pet1">Top 10 Restrauns in Kolkata</p>
+            <p className="bottom-para-pet1">Top 10 Restrauns in {Lc}</p>
             <p className="bottom-para-pet">
-              Pedegree Sponserd Restraunts Near Me
+              {params.id} Restraunts Near Me
             </p>
           </div>
           <div className="PetStyle_cards_div">
@@ -299,7 +301,7 @@ export const PetFriendly = () => {
                   <PetFriendlyCard
                     name={e.name}
                     image={e.img}
-                    location={e.city}
+                    location={Lc}
                     locality={e.locality}
                     rating={e.rating}
                   />

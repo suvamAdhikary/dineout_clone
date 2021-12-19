@@ -62,13 +62,21 @@ const customStyles = {
 Model.setAppElement('#root');
 export const Popup = () => {
   const [model, setModel] = useState(true);
+  const LcData = localStorage.getItem('data')
+  const Nc = JSON.parse(LcData)
     useEffect(() => {
+      if(Nc){
+        setModel(false);
+      }
       if (model) {
         document.body.style.overflow = 'hidden';
       } else {
         document.body.style.overflow = 'unset';
       }
     }, [model]);
+    const handleLc = (e)=>{
+      localStorage.setItem('data',JSON.stringify(e))
+    }
 
   return (
     <>
@@ -81,6 +89,7 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
               }}
             >
               Delhi
@@ -88,6 +97,7 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
               }}
             >
               Mumbai
@@ -95,6 +105,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Banglore
@@ -102,6 +114,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Chennai
@@ -109,6 +123,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Hyderabad
@@ -116,6 +132,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Pune
@@ -123,6 +141,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Kolkata
@@ -130,6 +150,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Ahemdabad
@@ -137,6 +159,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Chandigarh
@@ -144,6 +168,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Goa
@@ -151,6 +177,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Jaipur
@@ -158,6 +186,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Lucknow
@@ -165,6 +195,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Indore
@@ -172,6 +204,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Udaipur
@@ -179,6 +213,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Agra
@@ -186,6 +222,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Vadodra
@@ -193,6 +231,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Nagpur
@@ -200,6 +240,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Kochi
@@ -207,6 +249,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Surat
@@ -214,6 +258,8 @@ export const Popup = () => {
             <button
               onClick={() => {
                 setModel(false);
+                handleLc('Kolkata')
+
               }}
             >
               Ludhiana

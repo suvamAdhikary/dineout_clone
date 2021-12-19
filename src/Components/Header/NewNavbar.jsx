@@ -8,13 +8,14 @@ import { Signup } from "../Pages/Signup/Signup";
 import { VerifyOtp } from "./VerifyOtp";
 import { auth } from "../../Utils/Firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
 
 const Scroll = styled.div`
   height: 112px;
   display: flex;
   position:fixed;
   top:0;
-  /* z-index:50; */
+  z-index:100;
   flex-direction: column;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   background: white;
@@ -92,6 +93,9 @@ const Scroll = styled.div`
         line-height: 16px;
         color: #ffffff;
       }
+      button:hover{
+        background: #DC4F4A;
+      }
       input {
         width: 100%;
         border: none;
@@ -115,6 +119,9 @@ const Scroll = styled.div`
       line-height: 16px;
       color: #ffffff;
     }
+    .login_btn:hover{
+        background: #DC4F4A;
+      }
   }
   .bottom_div {
     height: 42px;
@@ -133,6 +140,11 @@ const Scroll = styled.div`
         line-height: 16px;
         align-items: center;
         color: #797979;
+        cursor: pointer;
+      }
+      p:hover{
+        color: #ff645a;
+        font-weight: bold;
       }
     }
   }
@@ -179,10 +191,10 @@ export const NewNavbar = () => {
     }
     else setNav(false)
   }
-  console.log(nav);
-  
   window.addEventListener('scroll', changeNavbarColor)
   const [user] = useAuthState(auth);
+  const LcData = localStorage.getItem('data')
+  const Nc = JSON.parse(LcData)
   return (
     <div style={{display:nav ? 'block':'none'}}>
       <VerifyOtp />
@@ -190,11 +202,11 @@ export const NewNavbar = () => {
       <Signup />
       <Scroll>
         <div className="top_searchDiv">
-          <img src={Dineout_Logo} className="header_logo" alt="" />
+          <Link to="/"><img src={Dineout_Logo} className="header_logo" alt="" /></Link>
           <div className="search_bar">
             <img src={Location_Logo} alt="" />
             <select name="search" id="">
-              <option value="abc">Delhi</option>
+              <option value="abc">{Nc}</option>
             </select>
           </div>
           <div className="big_search_bar">

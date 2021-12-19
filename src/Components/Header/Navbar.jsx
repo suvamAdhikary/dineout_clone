@@ -7,10 +7,9 @@ import { Popup } from "../Pages/Home/Popup";
 import { VerifyOtp } from "./VerifyOtp";
 import { Signup } from "../Pages/Signup/Signup";
 import { Signin } from "../Pages/signin/Signin";
-import { useContext,useEffect } from "react";
+import { useContext } from "react";
 import { SigninContext } from "../../Context/SignInContext";
 import { auth } from "../../Utils/Firebase";
-import {NewNavbar} from './NewNavbar'
 import { useAuthState } from "react-firebase-hooks/auth";
 const NavbarStyle = styled.div`
   width: 100%;
@@ -100,6 +99,10 @@ const NavbarStyle = styled.div`
     line-height: 16px;
     color: #ffffff;
   }
+  button:hover{
+    background: #DC4F4A;
+
+  }
   .selected {
     width: 100%;
     a {
@@ -180,17 +183,8 @@ export const Navbar = () => {
   const logout = () => {
     auth.signOut();
   };
-  const [nav,setNav] = useState(false)
-const changeNavbarColor = ()=>{
-  let windowHeight = window.scrollY;
-  if(windowHeight > 200){
-    setNav(true)
-  }
-  else setNav(false)
-}
-console.log(nav);
-
-window.addEventListener('scroll', changeNavbarColor)
+  const LcData = localStorage.getItem('data')
+  const Nc = JSON.parse(LcData)
   return (
     <>
       <Popup />
@@ -198,11 +192,11 @@ window.addEventListener('scroll', changeNavbarColor)
       <Signup />
       <Signin />
       <NavbarStyle>
-        <img src={Dineout_Logo} className="header_logo" alt="" />
+        <Link to="/"><img src={Dineout_Logo} className="header_logo" alt="" /></Link>
         <div className="search_bar">
           <img src={Location_Logo} alt="" />
           <select name="search" id="">
-            <option value="abc">Delhi</option>
+            <option value="abc">{Nc}</option>
           </select>
         </div>
         <div className="pages_link">
