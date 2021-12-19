@@ -1,5 +1,8 @@
 import styled from "styled-components";
-
+import Model from "react-modal";
+import {useContext } from "react";
+import {SigninContext} from "../../Context/SignInContext";
+import {Link} from "react-router-dom";
 const Style = styled.div`
   width: 464px;
   height: 356px;
@@ -71,25 +74,50 @@ const Style = styled.div`
       font-size: 16px;
       line-height: 22px;
       color: #ffffff;
+      cursor: pointer;
+    }
+    button:hover{
+      background: #DC4F4A !important;
     }
   }
   .cross_btn {
-    width: 24px;
-    heigth: 24px;
     position: relative;
     top: 20px;
     left: 420px;
-    background: #ffffff;
+    background: white;
+    width:24px;
+    height:24px;
+    border-radius:20px;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
   }
 `;
-
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    padding: "0px",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+  overlay: {
+    backgroundColor: "rgba(5, 5, 5, 0.3)",
+  },
+};
+Model.setAppElement('#root');
 export const ConfirmReservation = () => {
+const {handleConfirmation,confirm} = useContext(SigninContext)
+
   return (
+    <>
+          <Model style={customStyles} isOpen={confirm}>
     <Style>
-      <div className="cross_btn">
+      <div className="cross_btn" onClick={() =>handleConfirmation()}>
         <svg
           width="12"
           height="12"
@@ -119,8 +147,9 @@ export const ConfirmReservation = () => {
         </div>
       </div>
       <div className="btn-div">
-        <button>CONFIRM RESERVATION</button>
+        <Link to="/confirm"><button>CONFIRM RESERVATION</button></Link>
       </div>
     </Style>
-  );
+    </Model>
+ </> );
 };

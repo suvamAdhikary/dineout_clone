@@ -31,7 +31,7 @@ export default function Routes() {
         </Route>
 
         <Route path="/testing">
-          <Calender />
+         <ConfirmReservation/>
         </Route>
 
 

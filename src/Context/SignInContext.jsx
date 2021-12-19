@@ -5,6 +5,7 @@ export const SigninContextProvider = ({ children }) => {
   const [model, setModel] = useState(false);
   const [signupModel, setSignupModel] = useState(false);
   const [verifyOtp, setVerifyOtp] = useState(false);
+  const [confirm,setConfirm] = useState(false);
   const handleModel = () => {
     setSignupModel(false);
     setModel(model ? false : true);
@@ -17,6 +18,9 @@ export const SigninContextProvider = ({ children }) => {
     setSignupModel(false);
     setModel(false);
     setVerifyOtp(verifyOtp ? false : true);
+  };
+  const handleConfirmation = () => {
+    setConfirm(confirm ? false : true)
   };
   const [final, setFinal] = useState("");
   const handleSetFinal = (e) => {
@@ -33,6 +37,8 @@ export const SigninContextProvider = ({ children }) => {
         handleOtp,
         final,
         handleSetFinal,
+        confirm,
+        handleConfirmation
       }}
     >
       {children}
