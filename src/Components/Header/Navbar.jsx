@@ -99,6 +99,10 @@ const NavbarStyle = styled.div`
     line-height: 16px;
     color: #ffffff;
   }
+  button:hover{
+    background: #DC4F4A;
+
+  }
   .selected {
     width: 100%;
     a {
@@ -179,6 +183,8 @@ export const Navbar = () => {
   const logout = () => {
     auth.signOut();
   };
+  const LcData = localStorage.getItem('data')
+  const Nc = JSON.parse(LcData)
   return (
     <>
       <Popup />
@@ -186,11 +192,11 @@ export const Navbar = () => {
       <Signup />
       <Signin />
       <NavbarStyle>
-        <img src={Dineout_Logo} className="header_logo" alt="" />
+        <Link to="/"><img src={Dineout_Logo} className="header_logo" alt="" /></Link>
         <div className="search_bar">
           <img src={Location_Logo} alt="" />
           <select name="search" id="">
-            <option value="abc">Delhi</option>
+            <option value="abc">{Nc}</option>
           </select>
         </div>
         <div className="pages_link">

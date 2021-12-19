@@ -1,7 +1,12 @@
+import { useParams } from "react-router-dom/cjs/react-router-dom.min"
+
 export const PetFriendlyHeading = () => {
+  const LcData = localStorage.getItem('data')
+  const Lc = JSON.parse(LcData)
+  const params = useParams()
     return <>
                <div className="petStyle_location_div">
-              <p>Delhi</p>
+              <p>Dineout</p>
               <svg
                 width="7"
                 height="10"
@@ -14,7 +19,7 @@ export const PetFriendlyHeading = () => {
                   fill="#797979"
                 />
               </svg>
-              <p>Kolkata</p>
+              <p>{Lc}</p>
               <svg
                 width="7"
                 height="10"
@@ -27,7 +32,7 @@ export const PetFriendlyHeading = () => {
                   fill="#797979"
                 />
               </svg>
-              <p>Kolkata Restrauns</p>
+              <p>{Lc} Restraunts</p>
               <svg
                 width="7"
                 height="10"
@@ -40,10 +45,10 @@ export const PetFriendlyHeading = () => {
                   fill="#797979"
                 />
               </svg>
-              <p>Pet Friendly Restraunts</p>
+              <p>{params.id} Restraunts</p>
             </div>
             <div className="petfriendly-sort">
-              <h1>Best Pedegree Sponserd Restraunts Near Me In Kolgata</h1>
+              <h1>Best Pedegree Sponserd Restraunts Near Me In {Lc}</h1>
               <div>
                 <div>
                   <p>Sort By</p>

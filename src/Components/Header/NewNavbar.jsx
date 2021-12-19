@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Dineout_Logo from "../Images/Dineout_Logo.png";
 import Location_Logo from "../Images/Location_Logo.png";
 import { Signin } from "../Pages/signin/Signin";
-import { useContext } from "react";
+import { useContext ,useState} from "react";
 import { SigninContext } from "../../Context/SignInContext";
 import { Signup } from "../Pages/Signup/Signup";
 import { VerifyOtp } from "./VerifyOtp";
@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 const Scroll = styled.div`
   height: 112px;
   display: flex;
+  position:fixed;
   top:0;
   z-index:100;
   flex-direction: column;
@@ -138,8 +139,8 @@ const Scroll = styled.div`
         font-size: 14px;
         line-height: 16px;
         align-items: center;
-        cursor: pointer;
         color: #797979;
+        cursor: pointer;
       }
       p:hover{
         color: #ff645a;
@@ -177,16 +178,25 @@ const Scroll = styled.div`
   }
 `;
 
-export const ScrollNavbar = () => {
+export const NewNavbar = () => {
   const { handleModel } = useContext(SigninContext);
   const logout = () => {
     auth.signOut();
   };
+  const [nav,setNav] = useState(false)
+  const changeNavbarColor = ()=>{
+    let windowHeight = window.scrollY;
+    if(windowHeight > 220){
+      setNav(true)
+    }
+    else setNav(false)
+  }
+  window.addEventListener('scroll', changeNavbarColor)
   const [user] = useAuthState(auth);
   const LcData = localStorage.getItem('data')
   const Nc = JSON.parse(LcData)
   return (
-    <>
+    <div style={{display:nav ? 'block':'none'}}>
       <VerifyOtp />
       <Signin />
       <Signup />
@@ -246,6 +256,6 @@ export const ScrollNavbar = () => {
           </div>
         </div>
       </Scroll>
-    </>
+    </div>
   );
 };

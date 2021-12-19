@@ -9,7 +9,7 @@ const Mobilecss = styled.div`
     margin-left: 10%;
   }
   .mob_t1 {
-    width: 279px;
+    /* width: 279px; */
     height: 30px;
     font-weight: bold;
     font-size: 24px;
@@ -17,7 +17,7 @@ const Mobilecss = styled.div`
     color: #333333;
   }
   .mob_t2 {
-    width: 346px;
+    /* width: 346px; */
     height: 42px;
     font-weight: bold;
     font-size: 36px;

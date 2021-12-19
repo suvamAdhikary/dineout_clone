@@ -1,9 +1,9 @@
-
-import { Route, Switch } from 'react-router-dom';
-import RestaurantPage from './Restaurant/RestaurantPage';
+import { Route, Switch } from "react-router-dom";
+import RestaurantPage from "./Restaurant/RestaurantPage";
 import { PetFriendly } from "./PetFriendly/PetFriendly";
-import {Confirmation} from './ConfirmationPage/Confirmation'
-import {MainHome} from './Home/MainHome'
+import { Confirmation } from "./ConfirmationPage/Confirmation";
+import { MainHome } from "./Home/MainHome";
+import ScrollToTop from "../../Utils/ScrollToTop";
 import { ConfirmReservation } from '../Header/ConfirmReservation';
 import Calender from './Restaurant/Components/Calender';
 
@@ -11,15 +11,16 @@ import Calender from './Restaurant/Components/Calender';
 export default function Routes() {
   return (
     <div>
+      <ScrollToTop />
       <Switch>
 
         <Route path="/" exact>
           <MainHome/>
         </Route>
 
-        <Route path="/petfriendly">
-          <PetFriendly/>
-        </Route>
+        <Route path="/dynamic/:id">
+           <PetFriendly />
+         </Route>
 
         <Route path="/restaurant/:id" >
           <RestaurantPage />
@@ -39,6 +40,7 @@ export default function Routes() {
         </Route>
 
       </Switch>
+
     </div>
   );
 }

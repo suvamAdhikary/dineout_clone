@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import Model from "react-modal";
 import { SigninContext } from "../../../Context/SignInContext";
 
@@ -32,7 +32,7 @@ const Style = styled.div`
       height: 40px;
       display: flex;
       align-items: center;
-      border: 1px solid gray;
+      border: 1px solid #3595FF;
       input {
         width: 100%;
         border: none;
@@ -135,6 +135,13 @@ const Style = styled.div`
     position: relative;
     left: 380px;
     cursor: pointer;
+    width:24px;
+    height:24px;
+    border-radius:20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.03)
   }
 `;
 const customStyles = {
@@ -155,11 +162,21 @@ Model.setAppElement("#root");
 export const Signup = () => {
   const { signupModel, handleSignupModel, handleModel } =
     useContext(SigninContext);
+    useEffect(() => {
+      if (signupModel) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'unset';
+      }
+    }, [signupModel]);
+    const handleLc = (e)=>{
+      localStorage.setItem('data',JSON.stringify(e))
+    }
   return (
     <>
       <Model style={customStyles} isOpen={signupModel}>
         <Style>
-          <span onClick={() => handleSignupModel()} className="top_cross">
+          <div onClick={() => handleSignupModel()} className="top_cross">
             <svg
               width="12"
               height="12"
@@ -173,7 +190,7 @@ export const Signup = () => {
                 stroke="#DCDCDC"
               />
             </svg>
-          </span>
+          </div>
           <h1>Sign Up</h1>
           <div className="inputBox">
             <p>Name</p>

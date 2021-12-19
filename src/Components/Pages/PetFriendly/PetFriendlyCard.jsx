@@ -83,12 +83,11 @@ const Style = styled.div`
   }
   span {
     height: 24px;
-    width: 103px;
+    width: 115px;
     border-radius: 4px;
     padding: 4px, 8px, 4px, 8px;
     position:relative;
     top:-20px;
-    left:10px;
     background: #fff4f4;
     display:flex;
     gap:10px;
@@ -103,20 +102,20 @@ const Style = styled.div`
   }
 `;
 
-export const PetFriendlyCard = () => {
+export const PetFriendlyCard = ({name,image,location,locality,rating}) => {
   return (
     <Style>
       <div className="img-div">
         <img
-          src="https://b.zmtcdn.com/webFrontend/95f005332f5b9e71b9406828b63335331585809309.png?fit=around|402:360&crop=402:360;*,*"
+          src={image}
           alt=""
         />
       </div>
       <div className="details-section">
-        <p className="caffe-name">caffe 360 Degree</p>
-        <p className="location-para">Kakurgati, east kolgata</p>
-        <p className="location-para2">Kakurgati, east kolgata</p>
-        <div className="rating-box">4.5</div>
+        <p className="caffe-name">{name}</p>
+        <p className="location-para">{location}</p>
+        <p className="location-para2">{locality}</p>
+        <div className="rating-box">{rating}</div>
         <span>
         <p>Dineout Pay</p>
         <svg

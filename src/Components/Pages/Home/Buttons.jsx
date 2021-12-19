@@ -10,18 +10,21 @@ import btn8 from "../../Images/btn8.png";
 import { Link } from "react-router-dom";
 
 const ButtonsStyle = styled.div`
-height:268px;
-width:100%;
-padding:5%;
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content: center;
+  height: 268px;
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   .btnDiv {
+background: #f3f3f3;
+background: linear-gradient(to left, #f3f3f3 50%, #e7e6e6 50%) right;
+background-size: 200%;
+transition: .4s ease-out;
     cursor: pointer;
     width: 272px;
     height: 56px;
-    background: #f3f3f3;
     border-radius: 4px;
     display: flex;
     padding: 10px;
@@ -52,6 +55,9 @@ justify-content: center;
       color: #797979;
     }
   }
+  .btnDiv:hover {
+    background-position: left;
+  }
 `;
 export const Buttons = () => {
   return (
@@ -60,49 +66,49 @@ export const Buttons = () => {
         <div>
           <img src={buffet} alt="" />
         </div>
-        <p>Buffet</p>
+        <Link to="/dynamic/buffet">Buffet</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn2} alt="" />
         </div>
-        <p>Top-Trending</p>
+        <Link to="/dynamic/trending">Top-Trending</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn3} alt="" />
         </div>
-        <Link to="/petfriendly">Pet Friendly</Link>
+        <Link to="dynamic/petFriendly">Pet Friendly</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn4} alt="" />
         </div>
-        <p>New & Dineout</p>
+        <Link to="/dynamic/dineoutPay">New & Dineout</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn5} alt="" />
         </div>
-        <p>Family Time</p>
+        <Link to="/dynamic/familyTime">Family Time</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn6} alt="" />
         </div>
-        <p>Pure Veg</p>
+        <Link to="/dynamic/pureVeg">Pure Veg</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn7} alt="" />
         </div>
-        <p>North Indian</p>
+        <Link to="/dynamic/northIndian">North Indian</Link>
       </div>
       <div className="btnDiv">
         <div>
           <img src={btn8} alt="" />
         </div>
-        <p>Best Bars</p>
+        <Link to="/dynamic/bestBars">Best Bars</Link>
       </div>
     </ButtonsStyle>
   );
