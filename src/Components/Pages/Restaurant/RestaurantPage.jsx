@@ -371,7 +371,8 @@ const Right = styled.div`
 const Details = styled.div`
   .restaurant__mainImg--parent {
     width: 100%;
-
+    height:430px;
+    overflow: hidden;
     > img {
       width: 100%;
       border-radius: 4px 4px 0 0;
