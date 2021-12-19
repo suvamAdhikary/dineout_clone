@@ -58,6 +58,13 @@ const DetailsWrapper = styled.div`
             > h4 {
                 color: #AC8E48;
                 font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            > p {
+                font-weight: 400;
+                color: #
             }
         }
     }
@@ -106,13 +113,13 @@ const MiniCard = styled.div`
 `;
 
 
-const AboutUs = () => {
+const AboutUs = ({data}) => {
 
     return(<>
         <Wrapper>
             <h4>About Us</h4>
-            <p>The Green House is a nice, elegant cafe with a subtle ambiance and comfortable seating. The menu incl...</p>
-            <span>Read more</span>
+            <p>{data ? `${data}...` : null}</p>
+            <span>{data ? 'Read more' : null}</span>
             <DetailsWrapper>
                 <div className="details__sections">
                     <img src={cuisinImg} alt="cuisinImg" />
