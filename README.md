@@ -1,71 +1,123 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Logo](https://im1.dineout.co.in/images/uploads/misc/2019/Jul/25/website-logo.png)
 
-## Available Scripts
+# Clone of dineout
 
-In the project directory, you can run:
+# Technologies we used
 
-### `npm start`
+## Backend
+- Node Js
+- Express
+- MongoDB
+- Nodemailer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Frontend
+- React
+- Material UI
+- Styled- components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### Otp Varification
+Twilio -  [twilio.com/](https://www.twilio.com/) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Color Reference
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Mainorange  | ![#FF645A](https://via.placeholder.com/10/FF645A?text=+) `#FF645A` |
+| Darktheme | ![#ffffff](https://via.placeholder.com/10/ffffff?text=+) `#ffffff` |
+| Clearwhite| ![#333333](https://via.placeholder.com/10/333333?text=+) `#333333` |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Run Locally
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone the project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+  git clone (https://github.com/suvamAdhikary/dineout_clone)
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Go to the project directory
 
-## Learn More
+```bash
+  cd dineout_clone
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  npm install
+```
 
-### Code Splitting
+Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  npm start
+```
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Environment Variables
 
-### Making a Progressive Web App
+To run this project, you will need to add the following environment variables to your .env file
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Backend
 
-### Advanced Configuration
+`mongo` - database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+`port` - running port
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+### Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# dineout_clone
+
+`PORT`
+
+
+## Features
+
+- Login and Sign up using Mobile OTP
+- Sorting of hotels as its price/ratings etc.
+- Read full description of hotel
+- Book the Hotel.
+
+
+
+## Acknowledgements
+
+ - [dineout.co.in](https://www.dineout.co.in/)
+ - [Masai School](https://masaischool.com/)
+  
+
+## Authors
+
+-  [Suvam Adhikary](https://github.com/suvamAdhikary)
+
+- [Dharmesh Yadav](https://github.com/dharmeshrao)
+
+- [Arnavi Gode](https://github.com/arnavigode)
+
+
+## Home Page
+
+
+
+
+
+## Login and Otp verification
+
+
+
+
+## Search Page
+
+
+##Payment Page
+
+
+
+
+- GITHUB - https://github.com/suvamAdhikary/dineout_clone
