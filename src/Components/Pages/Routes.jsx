@@ -22,7 +22,7 @@ export default function Routes() {
            <PetFriendly />
          </Route>
 
-        <Route path="/restaurant/:id" >
+        <Route path="/restaurants/:id" >
           <RestaurantPage />
         </Route>
 
