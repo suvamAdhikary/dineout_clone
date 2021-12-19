@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     padding: 16px 24px 24px;
     position: relative;
-
+    border-radius: 4px;
 
     > h4 {
         font-size: 18px;
@@ -21,19 +21,23 @@ const Wrapper = styled.div`
             width: 136px;
             height: 120px;
             margin-top: 16px;
+            border-radius: 4px;
+
         }
 
         > div {
             background-color: #333333;
             color: #FFFFFF;
             width: 136px;
+            height: 24px;
             padding: 4px 0;
             display: flex;
             align-items: center;
             justify-content: center;
             position: absolute;
             z-index: 3;
-            bottom: 16px;
+            bottom: 24px;
+            border-radius: 0 0 4px 4px;
 
             > p {
                 font-size: 12px;
@@ -44,13 +48,13 @@ const Wrapper = styled.div`
     }
 `;
 
-const FoodMenu = () => {
+const FoodMenu = ({menuUrl}) => {
  
     return (<>
         <Wrapper>
             <h4>Menu</h4>
             <div className="foodMenu__parent">
-                <img src={menuImg} alt="menuImg" />
+                <img src={menuUrl[0]} alt="menuImg" />
                 <div>
                     <p>Menu(19)</p>
                 </div>
