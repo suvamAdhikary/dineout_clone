@@ -9,6 +9,7 @@ const Style = styled.div`
   border-radius: 4px;
   box-shadow: 0px 0px 4px gray;
   margin: auto;
+  z-index:1000;
   padding: 40px;
   padding-top: 15px;
   h1 {

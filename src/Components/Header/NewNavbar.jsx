@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Dineout_Logo from "../Images/Dineout_Logo.png";
 import Location_Logo from "../Images/Location_Logo.png";
 import { Signin } from "../Pages/signin/Signin";
-import { useContext } from "react";
+import { useContext ,useState} from "react";
 import { SigninContext } from "../../Context/SignInContext";
 import { Signup } from "../Pages/Signup/Signup";
 import { VerifyOtp } from "./VerifyOtp";
@@ -14,7 +14,7 @@ const Scroll = styled.div`
   display: flex;
   position:fixed;
   top:0;
-  z-index:100;
+  /* z-index:50; */
   flex-direction: column;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   background: white;
@@ -171,9 +171,20 @@ export const NewNavbar = () => {
   const logout = () => {
     auth.signOut();
   };
+  const [nav,setNav] = useState(false)
+  const changeNavbarColor = ()=>{
+    let windowHeight = window.scrollY;
+    if(windowHeight > 220){
+      setNav(true)
+    }
+    else setNav(false)
+  }
+  console.log(nav);
+  
+  window.addEventListener('scroll', changeNavbarColor)
   const [user] = useAuthState(auth);
   return (
-    <>
+    <div style={{display:nav ? 'block':'none'}}>
       <VerifyOtp />
       <Signin />
       <Signup />
@@ -233,6 +244,6 @@ export const NewNavbar = () => {
           </div>
         </div>
       </Scroll>
-    </>
+    </div>
   );
 };

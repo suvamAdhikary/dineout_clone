@@ -33,6 +33,7 @@ export const MainHome = () => {
   return (
     <>
      <Navbar />
+     <NewNavbar/>
      <Popup/>
       <SearchBox />
       <OfferCards />

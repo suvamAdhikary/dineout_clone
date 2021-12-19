@@ -10,6 +10,7 @@ import { Signin } from "../Pages/signin/Signin";
 import { useContext,useEffect } from "react";
 import { SigninContext } from "../../Context/SignInContext";
 import { auth } from "../../Utils/Firebase";
+import {NewNavbar} from './NewNavbar'
 import { useAuthState } from "react-firebase-hooks/auth";
 const NavbarStyle = styled.div`
   width: 100%;
@@ -189,7 +190,7 @@ const changeNavbarColor = ()=>{
 }
 console.log(nav);
 
-window.addEventListener('scroll', changeNavbarColor);
+window.addEventListener('scroll', changeNavbarColor)
   return (
     <>
       <Popup />
