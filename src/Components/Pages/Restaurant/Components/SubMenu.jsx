@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Wrapper = styled.div`
     display: flex;
 
-
     > div {
         padding: 14px 28px;
         color: #333333;

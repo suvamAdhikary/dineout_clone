@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Path from "./Components/Path";
-import DemoImg from './Assets/image17.png';
 import directionArrow from './Assets/direction.svg';
 import SubMenu from './Components/SubMenu';
 import DineoutPay from "./Components/DineoutPay";
@@ -18,6 +17,16 @@ import noOfrImg from "./Assets/No offer.svg";
 import downArrow from "./Assets/downArrowHead.svg";
 import addImg from "./Assets/add.svg";
 import removeImg from "./Assets/remove.svg";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../../../Redux/Users/action";
+import { Link, useParams } from "react-router-dom";
+import { getARestaurant } from "../../../Utils/Axios";
+import CalenderComp from "./Components/Calender";
+import TimeSlots from "./Components/TimeSlots";
+import Footer from "../../Footer/Footer";
+import { ScrollNavbar } from "../../Header/ScrollNavbar";
+import Calender from "./Components/Calender";
 
 
 const Wrapper = styled.div`
@@ -55,6 +64,7 @@ const Right = styled.div`
     height: max-content !important;
     border-radius: 4px;
 
+
     > div {
         &:nth-child(1){
             display: flex;
@@ -71,6 +81,11 @@ const Right = styled.div`
                 font-weight: 700;
             }
         }
+    }
+
+    .scroll__parent{
+        max-height: 456px;
+        overflow-y: scroll;
     }
 
     .reservation__offerAndTime{
@@ -123,6 +138,11 @@ const Right = styled.div`
             border-radius: 4px;
             box-shadow: 2px -1px 16px #00000028;
 
+                /* Dharmesh */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+                /* Dharmesh */
             
             .calenderIcon__parent {
                 background-color: #3595FF;
@@ -146,19 +166,30 @@ const Right = styled.div`
 
             }
             
-
+            .calender__slide--parent{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
 
             .calendar__dayes--parent{
+                /* object-fit: contain; */
                 display: flex;
                 flex-direction: row;
                 gap: 7px;
                 padding: 20px;
                 /* width: 229px; */
+                /* overflow: hidden; */
+                /* flex-wrap: nowrap; */
+                /* position: relative; */
+                /* background-color: red; */
+                /* color: white; */
+                /* white-space: nowrap;
                 overflow: hidden;
-                flex-wrap: nowrap;
-                position: relative;
+                text-overflow: ellipsis;  */
 
-                .calender__dayes{
+                /* .calender__dayes{
                     height: 52px;
                     width: 37.5px;
 
@@ -174,7 +205,7 @@ const Right = styled.div`
                             font-weight: 700;
                         }
                     }
-                }
+                } */
             }
         }
     }
@@ -280,9 +311,14 @@ const Right = styled.div`
                 line-height: 20px;
                 font-weight: 700;
                 color: #333333;
+                margin: 0 12px;
             }
             > div {
                 margin: 0 14px;
+            }
+
+            > button {
+                border: none;
             }
         }
 
@@ -293,8 +329,12 @@ const Right = styled.div`
 
             > span {
                 background-color: #F3F3F3;
-                padding: 6px;
-                border-radius: 50%;
+                min-height: 18px;
+                min-width: 18px; 
+                /* padding: 6px; */
+                /* border-radius: 9px; */
+                border-radius: 9px;
+                text-align: center;
             }
 
             > p {
@@ -304,6 +344,25 @@ const Right = styled.div`
                 line-height: 16px;
                 font-weight: 400;
             }
+        }
+
+    }
+    .continue__parent{
+        background-color: #FF645A;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        > a > button {
+            margin: 12px 0;
+            border: none;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            background-color: inherit;
+            
         }
     }
 `;
@@ -382,6 +441,7 @@ const Details = styled.div`
     }
     
     .restaurant__details--right{
+
         > .restaurant__details--sections{
             background-color: #51BA64;
             height: 46px;
@@ -396,6 +456,19 @@ const Details = styled.div`
             position: absolute;
             top: 0px;
             right: 16px;
+            border-radius: 2px;
+
+            > p, > span {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 26px;
+            }
+            > p {
+                margin-left: 10px;
+            }
+            >span {
+                margin-right: 10px;
+            }
         }
 
         > div {
@@ -420,6 +493,7 @@ const Fssai = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    margin-bottom: 48px;
 
     > img {
         &:nth-child(1){
@@ -429,29 +503,100 @@ const Fssai = styled.div`
     }
 `;
 
+
+
 const RestaurantPage = () => {
+    const [restaurantData, setRestaurantdata] = useState({});
+    const [img, setImg] = useState([]);
+    const [menuImg, setMenuImg] = useState([]);
+    const [guestCount, setGuestCount] = useState(0);
+    const [timeStatus, setTimeStatus] = useState("lunch");
+    const [bookTime, setBookTime] = useState("");
+    const [bookDate, setBookDate] = useState("");
+
+    const restaurantId = useParams();
+
+    const dispatch = useDispatch();
+
+    // const data = useSelector((state) => state);
+
+    // dispatch(getRestaurants())
+    // dispatch(getUser('61b8d36a6c6b3bb63911d300'))
+
+    const getRestaurantData = async ({id}) => {
+
+        try {
+            
+            const { data: {item} } = await getARestaurant(id);
+            
+            setRestaurantdata(item);
+            setImg(item?.img);
+            setMenuImg(item?.menuImg);
+            
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    
+    
+    
+    useEffect(() => {
+        
+        getRestaurantData(restaurantId);
+        
+        
+        
+    }, [restaurantId]);
+    
+    console.log(restaurantData);
+    
+    const { name, costForTwo, locality, city, rating, reviews, about } = restaurantData;
+    
+    const { northIndian, chinese, continental, fastFood, italian, indian, seafood, thai, southeastAsian, bengali } = restaurantData;
+    document.title = `Dineout - ${restaurantData.name}`;
 
     return(<>
+        <ScrollNavbar />
         <Wrapper>
-            <Path />
+            <Path city={city} locality={locality} resName={name} />
             <Main>
             <Left>
                 <Details>
                     <div className="restaurant__mainImg--parent">
-                        <img src={DemoImg} alt="restaurant" />
+                        <img src={img[0]} alt="restaurant" />
                     </div>
                     <div className="restaurant__details">
                         <div className="restaurant__details--left">
-                            <h2>The Green House</h2>
+                            <h2>{name}</h2>
                             <div className="restaurant__details--sections">
-                                <p>&#8377; 1,000 for 2</p>
+                                <p>&#8377; {costForTwo} for 2</p>
                                 <span>&#124;</span>
-                                <p>Italian, Continental</p>
+                                <p>
+                                    {northIndian ? 'North Indian,' : null}
+                                    {' '}
+                                    {chinese ? 'Chinese,' : null}
+                                    {' '}
+                                    {continental ? 'Continental,' : null}
+                                    {' '}
+                                    {fastFood ? 'Fast Food,' : null}
+                                    {' '}
+                                    {italian ? 'Italian' : null}
+                                    {' '}
+                                    {indian ? 'Indian' : null}
+                                    {' '}
+                                    {seafood ? 'Seafood,' : null}
+                                    {' '}
+                                    {thai ? 'Thai,' : null}
+                                    {' '}
+                                    {southeastAsian ? 'South East Asian' : null}
+                                    {" "}
+                                    {bengali ? 'Bengali' : null}
+                                </p>
                             </div>
                             <div className="restaurant__details--sections">
-                                <p>Salt Lake</p>
+                                <p>{locality}</p>
                                 <span>&#124;</span>
-                                <p>Kolkata</p>
+                                <p>{city}</p>
                                 <span>&#124;</span>
                                 <div className="direction">
                                     <img src={directionArrow} alt="directionArrow" />
@@ -469,19 +614,19 @@ const RestaurantPage = () => {
                         </div>
                         <div className="restaurant__details--right">
                             <div className="restaurant__details--sections">
-                                <p>4</p>
+                                <p>{rating}</p>
                                 <span>&#9733;</span>
                             </div>
                             <div>
-                                <p>21 reviews</p>
+                                <p>{reviews} reviews</p>
                             </div>
                         </div>
                     </div>
                 </Details>
                 <SubMenu />
                 <DineoutPay />
-                <FoodMenu />
-                <AboutUs />
+                <FoodMenu menuUrl={menuImg} />
+                <AboutUs data={about} />
                 <img src={l1} alt="l1" />
                 <img src={l2} alt="l2" />
                 <img src={l3} alt="l3" />
@@ -491,6 +636,7 @@ const RestaurantPage = () => {
                 <div>
                     <p>Make a Reservation</p>
                 </div>
+                <div className="scroll__parent">
                 <div className="reservation__offerAndTime">
                     <div>
                         <img src={doOfferImg} alt="doOfferImg" />
@@ -508,8 +654,9 @@ const RestaurantPage = () => {
                             <p>DEC</p>
                             <img src={calIcon} alt="calIcon" />
                         </div>
-                        <div>
-                            <div className="calendar__dayes--parent">
+                        <div className="calender__slide--parent">
+                            <Calender setBookDate={setBookDate} bookDate={bookDate} />
+                            {/* <div className="calendar__dayes--parent">
                                 <div className="calender__dayes">
                                     <p>Today</p>
                                     <p>16</p>
@@ -538,22 +685,34 @@ const RestaurantPage = () => {
                                     <p>Mon</p>
                                     <p>22</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="default__time">
                         <p><b>Time</b></p>
                         <div>
                             <p>Choose an available time slot</p>
-                            <p>2:00 PM</p>
-                            <div>
-                                <img src={downArrow} alt="downarrow" />
-                                {/* <span>&#8964;</span> */}
-                            </div>
+                            {
+                                bookTime.length ?
+                                <>
+                                <p>{bookTime}</p>
+                                <div onClick={() => setBookTime("")}>
+                                    <img src={downArrow} alt="downarrow" />
+                                    {/* <span>&#8964;</span> */}
+                                </div>
+                                </> : null
+                            }
                         </div>
                     </div>
+                    {
+                        !bookTime.length ?
+                        <TimeSlots timeStatus={timeStatus} setTimeStatus={setTimeStatus} setBookTime={setBookTime} />
+                        : null
+                    }
                 </div>
-                <div className="noOffer__parent">
+                {
+                    bookTime.length ?
+                    <div className="noOffer__parent">
                     <div>
                         <img src={noOfrImg} alt="noofferimg" />
                     </div>
@@ -562,25 +721,39 @@ const RestaurantPage = () => {
                             Sorry there are no Offers available for these timings. Select guests to continue to reserve a table.
                         </p>
                     </div>
-                </div>
+                    </div>
+                    : null
+                }
                 <div className="select__guest--parent">
                     <h4>Select Guest/s</h4>
                     <p>Choose the number of guests going</p>
                     <div className="guest__count--parent">
                         <h4>Guests:</h4>
-                        <div>
-                            <img src={addImg} alt="addImg" />
-                        </div>
-                        <h4>0</h4>
-                        <div>
+                        <button onClick={() => setGuestCount(n => n - 1)} disabled={guestCount < 1} >
                             <img src={removeImg} alt="removeImg" />
-                        </div>
+                        </button>
+                        <h4>{guestCount}</h4>
+                        <button onClick={() => setGuestCount(n => n + 1)} disabled={guestCount > 19} >
+                            <img src={addImg} alt="addImg" />
+                        </button>
                     </div>
                     <div className="addGuest__special">
                         <span>+</span>
                         <p>Any special request (Optional)</p>
                     </div>
                 </div>
+                </div>
+                    {
+                        guestCount > 0 ?
+                        <div className="continue__parent">
+                        <Link to="/confirm">
+                            <button>
+                                Continue
+                            </button>
+                        </Link>
+                        </div> :
+                        null
+                    }
             </Right>
             </Main>
             <Fssai>
@@ -588,6 +761,7 @@ const RestaurantPage = () => {
                 <img src={fassaiNoImg} alt="fassaino" />
             </Fssai>
         </Wrapper>
+        <Footer />
     </>)
 
 }

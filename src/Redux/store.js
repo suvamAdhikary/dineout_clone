@@ -1,13 +1,38 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
-import { restaurantReducer } from "./Restaurants/reducer";
 import thunk from "redux-thunk";
+import { restaurantReducer } from "./Restaurants/reducer";
+
+import { userReducer } from "./Users/reducer";
+
+
+
 
 const rootReducer = combineReducers({
-  restaurants: restaurantReducer,
-});
+    restaurants: restaurantReducer,
+    user: userReducer
+})
+
+
+const composeEnhancers = (
+
+    typeof window !== "undefined" && window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__
+
+) || compose;
+
+const enhancer = composeEnhancers(applyMiddleware(
+
+    thunk
+));
+
+
+
 
 export const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+    rootReducer,
+
+    enhancer,
+
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
-//  compose(applyMiddleware(thunk)),
+

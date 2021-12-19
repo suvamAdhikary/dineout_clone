@@ -17,7 +17,7 @@ export const restaurantReducer = (state = initState, {type, payload}) => {
                 ...state,
                 restaurants: {
                     ...state.restaurants,
-                    loading: true,
+                    loading: !state.restaurants.loading,
                 },
             };
         
