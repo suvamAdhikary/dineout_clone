@@ -1,7 +1,9 @@
+
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { getUser } from "../../../Redux/Users/action";
+
 
 const Style = styled.div`
   padding-bottom: 100px;
@@ -94,40 +96,55 @@ const Style = styled.div`
 
 
 export const ConfirmationPage = () => {
-
+  // const [data, setData] = useState({})
 
   const dispatch = useDispatch();
 
-  const { data } = useSelector((store) => store?.user.user)
+  const { loading, data, error } = useSelector((store) => store?.user.user)
 
   
+  // const setdata = async (id) => {
+  //   const { data :{item} } = await axios.get(`https://dineout-clone.herokuapp.com/users/${id}`);
+  //   console.log(item);
+  //   setData(item)
+  // }
+
+  const userId = JSON.parse(localStorage.getItem('dineout-userId'));
   useEffect(() => {
+    setTimeout(() => {
+
+      dispatch(getUser(userId))
+
+    }, 1500);
+
+    return {
+      clearTimeout
+    }
     
-    const userId = JSON.parse(localStorage.getItem('dineout-userId'));
-    
-    dispatch(getUser(userId))
+  //   // setdata(userId)
+  //   // const { data }  getAUser()
 
-  }, [dispatch])
+  }, [userId, dispatch])
+// console.log(data);
+  // const { restaurantName, locality, city, guests, timeSlot, date, _id } = resdata?.bookings;
 
-  const { restaurantName, locality, city, guests, timeSlot, date, _id } = data.bookings;
-
-  const { name, mobile } = data;
-
-  return (
+  // const { name, mobile } = resdata;
+  console.log(data, loading, error);
+  return ( loading ? <h1>Loading...</h1> : error ? <h1>Something went wrong...</h1> :
     <Style>
       <div className="first">
-        <h1>{restaurantName}</h1>
-        <p>{locality} , {city}</p>
+        <h1>{data?.bookings?.restaurantName}</h1>
+        <p>{data?.bookings?.locality} , {data?.bookings?.city}</p>
       </div>
       <div className="second">
         <p className="heading">Guest Details</p>
         <div>
           <p className="bold">Guest Name:</p>
-          <p>{name}</p>
+          <p>{data?.name}</p>
         </div>
         <div>
           <p className="bold">Phone No:</p>
-          <p>{mobile}</p>
+          <p>{data?.mobile}</p>
         </div>
       </div>
       <div className="third">
@@ -138,19 +155,19 @@ export const ConfirmationPage = () => {
         </div>
         <div>
           <p>Date & Time</p>
-          <p>{date}, {timeSlot}</p>
+          <p>{data?.bookings?.date}, {data?.bookings?.timeSlot}</p>
         </div>
         <div>
           <p>Guests</p>
-          <p>{guests}</p>
+          <p>{data?.bookings?.guests}</p>
         </div>
         <div>
           <p>Name</p>
-          <p>{name}</p>
+          <p>{data?.name}</p>
         </div>
         <div>
           <p>ID</p>
-          <p>{_id}</p>
+          <p>{data?.bookings?._id}</p>
         </div>
       </div>
     </Style>

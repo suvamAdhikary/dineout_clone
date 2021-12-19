@@ -1,9 +1,25 @@
+import { getAUser } from "../../Utils/Axios";
 import { ADD_USER_ERROR, ADD_USER_LOADING, ADD_USER_SUCCESS, GET_USER_ERROR, GET_USER_LOADING, GET_USER_SUCCESS } from "./actionTypes";
 
+const userId = JSON.parse(localStorage.getItem('dineout-userId'))
+
+
+var userData;
+
+const loaddata = async (userId) => {
+
+    const { data } = await getAUser(userId);
+
+    userData = data.item;
+    // console.log(data.item);
+}
+ 
+loaddata(userId)
+// console.log(data, "frm rdcr");
 const initState = {
     user: {
         loading: false,
-        data: {},
+        data: userData || {},
         error: false,
     }
 };

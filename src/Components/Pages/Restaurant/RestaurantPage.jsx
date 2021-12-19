@@ -29,6 +29,8 @@ import { auth } from "../../../Utils/Firebase";
 import Calender from "./Components/Calender";
 import { useContext } from "react";
 import { SigninContext } from "../../../Context/SignInContext";
+import { getUser } from "../../../Redux/Users/action";
+import { useDispatch, useSelector } from "react-redux";
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -515,9 +517,10 @@ const RestaurantPage = () => {
   const [bookDate, setBookDate] = useState("");
   const [dineoutUserId, setDineoutUserId] = useState("");
 
+
   const restaurantId = useParams();
 
-  const { signup } = useContext(SigninContext);
+  const dispatch = useDispatch();
 
 
   const getRestaurantData = async ({ id }) => {
@@ -535,12 +538,12 @@ const RestaurantPage = () => {
     }
   };
 
+  let userId = JSON.parse(localStorage.getItem('dineout-userId'));
   useEffect(() => {
-    let userId = JSON.parse(localStorage.getItem('dineout-userId'));
     setDineoutUserId(userId)
 
     getRestaurantData(restaurantId);
-  }, [restaurantId]);
+  }, [userId,restaurantId]);
 
   const { name, costForTwo, locality, city, rating, reviews, about } =
     restaurantData;
@@ -585,7 +588,8 @@ const RestaurantPage = () => {
       restaurantId: restaurantId.id
     }
 
-    await updateUser(dineoutUserId, {bookings: payload});
+      await updateUser(dineoutUserId, {bookings: payload})
+
   }
 
   return (
