@@ -85,10 +85,11 @@ const PetStyle = styled.div`
           height: 40px;
           min-width: 174px;
           border-radius: 4px;
-          background: #ffffff;
           padding: 8px;
           border: none;
+          background:white;
           select {
+            background: #ffffff;
             width: 100%;
             border: none;
           }

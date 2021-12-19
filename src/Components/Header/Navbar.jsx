@@ -205,7 +205,7 @@ export const Navbar = () => {
         <div className="search_bar">
           <img src={Location_Logo} alt="" />
           <select name="search" id="">
-            <option value="abc">{Nc}</option>
+            <option value="abc">Kolkata</option>
           </select>
         </div>
         <div className="pages_link">
