@@ -7,6 +7,7 @@ Dineout web application gives you the perfect restaurant of your choice. You can
 
 # Technologies we used
 ```
+
 ## Backend
 - Node Js
 - Express
@@ -21,6 +22,7 @@ Dineout web application gives you the perfect restaurant of your choice. You can
 
 ### Otp Varification
 Twilio -  [twilio.com/](https://www.twilio.com/) 
+
 ```
 
 ## Features
@@ -83,7 +85,9 @@ To run this project, you will need to add the following environment variables to
 ### Frontend
 
 
+
 `PORT`
+
 
 
 
@@ -94,6 +98,7 @@ To run this project, you will need to add the following environment variables to
  - [dineout.co.in](https://www.dineout.co.in/)
  - [Masai School](https://masaischool.com/)
   
+
 
 ### Quick Walkthrough
 
@@ -118,6 +123,8 @@ To run this project, you will need to add the following environment variables to
 
 
 
+
+
 ## Project By:
 
 -  [Suvam Adhikary](https://github.com/suvamAdhikary)
@@ -130,3 +137,4 @@ To run this project, you will need to add the following environment variables to
 
 - USERS repo :- https://github.com/suvamAdhikary/dineout_clone
 - BACKEND repo :- https://github.com/suvamAdhikary/dineout_server
+
