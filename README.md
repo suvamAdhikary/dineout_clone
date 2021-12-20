@@ -1,9 +1,12 @@
 
-![Logo](https://im1.dineout.co.in/images/uploads/misc/2019/Jul/25/website-logo.png)
+![Logo](https://www.dineout.co.in/blog/wp-content/uploads/2019/10/timthumb.jpg)
 
 # Clone of dineout
+Dineout web application gives you the perfect restaurant of your choice. You can filter restaurants and select the date and time of your choice and book restaurant, you can log in using mobile OTP and get booking confirmation.
+
 
 # Technologies we used
+```
 
 ## Backend
 - Node Js
@@ -20,6 +23,14 @@
 ### Otp Varification
 Twilio -  [twilio.com/](https://www.twilio.com/) 
 
+```
+
+## Features
+
+- Login and Sign up using Mobile OTP
+- Sorting of hotels as its price/ratings etc.
+- Read full description of hotel
+- Book the Hotel.
 
 
 ## Color Reference
@@ -74,15 +85,11 @@ To run this project, you will need to add the following environment variables to
 ### Frontend
 
 
+
 `PORT`
 
 
-## Features
 
-- Login and Sign up using Mobile OTP
-- Sorting of hotels as its price/ratings etc.
-- Read full description of hotel
-- Book the Hotel.
 
 
 
@@ -92,7 +99,33 @@ To run this project, you will need to add the following environment variables to
  - [Masai School](https://masaischool.com/)
   
 
-## Authors
+
+### Quick Walkthrough
+
+
+## Home Page
+
+![alt text](https://github.com/suvamAdhikary/dineout_clone/blob/main/public/Assets/SS/full1.png)
+
+## Restaurant Categories Page
+![alt text](https://github.com/suvamAdhikary/dineout_clone/blob/main/public/Assets/SS/full1.png)
+
+## Restaurant Details Page
+![alt text](https://github.com/suvamAdhikary/dineout_clone/blob/main/public/Assets/SS/full5.png)
+
+## User Receipt Page
+![alt text](https://github.com/suvamAdhikary/dineout_clone/blob/main/public/Assets/SS/full6.png)
+
+
+## Login and Otp verification
+![alt text](https://github.com/suvamAdhikary/dineout_clone/blob/main/public/Assets/SS/Screenshot%202021-12-20%20at%201.49.11%20AM.png)
+
+
+
+
+
+
+## Project By:
 
 -  [Suvam Adhikary](https://github.com/suvamAdhikary)
 
@@ -101,23 +134,7 @@ To run this project, you will need to add the following environment variables to
 - [Arnavi Gode](https://github.com/arnavigode)
 
 
-## Home Page
 
+- USERS repo :- https://github.com/suvamAdhikary/dineout_clone
+- BACKEND repo :- https://github.com/suvamAdhikary/dineout_server
 
-
-
-
-## Login and Otp verification
-
-
-
-
-## Search Page
-
-
-##Payment Page
-
-
-
-
-- GITHUB - https://github.com/suvamAdhikary/dineout_clone
