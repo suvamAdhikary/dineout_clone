@@ -29,8 +29,7 @@ import { auth } from "../../../Utils/Firebase";
 import Calender from "./Components/Calender";
 import { useContext } from "react";
 import { SigninContext } from "../../../Context/SignInContext";
-import { getUser } from "../../../Redux/Users/action";
-import { useDispatch, useSelector } from "react-redux";
+
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -520,9 +519,6 @@ const RestaurantPage = () => {
 
   const restaurantId = useParams();
 
-  const dispatch = useDispatch();
-
-
   const getRestaurantData = async ({ id }) => {
     try {
       const {
@@ -569,7 +565,7 @@ const RestaurantPage = () => {
 
   const handleModel = () => {
     if (user) {
-      // setUserPh()
+
       handleConfirmation();
     } else {
       handleSignupModel();
@@ -654,7 +650,6 @@ const RestaurantPage = () => {
                     <p className="restaurant__timing">
                       Time: 11:00 AM to 10:30 PM
                       <span>(Open Now)</span>
-                      {/* <span>&#8964;</span> */}
                       <img src={downArrow} alt="downArrow" />
                     </p>
                   </div>
@@ -716,7 +711,6 @@ const RestaurantPage = () => {
                         <p>{bookTime}</p>
                         <div onClick={() => setBookTime("")}>
                           <img src={downArrow} alt="downarrow" />
-                          {/* <span>&#8964;</span> */}
                         </div>
                       </>
                     ) : null}
