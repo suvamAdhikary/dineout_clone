@@ -63,7 +63,7 @@ const Left = styled.div`
 const Right = styled.div`
   width: 25.56vw;
   background-color: #ffffff;
-  height: max-content !important;
+  height: 550px;
   border-radius: 4px;
   position: relative;
 
@@ -330,13 +330,15 @@ const Right = styled.div`
     align-items: center;
     justifycontent: center;
     padding: 10px;
+    position:relative;
+    top:-50px;
 
     button {
       height: 46px;
       color: #ffffff;
       border:none;
       background: #FF645A;
-      width: 336px;
+      width: 100%;
       border-radius: 4px;
       padding: 12px, 32px, 12px, 32px;
       :hover{
