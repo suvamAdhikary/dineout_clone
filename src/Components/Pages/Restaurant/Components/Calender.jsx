@@ -107,7 +107,7 @@ export default function Calender({bookDate, setBookDate}) {
     infinite: true,
     speed: 1000,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     cssEase: 'linear',
     arrows: true,
     // nextArrow: <ArrowHead />,
@@ -125,22 +125,8 @@ export default function Calender({bookDate, setBookDate}) {
 </svg>
 </div>
     <Slider {...settings}>
-        <button className={bookDate === '19th DEC 2021' ? "calender__dayes active__date" : "calender__dayes"} onClick={() => setBookDate('19th DEC 2021')}>
-          <p className="select__day">Today</p>
-          <div className="select__date--parent">
-            <div className="blink__border">
-              <p className="select__date">19</p>
-            </div>
-          </div>
-        </button>
-        <button className={bookDate === '20th DEC 2021' ? "calender__dayes active__date" : "calender__dayes"} onClick={() => setBookDate('20th DEC 2021')}>
-          <p className="select__day">Mon</p>
-          <div className="select__date--parent">
-            <p className="select__date">20</p>
-          </div>
-        </button>
         <button className={bookDate === '21st DEC 2021' ? "calender__dayes active__date" : "calender__dayes"} onClick={() => setBookDate('21st DEC 2021')}>
-          <p className="select__day">Tue</p>
+          <p className="select__day">Today</p>
           <div className="select__date--parent">
             <p className="select__date">21</p>
           </div>
@@ -191,6 +177,20 @@ export default function Calender({bookDate, setBookDate}) {
           <p className="select__day">Wed</p>
           <div className="select__date--parent">
             <p className="select__date">29</p>
+          </div>
+        </button>
+        <button className={bookDate === '30th DEC 2021' ? "calender__dayes active__date" : "calender__dayes"} onClick={() => setBookDate('30th DEC 2021')}>
+          <p className="select__day">Thu</p>
+          <div className="select__date--parent">
+            <div className="blink__border">
+              <p className="select__date">30</p>
+            </div>
+          </div>
+        </button>
+        <button className={bookDate === '31st DEC 2021' ? "calender__dayes active__date" : "calender__dayes"} onClick={() => setBookDate('31st DEC 2021')}>
+          <p className="select__day">Fri</p>
+          <div className="select__date--parent">
+            <p className="select__date">31</p>
           </div>
         </button>
     </Slider>
