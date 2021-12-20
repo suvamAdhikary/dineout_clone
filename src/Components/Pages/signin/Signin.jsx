@@ -185,15 +185,18 @@ export const Signin = () => {
     auth
       .signInWithPhoneNumber("+91" + mynumber, verify)
       .then( async(result) => {
-        handleSetFinal(result);
-
+        
         const { data } = await getUserByMobile(`+91` + mynumber);
-
-        localStorage.setItem("dineout-userId", JSON.stringify(data?._id));
-        localStorage.setItem("number",JSON.stringify(mynumber))
-      })
-      .then(() => {
-        handleOtp();
+        if(data){
+          handleSetFinal(result);
+          localStorage.setItem("dineout-userId", JSON.stringify(data?._id));
+          localStorage.setItem("number",JSON.stringify(mynumber))
+          handleOtp();
+        }
+        else {
+          alert('No user Found')
+          handleSignupModel()
+        }
       })
       .catch((err) => {
         alert(err);
