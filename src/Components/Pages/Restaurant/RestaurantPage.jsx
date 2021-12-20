@@ -65,6 +65,8 @@ const Right = styled.div`
   background-color: #ffffff;
   height: max-content !important;
   border-radius: 4px;
+  position: relative;
+
   > div {
     &:nth-child(1) {
       display: flex;
@@ -86,6 +88,7 @@ const Right = styled.div`
   .scroll__parent {
     max-height: 456px;
     overflow-y: scroll;
+    position: relative;
   }
 
   .reservation__offerAndTime {
@@ -297,7 +300,7 @@ const Right = styled.div`
     .addGuest__special {
       display: flex;
       align-items: center;
-      margin: 15px 0;
+      margin: 15px 0 64px;
 
       > span {
         background-color: #f3f3f3;
@@ -680,13 +683,17 @@ const RestaurantPage = () => {
             </div>
             <div className="scroll__parent">
               <div className="reservation__offerAndTime">
-                <div>
+                { bookDate &&
+                  <div>
                   <img src={doOfferImg} alt="doOfferImg" />
                 </div>
+                }
                 <div>
-                  <b>2021-12-16</b>
-                  <span>&#124;</span>
-                  <b>2:00 PM</b>
+                  { bookDate && <b>{bookDate}</b> }
+                  { bookTime && <>
+                    <span>&#124;</span>
+                  <b>{bookTime}</b>
+                  </>}
                 </div>
               </div>
               <div className="calendar__head--parent">
@@ -762,11 +769,11 @@ const RestaurantPage = () => {
                 </div>
               </div>
             </div>
-            {guestCount > 0 ? (
-              <div className="continue__parent">
-                <button onClick={() => handleModel()}>Continue</button>
-              </div>
-            ) : null}
+              {guestCount > 0 ? (
+                <div className="continue__parent">
+                  <button onClick={() => handleModel()}>Continue</button>
+                </div>
+                ) : null}
           </Right>
         </Main>
         <Fssai>
