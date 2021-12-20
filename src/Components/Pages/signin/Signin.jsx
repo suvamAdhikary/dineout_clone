@@ -6,12 +6,12 @@ import { firebase, auth } from "../../../Utils/Firebase";
 import { getUserByMobile } from "../../../Utils/Axios";
 const Style = styled.div`
   /* height: 455px; */
-  .noUserCheck{
-    color:red;
-    text-align:center;
+  .noUserCheck {
+    color: red;
+    text-align: center;
   }
-  .hide{
-    display:none;
+  .hide {
+    display: none;
   }
   width: 464px;
   border-radius: 4px;
@@ -182,7 +182,7 @@ export const Signin = () => {
     useContext(SigninContext);
   // Inputs
   const [mynumber, setnumber] = useState("");
-  const [bug,setBut] = useState(false)
+  const [bug, setBut] = useState(false);
   const signin = () => {
     if (mynumber === "" || mynumber.length < 10) return;
 
@@ -192,13 +192,13 @@ export const Signin = () => {
       .then(async (result) => {
         const { data } = await getUserByMobile(`+91` + mynumber);
         if (data) {
-          setBut(false)
+          setBut(false);
           handleSetFinal(result);
           localStorage.setItem("dineout-userId", JSON.stringify(data?._id));
           localStorage.setItem("number", JSON.stringify(mynumber));
           handleOtp();
         } else {
-          setBut(true)
+          setBut(true);
           // alert("No user Found");
           // handleSignupModel();
         }
@@ -240,7 +240,9 @@ export const Signin = () => {
           </div>
         </div>
         <div id="recaptcha-container"></div>
-        <div className={bug ? "noUserCheck" : 'hide'}>User Not Found, Signup First</div>
+        <div className={bug ? "noUserCheck" : "hide"}>
+          User Not Found, Signup First
+        </div>
         <button onClick={signin} className="signup_button">
           SEND OTP
         </button>
@@ -296,7 +298,14 @@ export const Signin = () => {
         <div className="end_line">
           <p>
             Don't have an account?{" "}
-            <span onClick={() => handleSignupModel()}>Create one</span>
+            <span
+              onClick={() => {
+                setBut(false);
+                handleSignupModel();
+              }}
+            >
+              Create one
+            </span>
           </p>
         </div>
       </Style>
