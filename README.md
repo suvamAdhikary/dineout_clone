@@ -6,7 +6,7 @@ Dineout web application gives you the perfect restaurant of your choice. You can
 
 
 # Technologies we used
-```
+
 
 ## Backend
 - Node Js
@@ -21,9 +21,9 @@ Dineout web application gives you the perfect restaurant of your choice. You can
 
 
 ### Otp Varification
--Firebase
+- [Firebase](https://firebase.google.com/)
 
-```
+
 
 ## Features
 
