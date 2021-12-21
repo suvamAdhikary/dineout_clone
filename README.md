@@ -21,7 +21,7 @@ Dineout web application gives you the perfect restaurant of your choice. You can
 
 
 ### Otp Varification
-[Firebase](https://firebase.google.com/) 
+-Firebase
 
 ```
 
@@ -47,9 +47,9 @@ Dineout web application gives you the perfect restaurant of your choice. You can
 
 Clone the project
 
-```bash
-  git clone (https://github.com/suvamAdhikary/dineout_clone)
-```
+
+  -[git clone](https://github.com/suvamAdhikary/dineout_clone)
+
 
 Go to the project directory
 
