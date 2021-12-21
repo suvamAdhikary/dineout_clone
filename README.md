@@ -12,7 +12,7 @@ Dineout web application gives you the perfect restaurant of your choice. You can
 - Node Js
 - Express
 - MongoDB
-- Nodemailer
+- Firebase
 
 ## Frontend
 - React
@@ -21,16 +21,16 @@ Dineout web application gives you the perfect restaurant of your choice. You can
 
 
 ### Otp Varification
-Twilio -  [twilio.com/](https://www.twilio.com/) 
+[Firebase](https://firebase.google.com/) 
 
 ```
 
 ## Features
 
 - Login and Sign up using Mobile OTP
-- Sorting of hotels as its price/ratings etc.
-- Read full description of hotel
-- Book the Hotel.
+- Sorting and filtering of restaurants as its price/ratings etc.
+- Read full description of restaurant
+- Book the Restaurant.
 
 
 ## Color Reference
