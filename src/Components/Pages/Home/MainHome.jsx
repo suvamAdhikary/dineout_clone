@@ -1,5 +1,4 @@
 import { Navbar } from "../../Header/Navbar";
-import { NewNavbar } from "../../Header/NewNavbar";
 import { Buttons } from "./Buttons";
 import {Popup} from "./Popup"
 import MobileApp from "./MobileApp";
@@ -7,7 +6,7 @@ import Passport from "./Passport";
 import OfferCards from "./OfferCards";
 import { SearchBox } from "./SearchBox";
 import Footer from "../../Footer/Footer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import { RestrauntsNear } from "./RestrauntsNear";
 import { FeaturedRestraunts } from "./FeaturedRestraunts";
@@ -23,7 +22,7 @@ export const MainHome = () => {
     dispatch(getRestaurantsLoading());
     try {
       const { data } = await axios.get(
-        "https://dineout-clone.herokuapp.com/restaurants"
+        "https://dineout-clone-server.onrender.com/restaurants"
       );
       dispatch(getRestaurantsSuccess(data.items));
     } catch (err) {
@@ -33,7 +32,6 @@ export const MainHome = () => {
   return (
     <>
      <Navbar />
-     {/* <NewNavbar/> */}
      <Popup/>
       <SearchBox />
       <OfferCards />

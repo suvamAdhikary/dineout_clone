@@ -40,7 +40,7 @@ const Style = styled.div`
     padding: 15px;
     display: flex;
     flex-direction: column;
-    align-itmes: center;
+    align-items: center;
     justify-content: center;
     row-gap: 20px;
     .heading {
@@ -96,18 +96,8 @@ const Style = styled.div`
 
 
 export const ConfirmationPage = () => {
-  // const [data, setData] = useState({})
-
   const dispatch = useDispatch();
-
   const { loading, data, error } = useSelector((store) => store?.user.user)
-
-  
-  // const setdata = async (id) => {
-  //   const { data :{item} } = await axios.get(`https://dineout-clone.herokuapp.com/users/${id}`);
-  //   console.log(item);
-  //   setData(item)
-  // }
 
   const userId = JSON.parse(localStorage.getItem('dineout-userId'));
   useEffect(() => {
@@ -120,16 +110,9 @@ export const ConfirmationPage = () => {
     return {
       clearTimeout
     }
-    
-  //   // setdata(userId)
-  //   // const { data }  getAUser()
 
   }, [userId, dispatch])
-// console.log(data);
-  // const { restaurantName, locality, city, guests, timeSlot, date, _id } = resdata?.bookings;
 
-  // const { name, mobile } = resdata;
-  console.log(data, loading, error);
   return ( loading ? <h1>Loading...</h1> : error ? <h1>Something went wrong...</h1> :
     <Style>
       <div className="first">

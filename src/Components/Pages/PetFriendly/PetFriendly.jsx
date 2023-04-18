@@ -111,7 +111,7 @@ export const PetFriendly = () => {
   const { chips, handleAddChips } = useContext(ChipsContext);
   useEffect(async () => {
     const { data } = await axios.get(
-      "https://dineout-clone.herokuapp.com/restaurants"
+      "https://dineout-clone-server.onrender.com/restaurants"
     );
     if (params.id === "buffet") {
       const abc = data.items.filter((e) => {
